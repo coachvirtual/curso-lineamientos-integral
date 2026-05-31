@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formación Ciudadana &amp; DSE · MEN 2026</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-icon">🌱</div>
+      <span class="logo-text">Formación Ciudadana · MEN 2026</span>
+    </div>
+    <div class="topbar-div"></div>
+    
+    <div class="topbar-progress" id="topbar-prog" style="display:none">
+      <span id="topbar-prog-txt">0%</span>
+      <div class="topbar-progress-bar">
+        <div class="topbar-progress-fill" id="topbar-prog-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <nav class="nav-pills">
+      <button class="npill on" id="nav-curso" onclick="showPage('curso', event)">📚 Curso</button>
+      <button class="npill" id="nav-profundizacion" onclick="showPage('profundizacion', event)">📊 Competencias CSE</button>
+      <button class="npill" id="nav-diario" onclick="showPage('diario', event)">📓 Diario</button>
+    </nav>
+  </header>
+
+  <div id="page-curso" class="page active">
+
+    <div class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-badge"><span class="hero-dot"></span>MEN Colombia · Lineamientos 2026</div>
+      <h1>Formación <em>Ciudadana</em><br>&amp; Desarrollo Socioemocional</h1>
+      <p class="hero-desc">Lineamientos Curriculares para la Formación Integral — Educación Inicial, Básica y Media. Un programa transformador para docentes comprometidos con Colombia.</p>
+      
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">9</div><div class="lbl">Módulos</div></div>
+        <div class="hero-stat"><div class="num">33</div><div class="lbl">Sesiones</div></div>
+        <div class="hero-stat"><div class="num">40h+</div><div class="lbl">Formación</div></div>
+        <div class="hero-stat"><div class="num">4</div><div class="lbl">Niveles Educ.</div></div>
+      </div>
+
+      <div class="progress-hero" id="progress-hero" style="display:none">
+        <div class="progress-hero-top">
+          <span class="progress-hero-label">Tu progreso en el curso</span>
+          <span class="progress-hero-pct" id="hero-pct">0%</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="hero-bar" style="width:0%"></div>
+        </div>
+        <div style="font-size:12px; opacity:.75; margin-top:.4rem" id="hero-sub-txt">0 de 33 sesiones completadas</div>
+        <button class="resume-btn" id="resume-btn" onclick="resumeCourse()" style="display:none">
+          <i class="ti ti-player-play"></i> Retomar donde lo dejé
+        </button>
+      </div>
+    </div>
+
+    <div class="container" id="view-modulos">
+      <div class="section-title">Módulos del curso</div>
+      
+      <div id="modulos-list"></div>
+      
+      <div class="note-box">
+        <strong style="color:var(--verde-dk)">Nota pedagógica:</strong> Este curso puede implementarse de manera flexible, adaptado a las realidades territoriales, culturales y sociales de cada institución educativa. Las competencias ciudadanas y socioemocionales se desarrollan tanto en el currículo explícito como en el currículo oculto que permea toda la vida institucional.
+      </div>
+      
+      <button onclick="showPage('diario', event)" style="margin-top:.85rem; width:100%; padding:11px; background:var(--surface); border:1.5px solid var(--border); border-radius:var(--radius); cursor:pointer; font-size:13px; font-weight:600; color:var(--text2); display:flex; align-items:center; justify-content:center; gap:8px; font-family:Inter,sans-serif; box-shadow:var(--shadow-sm); transition:all .15s" onmouseover="this.style.borderColor='var(--verde)';this.style.color='var(--verde-dk)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">
+        <i class="ti ti-notebook"></i> Ver mi diario pedagógico
+      </button>
+    </div>
+
+    <div class="container" id="view-sesiones" style="display:none">
+      <button class="back-btn" onclick="backToModulos()"><i class="ti ti-arrow-left"></i> Volver al curso</button>
+      <div id="mod-header"></div>
+      <div class="section-title" id="ses-count-label"></div>
+      <div id="sesiones-list"></div>
+    </div>
+
+    <div class="container" id="view-sesion" style="display:none">
+      <button class="back-btn" onclick="backToSesiones()"><i class="ti ti-arrow-left"></i> Volver al módulo</button>
+      <div class="ses-header">
+        <div id="ses-badge-row"></div>
+        <h2 id="ses-title"></h2>
+        <div id="ses-meta" style="font-size:13px; color:var(--muted)"></div>
+      </div>
+      
+      <div class="tab-bar" id="ses-tabs">
+        <button class="tab-btn active" onclick="switchTab('contenido', this)">Contenidos</button>
+        <button class="tab-btn" onclick="switchTab('actividades', this)">Actividades</button>
+        <button class="tab-btn" onclick="switchTab('recursos', this)">Recursos</button>
+      </div>
+      
+      <div id="tab-contenido"></div>
+      <div id="tab-actividades" style="display:none"></div>
+      <div id="tab-recursos" style="display:none"></div>
+      
+      <button class="ses-done-btn pending" id="ses-done-btn" onclick="toggleDone()">
+        <i class="ti ti-circle-check"></i> <span id="ses-done-txt">Marcar sesión como completada</span>
+      </button>
+      
+      <div class="nav-footer">
+        <button class="nav-prev" id="btn-prev" onclick="navSesion(-1)"><i class="ti ti-arrow-left"></i> Anterior</button>
+        <button class="nav-next" id="btn-next" onclick="navSesion(1)"><i class="ti ti-arrow-right"></i> Siguiente</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="page-profundizacion" class="page">
+    <div class="hero" style="background:linear-gradient(135deg,#534AB7 0%,#993556 100%)">
+      <div class="hero-label">Material ampliado</div>
+      <h1>7 Competencias Socioemocionales</h1>
+      <div class="hero-sub">Secuencia didáctica · Actividades por nivel · Rúbrica · Guía del facilitador</div>
+    </div>
+    
+    <div class="container">
+      <div class="section-title">Selecciona una competencia</div>
+      <div id="cse-list"></div>
+    </div>
+    
+    <div class="container" id="view-cse-detail" style="display:none">
+      <button class="back-btn" onclick="backToCSE()"><i class="ti ti-arrow-left"></i> Volver</button>
+      <div id="cse-header"></div>
+      
+      <div class="tab-bar" id="cse-tabs">
+        <button class="tab-btn active" onclick="switchCSETab('secuencia', this)">Secuencia didáctica</button>
+        <button class="tab-btn" onclick="switchCSETab('actividades', this)">Por nivel educativo</button>
+        <button class="tab-btn" onclick="switchCSETab('rubrica', this)">Rúbrica</button>
+        <button class="tab-btn" onclick="switchCSETab('guia', this)">Guía del facilitador</button>
+      </div>
+      
+      <div id="cse-secuencia"></div>
+      <div id="cse-actividades" style="display:none"></div>
+      <div id="cse-rubrica" style="display:none"></div>
+      <div id="cse-guia" style="display:none"></div>
+    </div>
+  </div>
+
+  <div id="page-diario" class="page">
+    <div class="hero" style="background:linear-gradient(145deg,#1A1917 0%,#4A4845 100%)">
+      <div class="hero-label">Registro personal</div>
+      <h1>Mi Diario Pedagógico</h1>
+      <div class="hero-sub">Reflexiones guardadas a lo largo del curso</div>
+    </div>
+    
+    <div class="container">
+      <div class="section-title">Entradas guardadas</div>
+      <div id="diario-entries"></div>
+      
+      <div id="diario-empty" style="text-align:center; padding:3rem 1rem; color:var(--muted); display:none">
+        <i class="ti ti-notebook" style="font-size:40px; display:block; margin-bottom:1rem; opacity:.4"></i>
+        <p style="font-size:14px; line-height:1.6">Aún no tienes reflexiones guardadas.<br>Ve a cualquier sesión del curso y escribe tu primera reflexión.</p>
+      </div>
+      
+      <button id="diario-clear-btn" onclick="clearDiario()" style="margin-top:1.5rem; padding:9px 18px; background:none; border:1.5px solid #FCA5A5; border-radius:9px; color:#DC2626; font-size:13px; font-weight:600; cursor:pointer; font-family:Inter,sans-serif; display:none">
+        <i class="ti ti-trash"></i> Borrar todo el diario
+      </button>
+    </div>
+  </div>
+
+  <script src="js/modulos.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
