@@ -5,6 +5,13 @@ let curModIdx = null;
 let curSesIdx = null;
 let curCSEIdx = null;
 
+// Variables Globales de Persistencia y Conteo
+const TOTAL_SESSIONS = 15; 
+const PROG_KEY = 'cfe_dse_progress_v2_2026';
+const LAST_KEY = 'cfe_dse_last_v2_2026';
+const REF_PREFIX = 'reflexion_';
+const AE_PREFIX  = 'autoeval_';
+
 // Inicialización del sistema al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
   renderModulos();
@@ -20,7 +27,7 @@ function showPage(id, evt) {
   
   // Alternar estados activos en el marcado de páginas
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn, .npill').forEach(b => b.classList.remove('active', 'on'));
+  document.querySelectorAll('.nav-pills button, .npill').forEach(b => b.classList.remove('active', 'on'));
   
   const targetPage = document.getElementById('page-' + id);
   if (targetPage) targetPage.classList.add('active');
@@ -45,7 +52,7 @@ function renderModulos() {
   el.innerHTML = MODULOS.map((m, i) => {
     const done = countModDone(i);
     const total = m.sesiones.length;
-    const pct = m.sesiones.length ? Math.round(done / total * 100) : 0;
+    const pct = total ? Math.round(done / total * 100) : 0;
     const allDone = done === total && total > 0;
     
     return `
@@ -73,9 +80,9 @@ function openModulo(idx) {
   curModIdx = idx;
   const m = MODULOS[idx];
   
-  show('view-modulos', false);
-  show('view-sesiones', true);
-  show('view-sesion', false);
+  document.getElementById('view-modulos').style.display = 'none';
+  document.getElementById('view-sesiones').style.display = 'block';
+  document.getElementById('view-sesion').style.display = 'none';
 
   document.getElementById('mod-header').innerHTML = `
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:.5rem">
@@ -99,7 +106,7 @@ function openModulo(idx) {
       <div style="display:flex; align-items:center; justify-content:between; width:100%">
         <div style="flex:1; text-align:left">
           <span class="ses-badge" style="background:${m.bg}; color:${m.color}">${s.tipo}</span>
-          <span class="ses-dur"><i class="ti ti-clock"></i> ${m.id === 'm2' ? '75 min' : s.dur}</span>
+          <span class="ses-dur"><i class="ti ti-clock"></i> ${s.dur}</span>
         </div>
         ${done ? '<span style="font-size:13px; color:#059669; font-weight:600; display:flex; align-items:center; gap:3px"><i class="ti ti-circle-check-filled"></i> Completada</span>' : ''}
       </div>
@@ -112,9 +119,9 @@ function openModulo(idx) {
 }
 
 function backToModulos() {
-  show('view-modulos', true);
-  show('view-sesiones', false);
-  show('view-sesion', false);
+  document.getElementById('view-modulos').style.display = 'block';
+  document.getElementById('view-sesiones').style.display = 'none';
+  document.getElementById('view-sesion').style.display = 'none';
   window.scrollTo(0, 0);
 }
 
@@ -126,18 +133,17 @@ function openSesion(idx) {
   const m = MODULOS[curModIdx];
   const s = m.sesiones[idx];
 
-  show('view-sesiones', false);
-  show('view-sesion', true);
+  document.getElementById('view-sesiones').style.display = 'none';
+  document.getElementById('view-sesion').style.display = 'block';
 
   document.getElementById('ses-badge-row').innerHTML = `
     <span class="ses-badge" style="background:${m.bg}; color:${m.color}">${s.tipo}</span>
   `;
   document.getElementById('ses-title').textContent = s.title;
-  document.getElementById('ses-meta').innerHTML = `<i class="ti ti-clock"></i> ${m.id === 'm2' ? '75 min' : s.dur}`;
+  document.getElementById('ses-meta').innerHTML = `<i class="ti ti-clock"></i> ${s.dur}`;
 
-  // Claves de indexación para el LocalStorage local
-  const rKey = 'reflexion_' + curModIdx + '_' + curSesIdx;
-  const aeKey = 'autoeval_' + curModIdx + '_' + curSesIdx;
+  const rKey = REF_PREFIX + curModIdx + '_' + curSesIdx;
+  const aeKey = AE_PREFIX + curModIdx + '_' + curSesIdx;
   const savedRef = localStorage.getItem(rKey) || '';
   const savedAe = JSON.parse(localStorage.getItem(aeKey) || '{}');
 
@@ -154,16 +160,16 @@ function openSesion(idx) {
         <div class="reflexion-icon" style="background:${m.bg}; color:${m.color}"><i class="ti ti-pencil"></i></div>
         <div>
           <div class="reflexion-title">Mi Diario Pedagógico e Institucional</div>
-          <div class="reflexion-sub">El registro reflexivo de tu práctica se almacena de forma local</div>
+          <div class="reflexion-sub">El registro reflexivo se almacena localmente</div>
         </div>
       </div>
       <div class="reflexion-question" style="font-weight:600; color:var(--text)">Disparador Reflexivo: ${s.rq}</div>
-      <textarea class="reflexion-textarea" id="reflexion-input" placeholder="Escribe tu reflexión con un enfoque transformador para tu institución aquí..." rows="4">${savedRef}</textarea>
+      <textarea class="reflexion-textarea" id="reflexion-input" placeholder="Escribe tu reflexión pedagógica aquí..." rows="4">${savedRef}</textarea>
       <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:.65rem">
         <button class="reflexion-save-btn" style="background:${m.color}" onclick="saveReflexion()">
           <i class="ti ti-device-floppy"></i> Guardar en Diario
         </button>
-        <div class="reflexion-saved" id="reflexion-saved">
+        <div class="reflexion-saved" id="reflexion-saved" style="display:none">
           <i class="ti ti-circle-check"></i> ¡Guardada con éxito en tu bitácora!
         </div>
       </div>
@@ -205,7 +211,7 @@ function openSesion(idx) {
   document.getElementById('tab-recursos').innerHTML = `
     <div class="section-label">Referencias del MEN y Recursos Técnicos de Apoyo</div>
     <div class="res-list">${s.recursos.map(r => `
-      <div class="res-item" style="background:#fff; box-shadow:var(--shadow-sm)">
+      <div class="res-item" style="background:#fff; box-shadow:var(--shadow-sm); padding:.75rem; border-radius:6px; margin-bottom:.5rem; display:flex; align-items:center; gap:8px">
         <i class="ti ti-link" style="color:${m.color}; flex-shrink:0; font-size:16px"></i>
         <span style="font-size:13px; color:var(--text2)">${r}</span>
       </div>`).join('')}
@@ -221,9 +227,9 @@ function openSesion(idx) {
   firstTab.classList.add('active');
   firstTab.style.color = m.color;
 
-  show('tab-contenido', true);
-  show('tab-actividades', false);
-  show('tab-recursos', false);
+  document.getElementById('tab-contenido').style.display = 'block';
+  document.getElementById('tab-actividades').style.display = 'none';
+  document.getElementById('tab-recursos').style.display = 'none';
 
   // Configurar propiedades de color css nativo en pestañas activas
   document.querySelectorAll('#ses-tabs .tab-btn').forEach(b => {
@@ -243,8 +249,8 @@ function openSesion(idx) {
 }
 
 function backToSesiones() {
-  show('view-sesion', false);
-  show('view-sesiones', true);
+  document.getElementById('view-sesion').style.display = 'none';
+  document.getElementById('view-sesiones').style.display = 'block';
   openModulo(curModIdx);
 }
 
@@ -259,7 +265,10 @@ function navSesion(dir) {
 }
 
 function switchTab(tab, btn) {
-  ['contenido', 'actividades', 'recursos'].forEach(t => show('tab-' + t, t === tab));
+  ['contenido', 'actividades', 'recursos'].forEach(t => {
+    const el = document.getElementById('tab-' + t);
+    if (el) el.style.display = (t === tab) ? 'block' : 'none';
+  });
   document.querySelectorAll('#ses-tabs .tab-btn').forEach(b => {
     b.classList.remove('active');
     b.style.color = 'var(--muted)';
@@ -274,7 +283,9 @@ function switchTab(tab, btn) {
    ══════════════════════════════════════════ */
 function renderCSE() {
   const listContainer = document.getElementById('cse-list');
-  if (!listContainer) return;
+  if (!listContainer) return; // BLINDAJE CONTRA EL TYPEERROR DE NULL ⚡
+  
+  if (typeof CSE === 'undefined') return;
   
   listContainer.innerHTML = CSE.map((c, i) => `
     <button class="mod-card" onclick="openCSE(${i})">
@@ -296,8 +307,12 @@ function renderCSE() {
 function openCSE(idx) {
   curCSEIdx = idx;
   const c = CSE[idx];
-  document.getElementById('cse-list').parentElement.style.display = 'none';
-  show('view-cse-detail', true);
+  
+  const listCont = document.getElementById('view-cse-list-container');
+  if (listCont) listCont.style.display = 'none';
+  
+  const detailCont = document.getElementById('view-cse-detail');
+  if (detailCont) detailCont.style.display = 'block';
 
   document.getElementById('cse-header').innerHTML = `
     <div style="display:flex; align-items:flex-start; gap:14px; margin-bottom:.75rem">
@@ -322,13 +337,19 @@ function openCSE(idx) {
 }
 
 function backToCSE() {
-  document.getElementById('cse-list').parentElement.style.display = 'block';
-  show('view-cse-detail', false);
+  const listCont = document.getElementById('view-cse-list-container');
+  if (listCont) listCont.style.display = 'block';
+  
+  const detailCont = document.getElementById('view-cse-detail');
+  if (detailCont) detailCont.style.display = 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function switchCSETab(tab, btn) {
-  ['secuencia', 'actividades', 'rubrica', 'guia'].forEach(t => show('cse-' + t, t === tab));
+  ['secuencia', 'actividades', 'rubrica', 'guia'].forEach(t => {
+    const el = document.getElementById('cse-' + t);
+    if (el) el.style.display = (t === tab) ? 'block' : 'none';
+  });
   document.querySelectorAll('#cse-tabs .tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderCSETab(tab);
@@ -348,7 +369,7 @@ function renderCSETab(tab) {
           </div>
           <span style="font-size:12px; color:${c.tc}; font-weight:500"><i class="ti ti-clock"></i> ${f.tiempo}</span>
         </div>
-        <div class="seq-body" style="background:#fff">
+        <div class="seq-body" style="background:#fff; padding:1rem">
           <div class="seq-desc" style="font-size:13.5px; color:var(--text2)">${f.desc}</div>
           <div class="seq-rol" style="color:var(--muted); font-size:12px; margin-top:4px"><i class="ti ti-user"></i> Rol de Facilitación: ${f.rol}</div>
         </div>
@@ -358,9 +379,9 @@ function renderCSETab(tab) {
 
   if (tab === 'actividades') {
     document.getElementById('cse-actividades').innerHTML = c.actividades.map(n => `
-      <div class="nivel-card" style="box-shadow:var(--shadow-sm); border-radius:12px">
-        <div class="nivel-head" style="background:${n.bg}; color:${n.tc}; font-weight:600">${n.nivel}</div>
-        <ul class="nivel-body" style="background:#fff">
+      <div class="nivel-card" style="box-shadow:var(--shadow-sm); border-radius:12px; margin-bottom:1rem; border:1px solid var(--border); overflow:hidden">
+        <div class="nivel-head" style="background:${n.bg}; color:${n.tc}; font-weight:600; padding:.7rem 1rem">${n.nivel}</div>
+        <ul class="nivel-body" style="background:#fff; padding:1rem 1rem 1rem 2rem">
           ${n.items.map(it => `<li style="font-size:13px; color:var(--text2); margin-bottom:.5rem">${it}</li>`).join('')}
         </ul>
       </div>
@@ -369,18 +390,18 @@ function renderCSETab(tab) {
 
   if (tab === 'rubrica') {
     document.getElementById('cse-rubrica').innerHTML = `
-      <div class="rubrica-wrap">
-        <table style="background:#fff">
+      <div class="rubrica-wrap" style="overflow-x:auto; background:#fff; padding:1rem; border:1px solid var(--border); border-radius:8px">
+        <table style="width:100%; border-collapse:collapse">
           <thead><tr style="background:${c.bg}">
-            <th style="color:${c.tc}; font-size:12px">Criterios Evaluativos</th>
-            <th style="color:${c.tc}; font-size:12px">1. Explorando</th>
-            <th style="color:${c.tc}; font-size:12px">2. Comprendiendo</th>
-            <th style="color:${c.tc}; font-size:12px">3. Aplicando</th>
-            <th style="color:${c.tc}; font-size:12px">4. Liderando</th>
+            <th style="color:${c.tc}; font-size:12px; padding:8px; border:1px solid var(--border)">Criterios Evaluativos</th>
+            <th style="color:${c.tc}; font-size:12px; padding:8px; border:1px solid var(--border)">1. Explorando</th>
+            <th style="color:${c.tc}; font-size:12px; padding:8px; border:1px solid var(--border)">2. Comprendiendo</th>
+            <th style="color:${c.tc}; font-size:12px; padding:8px; border:1px solid var(--border)">3. Aplicando</th>
+            <th style="color:${c.tc}; font-size:12px; padding:8px; border:1px solid var(--border)">4. Liderando</th>
           </tr></thead>
           <tbody>${c.rubrica.map(r => `<tr>
-            <td style="font-weight:600; font-size:12.5px">${r.criterio}</td>
-            ${r.d.map(desc => `<td style="font-size:12px; color:var(--text2)">${desc}</td>`).join('')}
+            <td style="font-weight:600; font-size:12.5px; padding:8px; border:1px solid var(--border)">${r.criterio}</td>
+            ${r.d.map(desc => `<td style="font-size:12px; color:var(--text2); padding:8px; border:1px solid var(--border)">${desc}</td>`).join('')}
           </tr>`).join('')}</tbody>
         </table>
       </div>
@@ -389,7 +410,7 @@ function renderCSETab(tab) {
 
   if (tab === 'guia') {
     document.getElementById('cse-guia').innerHTML = `
-      <div class="guia-box" style="background:var(--bg2); border-color:${c.color}; color:${c.color}">
+      <div class="guia-box" style="background:var(--bg2); border-left:4px solid ${c.color}; padding:1rem; margin-bottom:1rem; border-radius:4px">
         <div class="guia-title" style="font-weight:700">Propósito Formativo Integral</div>
         <div class="guia-text" style="color:var(--text); font-size:13.5px">${c.guia.prop}</div>
       </div>
@@ -398,53 +419,42 @@ function renderCSETab(tab) {
           <span style="font-size:13px; font-weight:600; color:#991B1B"><i class="ti ti-alert-triangle-filled"></i> Alertas y Resguardos Pedagógicos Esenciales</span>
         </div>
         <div style="padding:.75rem 1rem; background:#fff">
-          ${c.guia.adv.map(a => `<div class="warn-item" style="font-size:13px; color:var(--text2)">⚠ ${a}</div>`).join('')}
+          ${c.guia.adv.map(a => `<div class="warn-item" style="font-size:13px; color:var(--text2); margin-bottom:4px">⚠ ${a}</div>`).join('')}
         </div>
       </div>
-      <div class="guia-box" style="background:${c.bg}; border-color:${c.color}; color:${c.tc}">
-        <div class="guia-title" style="font-weight:700"><i class="ti ti-flag-filled"></i> Directriz del Cierre Afectivo</div>
-        <div class="guia-text" style="font-size:13.5px">${c.guia.cierre}</div>
+      <div class="guia-box" style="background:${c.bg}; border-left:4px solid ${c.color}; padding:1rem; border-radius:4px">
+        <div class="guia-title" style="font-weight:700; color:${c.tc}"><i class="ti ti-flag-filled"></i> Directriz del Cierre Afectivo</div>
+        <div class="guia-text" style="font-size:13.5px; color:var(--text2)">${c.guia.cierre}</div>
       </div>
     `;
   }
 }
 
 /* ══════════════════════════════════════════
-   SISTEMA DE PERSISTENCIA Y LOCALSTORAGE (PROGRESO)
+   SISTEMA DE PROGRESO DE LOCALSTORAGE
    ══════════════════════════════════════════ */
-const TOTAL_SESSIONS = 9; // Calibrado técnico según la nueva distribución
-const PROG_KEY = 'cfe_dse_progress_v2_2026';
-const LAST_KEY = 'cfe_dse_last_v2_2026';
-
 function getProgress() {
-  try { return JSON.parse(localStorage.getItem(PROG_KEY)) || {}; }
-  catch(e) { return {}; }
+  try { return JSON.parse(localStorage.getItem(PROG_KEY)) || {}; } catch(e) { return {}; }
 }
-
 function saveProgress(p) {
   try { localStorage.setItem(PROG_KEY, JSON.stringify(p)); } catch(e){}
 }
-
 function saveLastPos(modIdx, sesIdx) {
   try { localStorage.setItem(LAST_KEY, JSON.stringify({ modIdx, sesIdx })); } catch(e){}
 }
-
-function sesKey(modIdx, sesIdx) { return modIdx + '_' + sesIdx; }
-function isDone(modIdx, sesIdx) { return !!getProgress()[sesKey(modIdx, sesIdx)]; }
+function isDone(modIdx, sesIdx) { return !!getProgress()[modIdx + '_' + sesIdx]; }
 
 function countDone() {
   const p = getProgress();
   return Object.keys(p).filter(k => p[k]).length;
 }
-
 function countModDone(modIdx) {
-  const m = MODULOS[modIdx];
-  return m.sesiones.filter((_, i) => isDone(modIdx, i)).length;
+  return MODULOS[modIdx].sesiones.filter((_, i) => isDone(modIdx, i)).length;
 }
 
 function toggleDone() {
   const p = getProgress();
-  const key = sesKey(curModIdx, curSesIdx);
+  const key = curModIdx + '_' + curSesIdx;
   p[key] = !p[key];
   saveProgress(p);
   
@@ -467,19 +477,14 @@ function updateProgressUI() {
   const done = countDone();
   const pct = Math.round(done / TOTAL_SESSIONS * 100);
 
-  // Panel de visualización de Hero en Inicio
   const heroEl = document.getElementById('progress-hero');
   if (heroEl) {
     heroEl.style.display = done > 0 ? 'block' : 'none';
     document.getElementById('hero-pct').textContent = pct + '%';
     document.getElementById('hero-bar').style.width = pct + '%';
-    document.getElementById('hero-sub-txt').textContent = `${done} de ${TOTAL_SESSIONS} sesiones registradas`;
-    
-    const resumeBtn = document.getElementById('resume-btn');
-    if (resumeBtn) resumeBtn.style.display = done < TOTAL_SESSIONS ? 'flex' : 'none';
+    document.getElementById('hero-sub-txt').textContent = `${done} de ${TOTAL_SESSIONS} laboratorios completados`;
   }
 
-  // Barra de navegación superior rápida
   const topProg = document.getElementById('topbar-prog');
   if (topProg) {
     topProg.style.display = done > 0 ? 'flex' : 'none';
@@ -488,29 +493,14 @@ function updateProgressUI() {
   }
 }
 
-function resumeCourse() {
-  try {
-    const last = JSON.parse(localStorage.getItem(LAST_KEY));
-    if (!last) return;
-    curModIdx = last.modIdx;
-    showPage('curso');
-    openModulo(last.modIdx);
-    setTimeout(() => openSesion(last.sesIdx), 150);
-  } catch(e){}
-}
-
 /* ══════════════════════════════════════════
-   GESTIÓN DEL DIARIO PEDAGÓGICO
+   SISTEMA DEL DIARIO PEDAGÓGICO
    ══════════════════════════════════════════ */
-const REF_PREFIX = 'reflexion_';
-const AE_PREFIX  = 'autoeval_';
-
 function saveReflexion() {
   const el = document.getElementById('reflexion-input');
   if (!el || !el.value.trim()) return;
   
-  const key = REF_PREFIX + curModIdx + '_' + curSesIdx;
-  localStorage.setItem(key, el.value.trim());
+  localStorage.setItem(REF_PREFIX + curModIdx + '_' + curSesIdx, el.value.trim());
   
   const dKey = 'diario_meta_' + curModIdx + '_' + curSesIdx;
   const m = MODULOS[curModIdx];
@@ -532,8 +522,7 @@ function saveReflexion() {
 
 function setAE(field, val, btn) {
   const key = AE_PREFIX + curModIdx + '_' + curSesIdx;
-  const ae = { [field]: val };
-  localStorage.setItem(key, JSON.stringify(ae));
+  localStorage.setItem(key, JSON.stringify({ [field]: val }));
   
   const m = MODULOS[curModIdx];
   const wrap = document.getElementById('ae-' + field);
@@ -541,9 +530,7 @@ function setAE(field, val, btn) {
   
   wrap.querySelectorAll('.scale-btn').forEach(b => {
     b.classList.remove('selected');
-    b.style.background = '';
-    b.style.borderColor = '';
-    b.style.color = '';
+    b.style.background = ''; b.style.borderColor = ''; b.style.color = '';
   });
   
   btn.classList.add('selected');
@@ -554,8 +541,8 @@ function setAE(field, val, btn) {
 
 function renderDiario() {
   const container = document.getElementById('diario-entries');
-  const emptyEl   = document.getElementById('diario-empty');
-  const clearBtn  = document.getElementById('diario-clear-btn');
+  const emptyEl = document.getElementById('diario-empty');
+  const clearBtn = document.getElementById('diario-clear-btn');
   if (!container) return;
 
   const entries = [];
@@ -564,40 +551,34 @@ function renderDiario() {
       const ref = localStorage.getItem(REF_PREFIX + mi + '_' + si);
       if (!ref) continue;
       const meta = JSON.parse(localStorage.getItem('diario_meta_' + mi + '_' + si) || '{}');
-      const ae   = JSON.parse(localStorage.getItem(AE_PREFIX + mi + '_' + si) || '{}');
+      const ae = JSON.parse(localStorage.getItem(AE_PREFIX + mi + '_' + si) || '{}');
       entries.push({ ref, meta, ae });
     }
   }
 
   if (!entries.length) {
     container.innerHTML = '';
-    emptyEl.style.display = 'block';
-    clearBtn.style.display = 'none';
+    if (emptyEl) emptyEl.style.display = 'block';
+    if (clearBtn) clearBtn.style.display = 'none';
     return;
   }
 
-  emptyEl.style.display = 'none';
-  clearBtn.style.display = 'inline-flex';
+  if (emptyEl) emptyEl.style.display = 'none';
+  if (clearBtn) clearBtn.style.display = 'inline-block';
 
   container.innerHTML = entries.map(e => `
     <div class="diario-entry" style="border-left:4px solid ${e.meta.modColor || 'var(--verde)'}; background:#fff; margin-bottom:1rem; border-radius:8px; box-shadow:var(--shadow-sm); padding:1.25rem">
-      <div class="diario-entry-date" style="font-weight:500"><i class="ti ti-calendar"></i> Registro: ${e.meta.date || '—'}</div>
+      <div class="diario-entry-date" style="font-weight:500; font-size:12px; color:var(--muted)"><i class="ti ti-calendar"></i> Registro: ${e.meta.date || '—'}</div>
       <div class="diario-entry-mod" style="color:${e.meta.modColor || 'var(--verde)'}; font-weight:600; font-size:13px; margin:4px 0">${e.meta.modTitle} &rsaquo; ${e.meta.sesTitle}</div>
       <div class="diario-entry-txt" style="font-size:13.5px; line-height:1.6; color:var(--text2); background:var(--bg); padding:.75rem; border-radius:6px; margin-top:6px; font-style:italic">"${e.ref}"</div>
-      ${e.ae.comprension ? `<div style="margin-top:.5rem"><span style="font-size:11px; background:var(--bg2); padding:3px 9px; border-radius:99px; color:var(--text); font-weight:600">Nivel de Progresión: ${e.ae.comprension} / 4</span></div>` : ''}
     </div>
   `).join('');
 }
 
 function clearDiario() {
-  if (!confirm('¿Seguro que deseas purgar la base de datos de tus reflexiones pedagógicas? Esto no se puede deshacer.')) return;
-  for (let mi = 0; mi < MODULOS.length; mi++) {
-    for (let si = 0; si < MODULOS[mi].sesiones.length; si++) {
-      localStorage.removeItem(REF_PREFIX + mi + '_' + si);
-      localStorage.removeItem(AE_PREFIX + mi + '_' + si);
-      localStorage.removeItem('diario_meta_' + mi + '_' + si);
-    }
-  }
+  if (!confirm('¿Borrar todas las reflexiones?')) return;
+  localStorage.clear();
   renderDiario();
   updateProgressUI();
+  renderModulos();
 }
