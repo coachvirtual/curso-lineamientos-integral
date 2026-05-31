@@ -35,17 +35,16 @@
   </header>
 
   <div id="page-curso" class="page active">
-
     <div class="hero" id="hero">
       <div class="hero-bg"></div>
       <div class="hero-grid"></div>
       <div class="hero-badge"><span class="hero-dot"></span>MEN Colombia · Lineamientos 2026</div>
       <h1>Formación <em>Ciudadana</em><br>&amp; Desarrollo Socioemocional</h1>
-      <p class="hero-desc">Lineamientos Curriculares para la Formación Integral — Educación Inicial, Básica y Media. Un programa transformador para docentes comprometidos con Colombia.</p>
+      <p class="hero-desc">Lineamientos Curriculares para la Formación Integral — Educación Inicial, Básica y Media.</p>
       
       <div class="hero-stats">
-        <div class="hero-stat"><div class="num">7</div><div class="lbl">Módulos</div></div>
-        <div class="hero-stat"><div class="num">9</div><div class="lbl">Laboratorios</div></div>
+        <div class="hero-stat"><div class="num">6</div><div class="lbl">Módulos</div></div>
+        <div class="hero-stat"><div class="num">15</div><div class="lbl">Sesiones</div></div>
         <div class="hero-stat"><div class="num">40h+</div><div class="lbl">Formación</div></div>
         <div class="hero-stat"><div class="num">4</div><div class="lbl">Niveles Educ.</div></div>
       </div>
@@ -58,7 +57,7 @@
         <div class="progress-bar-wrap">
           <div class="progress-bar-fill" id="hero-bar" style="width:0%"></div>
         </div>
-        <div style="font-size:12px; opacity:.75; margin-top:.4rem" id="hero-sub-txt">0 de 9 sesiones completadas</div>
+        <div style="font-size:12px; opacity:.75; margin-top:.4rem" id="hero-sub-txt">0 sesiones completadas</div>
         <button class="resume-btn" id="resume-btn" onclick="resumeCourse()" style="display:none">
           <i class="ti ti-player-play"></i> Retomar donde lo dejé
         </button>
@@ -66,28 +65,23 @@
     </div>
 
     <div class="container" id="view-modulos">
-      <div class="section-title">Módulos de Transformación Curricular</div>
-      
+      <div class="section-title">Módulos del curso</div>
       <div id="modulos-list"></div>
       
       <div class="note-box">
-        <strong style="color:var(--verde-dk)">Nota pedagógica (Ley 2503/2025):</strong> Este entorno interactivo actúa como un portafolio de evidencias. Las reflexiones registradas en el Diario e Indicadores se almacenan localmente en tu navegador y sirven como soporte técnico de la Cátedra de Educación Emocional para tu planeación institucional.
+        <strong style="color:var(--verde-dk)">Nota pedagógica:</strong> Este curso guarda tu progreso localmente en el navegador.
       </div>
-      
-      <button onclick="showPage('diario', event)" style="margin-top:.85rem; width:100%; padding:11px; background:var(--surface); border:1.5px solid var(--border); border-radius:var(--radius); cursor:pointer; font-size:13px; font-weight:600; color:var(--text2); display:flex; align-items:center; justify-content:center; gap:8px; font-family:Inter,sans-serif; box-shadow:var(--shadow-sm); transition:all .15s" onmouseover="this.style.borderColor='var(--verde)';this.style.color='var(--verde-dk)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">
-        <i class="ti ti-notebook"></i> Abrir mi bitácora y diario pedagógico
-      </button>
     </div>
 
     <div class="container" id="view-sesiones" style="display:none">
-      <button class="back-btn" onclick="backToModulos()"><i class="ti ti-arrow-left"></i> Volver a los Módulos</button>
+      <button class="back-btn" onclick="backToModulos()"><i class="ti ti-arrow-left"></i> Volver al curso</button>
       <div id="mod-header"></div>
       <div class="section-title" id="ses-count-label"></div>
       <div id="sesiones-list"></div>
     </div>
 
     <div class="container" id="view-sesion" style="display:none">
-      <button class="back-btn" onclick="backToSesiones()"><i class="ti ti-arrow-left"></i> Volver al Módulo</button>
+      <button class="back-btn" onclick="backToSesiones()"><i class="ti ti-arrow-left"></i> Volver al módulo</button>
       <div class="ses-header">
         <div id="ses-badge-row"></div>
         <h2 id="ses-title"></h2>
@@ -95,9 +89,9 @@
       </div>
       
       <div class="tab-bar" id="ses-tabs">
-        <button class="tab-btn active" onclick="switchTab('contenido', this)">Contenidos y Retos</button>
-        <button class="tab-btn" onclick="switchTab('actividades', this)">Secuencia Didáctica</button>
-        <button class="tab-btn" onclick="switchTab('recursos', this)">Recursos MEN</button>
+        <button class="tab-btn active" onclick="switchTab('contenido', this)">Contenidos</button>
+        <button class="tab-btn" onclick="switchTab('actividades', this)">Actividades</button>
+        <button class="tab-btn" onclick="switchTab('recursos', this)">Recursos</button>
       </div>
       
       <div id="tab-contenido"></div>
@@ -117,25 +111,24 @@
 
   <div id="page-profundizacion" class="page">
     <div class="hero" style="background:linear-gradient(135deg,#534AB7 0%,#993556 100%)">
-      <div class="hero-label">Material de profundización técnica</div>
       <h1>7 Competencias Socioemocionales</h1>
-      <div class="hero-sub">Secuencia didáctica de aula · Actividades por nivel escolar · Rúbrica de progresión · Guía de resguardos</div>
+      <div class="hero-sub">Secuencia didáctica · Actividades por nivel · Rúbrica</div>
     </div>
     
-    <div class="container">
-      <div class="section-title">Selecciona una competencia para desplegar la ruta</div>
+    <div class="container" id="view-cse-list-container">
+      <div class="section-title">Selecciona una competencia</div>
       <div id="cse-list"></div>
     </div>
     
     <div class="container" id="view-cse-detail" style="display:none">
-      <button class="back-btn" onclick="backToCSE()"><i class="ti ti-arrow-left"></i> Volver a la Lista</button>
+      <button class="back-btn" onclick="backToCSE()"><i class="ti ti-arrow-left"></i> Volver</button>
       <div id="cse-header"></div>
       
       <div class="tab-bar" id="cse-tabs">
-        <button class="tab-btn active" onclick="switchCSETab('secuencia', this)">Secuencia de Taller</button>
-        <button class="tab-btn" onclick="switchCSETab('actividades', this)">Estrategias por Nivel</button>
-        <button class="tab-btn" onclick="switchCSETab('rubrica', this)">Rúbrica de Campo</button>
-        <button class="tab-btn" onclick="switchCSETab('guia', this)">Guía del Facilitador</button>
+        <button class="tab-btn active" onclick="switchCSETab('secuencia', this)">Secuencia didáctica</button>
+        <button class="tab-btn" onclick="switchCSETab('actividades', this)">Por nivel educativo</button>
+        <button class="tab-btn" onclick="switchCSETab('rubrica', this)">Rúbrica</button>
+        <button class="tab-btn" onclick="switchCSETab('guia', this)">Guía del facilitador</button>
       </div>
       
       <div id="cse-secuencia"></div>
@@ -147,34 +140,18 @@
 
   <div id="page-diario" class="page">
     <div class="hero" style="background:linear-gradient(145deg,#1A1917 0%,#4A4845 100%)">
-      <div class="hero-label">Registro personal y soporte técnico</div>
       <h1>Mi Diario Pedagógico</h1>
-      <div class="hero-sub">Historial de reflexiones e indicadores de avance guardados</div>
     </div>
-    
     <div class="container">
-      <div class="section-title" style="display:flex; justify-content:space-between; align-items:center">
-        <span>Entradas registradas en esta estación</span>
-        <button onclick="window.print()" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:6px; font-size:12px; cursor:pointer; font-weight:600; font-family:inherit; color:var(--text2); display:inline-flex; align-items:center; gap:4px">
-          <i class="ti ti-download"></i> Exportar a PDF / Imprimir
-        </button>
-      </div>
-      
       <div id="diario-entries"></div>
-      
       <div id="diario-empty" style="text-align:center; padding:3rem 1rem; color:var(--muted); display:none">
-        <i class="ti ti-notebook" style="font-size:40px; display:block; margin-bottom:1rem; opacity:.4"></i>
-        <p style="font-size:14px; line-height:1.6">Aún no tienes reflexiones guardadas.<br>Ve a cualquier laboratorio de los módulos, escribe en las cajas de texto y haz clic en "Guardar en Diario".</p>
+        <p>Aún no tienes reflexiones guardadas.</p>
       </div>
-      
-      <button id="diario-clear-btn" onclick="clearDiario()" style="margin-top:1.5rem; padding:9px 18px; background:none; border:1.5px solid #FCA5A5; border-radius:9px; color:#DC2626; font-size:13px; font-weight:600; cursor:pointer; font-family:Inter,sans-serif; display:none">
-        <i class="ti ti-trash"></i> Purgar base de datos local
-      </button>
+      <button id="diario-clear-btn" onclick="clearDiario()" style="display:none">Borrar todo el diario</button>
     </div>
   </div>
 
   <script src="js/modulos.js"></script>
   <script src="js/app.js"></script>
-
 </body>
 </html>
