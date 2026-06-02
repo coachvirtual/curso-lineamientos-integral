@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════════════
-   MÓDULO 2: EL MODELO CONCÉNTRICO (ESTRUCTURA INTEGRAL MEN 2026)
+   MÓDULO 2: EL MODELO CONCÉNTRICO (ESTRUCTURA INTEGRAL EXTENDIDA MEN 2026)
    ══════════════════════════════════════════════════════════════════════════ */
 
 if (typeof MODULOS === 'undefined') { var MODULOS = []; }
@@ -13,10 +13,10 @@ MODULOS.push({
   title: 'El Modelo Concéntrico',
   sub: 'La cartografía recursiva del ser: de la interioridad del Yo al cuidado del territorio planetario',
   
-  // ── SESIONES / LABORATORIOS DE APRENDIZAJE ──────────────────────────────
+  // ── SESIONES / LABORATORIOS DE APRENDIZAJE COMPLETOS SIN CORTE DE LÍNEAS ──
   sesiones: [
     { 
-      title: 'Sesión 1: La onda expansiva del ser — Mi Ecosistema de Aula (Ejes A y B)', 
+      title: 'Sesión 5: La onda expansiva del ser — Mi Ecosistema de Aula (Ejes A y B)', 
       tipo: 'Marco Organizador', 
       dur: '75 min',
       obj: [
@@ -32,7 +32,7 @@ MODULOS.push({
       ],
       actividades: [
         '<strong>Reto de Diagnóstico "Mi Ecosistema de Aula":</strong> Diseña un mapa visual de interacciones. Registra de forma transparente cómo tus propios picos de cansancio, estrés personal o saturación administrativa (Eje A) se traducen de forma reactiva en tus respuestas frente a los conflictos o desobediencias de tus alumnos (Eje B).',
-        '<strong>Codiseño de Andamiaje Relacional:</strong> Estructura un protocolo escrito de "Check-in Colectivo" de 5 minutos para sintonizar los estados de ánimo basándote en la granularidad emocional antes de impartir el contenido de tu materia.'
+        '<strong>Codiseño de Andamiaje Relacional:</strong> Estructura un protocolo escrito de "Check-in Colectivo" de 5 minutos para sintonizar los estados de ánimo basándote en la granularidad emocional antes de importar el contenido de tu materia.'
       ],
       recursos: [
         'Infografía Técnica Integrada: Cartografía Concéntrica en SVG y Ámbitos del Vínculo',
@@ -42,7 +42,7 @@ MODULOS.push({
       aq: '¿Qué nivel de claridad tienes para identificar que el comportamiento de un estudiante no es un ataque personal hacia ti, sino un síntoma de su propia desregulación relacional?'
     },
     { 
-      title: 'Sesión 2: De la escuela al territorio planetario — El Radar del Entorno (Ejes C y D)', 
+      title: 'Sesión 6: De la escuela al territorio planetario — El Radar del Entorno (Ejes C y D)', 
       tipo: 'Marco Organizador', 
       dur: '75 min',
       obj: [
@@ -56,7 +56,7 @@ MODULOS.push({
         '<strong>Tabla de Interdependencia Macro-Concéntrica:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAECE7; color:#712B13"><th style="padding:6px; border:1px solid var(--border)">Eje Concéntrico</th><th style="padding:6px; border:1px solid var(--border)">Foco en el Territorio</th><th style="padding:6px; border:1px solid var(--border)">Traducción en Proyectos Escolares</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Eje C: Con la sociedad</td><td style="padding:6px; border:1px solid var(--border)">Comunidad, PEI y Democracia local</td><td style="padding:6px; border:1px solid var(--border)">Articulación con Juntas de Acción Comunal para mitigar focos de basura barriales.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Eje D: Con el mundo</td><td style="padding:6px; border:1px solid var(--border)">Interdependencia planetaria y Eco-justicia</td><td style="padding:6px; border:1px solid var(--border)">Análisis sistémico del impacto del calentamiento global sobre la economía agrícola de la región.</td></tr></table>'
       ],
       actividades: [
-        '<strong>Laboratorio Didáctico "El Radar del Entorno":</strong> Identifica un conflicto social o ambiental agudo en tu municipio o vereda (Eje C). Traza una ruta metodológica transversal que demuestre de forma explícita a tus alumnos cómo ese problema local está engranado con desafíos ecológicos o geopolíticos globales de interdependencia (Eje D).',
+        '<strong>Laboratorio Didáctico "El Radar del Entorno":</strong> Identifica un conflicto social o ambiental agudo en tu municipio o vereda (Eje C). Traza una ruta metodológica transversal que demuestre de forma explícita a tus alumnos cómo ese problema local está engranado con desafíos ecológicos u objetivos globales de interdependencia planetaria (Eje D).',
         '<strong>Mapeo de Actores Comunitarios Externos:</strong> Estructura un directorio de líderes vecinales, sabedores tradicionales u organizaciones ecológicas del barrio para sacarlos de la periferia e incorporarlos en tu próxima unidad.'
       ],
       recursos: [
@@ -82,7 +82,7 @@ MODULOS.push({
       exp: 'La recursividad es la clave del modelo. No es una escalera de etapas; es una onda expansiva en doble vía. Los procesos intrapersonales modulan la calidad de las interacciones ciudadanas y comunitarias, y los choques o crisis del territorio transforman de inmediato la interioridad del ser.'
     },
     {
-      q: 'Al estructurar la rutina del "Check-in Colectivo" de la Sesión 1 para cruzar el Eje A con el Eje B, ¿cuál es la premisa metodológica que debe resguardar el docente?',
+      q: 'Al estructurar la rutina del "Check-in Colectivo" de la Sesión 5 para cruzar el Eje A con el Eje B, ¿cuál es la premisa metodológica que debe resguardar el docente?',
       opts: [
         'Obligar a los estudiantes a exponer de forma obligatoria y bajo calificación cuantitativa sus crisis familiares íntimas frente al grupo.',
         'Utilizar su propio estado interno de forma regulada y vulnerable como un modelo de co-regulación, convirtiendo la rutina en un espacio protector y simétrico de escucha relacional, nunca en una imposición punitiva.',
