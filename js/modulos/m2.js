@@ -16,7 +16,7 @@ MODULOS.push({
   // ── SESIONES / LABORATORIOS DE APRENDIZAJE COMPLETOS SIN CORTE DE LÍNEAS ──
   sesiones: [
     { 
-      title: 'Sesión 5: La onda expansiva del ser — Mi Ecosistema de Aula (Ejes A y B)', 
+      title: 'Sesión 6: La onda expansiva del ser — Mi Ecosistema de Aula (Ejes A y B)', 
       tipo: 'Marco Organizador', 
       dur: '75 min',
       obj: [
@@ -26,7 +26,7 @@ MODULOS.push({
       ],
       contenidos: [
         '<strong>La recursividad del Modelo Concéntrico:</strong> Superar las visiones lineales o por etapas rígidas del desarrollo. Lo que ocurre en la interioridad (Yo) reverbera de inmediato en el plano vincular (Otros).',
-        '<strong>Eje A – Yo conmigo mismo (Dimensión Intrapersonal):</strong> El reconocimiento de la propia identidad, la autoconciencia fina de las señales corporales, el auto-sostén ético y la salud mental del docente como infraestructura de la práctica.',
+        '<strong>Eje A – Yo conmigo mismo (Dimensión Intrapersonal):</strong> El recognition de la propia identidad, la autoconciencia fina de las señales corporales, el auto-sostén ético y la salud mental del docente como infraestructura de la práctica.',
         '<strong>Eje B – Yo con los otros (Dimensión Interpersonal):</strong> La escucha radical, la validación de las emociones del estudiante, la empatía compasiva en situaciones de crisis y la co-regulación como alternativa al control autoritario.',
         '<strong>Tabla de Correspondencia y Dinámicas Internas del Eje:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAECE7; color:#712B13"><th style="padding:6px; border:1px solid var(--border)">Eje Concéntrico</th><th style="padding:6px; border:1px solid var(--border)">Capacidad Núcleo</th><th style="padding:6px; border:1px solid var(--border)">Reflejo en el Aula (Currículo Oculto)</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Eje A: Yo conmigo</td><td style="padding:6px; border:1px solid var(--border)">Autoconciencia y límites del docente</td><td style="padding:6px; border:1px solid var(--border)">Gestión de la frustración del maestro ante el sabotaje de la clase.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Eje B: Con los otros</td><td style="padding:6px; border:1px solid var(--border)">Vínculo y co-regulación afectiva</td><td style="padding:6px; border:1px solid var(--border)">Uso de tonos de voz pausados y simétricos durante una crisis conductual.</td></tr></table>'
       ],
@@ -39,10 +39,10 @@ MODULOS.push({
         'Formato editable: "Matriz de Monitoreo del Clima Relacional y Co-regulación de Aula"'
       ],
       rq: 'Cuando ingresas al salón de clases emocionalmente inundado/a o agotado/a, ¿cómo se transforma la atmósfera del grupo? ¿Qué micro-ritual de pausa o respiración consciente podrías implementar en la puerta antes de entrar?',
-      aq: '¿Qué nivel de claridad tienes para identificar que el comportamiento de un estudiante no es un ataque personal hacia ti, sino un síntoma de su propia desregulación relacional?'
+      aq: '¿Qué que nivel de claridad tienes para identificar que el comportamiento de un estudiante no es un ataque personal hacia ti, sino un síntoma de su propia desregulación relacional?'
     },
     { 
-      title: 'Sesión 6: De la escuela al territorio planetario — El Radar del Entorno (Ejes C y D)', 
+      title: 'Sesión 6B: De la escuela al territorio planetario — El Radar del Entorno (Ejes C y D)', 
       tipo: 'Marco Organizador', 
       dur: '75 min',
       obj: [
@@ -53,6 +53,7 @@ MODULOS.push({
       contenidos: [
         '<strong>Eje C – Yo con la sociedad (Dimensión Sociopolítica):</strong> El ejercicio de la democracia escolar, la memoria histórica territorial, la reconstrucción de tejidos comunitarios, la justicia social y la reconciliación situada.',
         '<strong>Eje D – Yo con el mundo (Dimensión Ecocéntrica y Global):</strong> La conciencia radical de la crisis ecológica, la ciudadanía global planetaria, el análisis de las cadenas de consumo y el cuidado ético de los sistemas no humanos.',
+        '<strong>Articulación Epistémica Complementaria (MEN 2026):</strong> Integración con la hermenéutica de Hans-Georg Gadamer (fusión de horizontes a través del diálogo intergeneracional en la comunidad) y el principio de natalidad y cuidado del mundo de Hannah Arendt (responsabilidad política de heredar un entorno habitable).',
         '<strong>Tabla de Interdependencia Macro-Concéntrica:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAECE7; color:#712B13"><th style="padding:6px; border:1px solid var(--border)">Eje Concéntrico</th><th style="padding:6px; border:1px solid var(--border)">Foco en el Territorio</th><th style="padding:6px; border:1px solid var(--border)">Traducción en Proyectos Escolares</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Eje C: Con la sociedad</td><td style="padding:6px; border:1px solid var(--border)">Comunidad, PEI y Democracia local</td><td style="padding:6px; border:1px solid var(--border)">Articulación con Juntas de Acción Comunal para mitigar focos de basura barriales.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Eje D: Con el mundo</td><td style="padding:6px; border:1px solid var(--border)">Interdependencia planetaria y Eco-justicia</td><td style="padding:6px; border:1px solid var(--border)">Análisis sistémico del impacto del calentamiento global sobre la economía agrícola de la región.</td></tr></table>'
       ],
       actividades: [
@@ -82,7 +83,7 @@ MODULOS.push({
       exp: 'La recursividad es la clave del modelo. No es una escalera de etapas; es una onda expansiva en doble vía. Los procesos intrapersonales modulan la calidad de las interacciones ciudadanas y comunitarias, y los choques o crisis del territorio transforman de inmediato la interioridad del ser.'
     },
     {
-      q: 'Al estructurar la rutina del "Check-in Colectivo" de la Sesión 5 para cruzar el Eje A con el Eje B, ¿cuál es la premisa metodológica que debe resguardar el docente?',
+      q: 'Al estructurar la rutina del "Check-in Colectivo" de la Sesión 6 para cruzar el Eje A con el Eje B, ¿cuál es la premisa metodológica que debe resguardar el docente?',
       opts: [
         'Obligar a los estudiantes a exponer de forma obligatoria y bajo calificación cuantitativa sus crisis familiares íntimas frente al grupo.',
         'Utilizar su propio estado interno de forma regulada y vulnerable como un modelo de co-regulación, convirtiendo la rutina en un espacio protector y simétrico de escucha relacional, nunca en una imposición punitiva.',
