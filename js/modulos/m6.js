@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════════════
-   MÓDULO 6: EVALUACIÓN PARA LOS APRENDIZAJES (ESTRUCTURA INTEGRAL - MEN 2026)
+   MÓDULO 6: EVALUACIÓN PARA LOS APRENDIZAJES (SESIONES 24 Y 25 - MEN 2026)
    ══════════════════════════════════════════════════════════════════════════ */
 
 if (typeof MODULOS === 'undefined') { var MODULOS = []; }
@@ -11,68 +11,72 @@ MODULOS.push({
   bg: '#FAEEDA', 
   icon: 'ti-chart-arrows-vertical',
   title: 'Evaluación para los Aprendizajes',
-  sub: 'De la medición punitiva al acompañamiento dialógico: evaluar el ser para transformar las realidades escolares',
+  sub: 'De la medición al acompañamiento: evaluar para transformar',
   
-  // ── SESIONES / LABORATORIOS DE APRENDIZAJE ──────────────────────────────
+  // ── SESIONES OFICIALES EXTRAÍDAS DEL DOCUMENTO MAESTRO (MEN 2026) ───────
   sesiones: [
     { 
-      title: 'Sesión 1: Evaluación de Competencias — El Semáforo de la Nota', 
-      tipo: 'Evaluación Formativa', 
+      title: 'Sesión 24: Evaluación de competencias ciudadanas y socioemocionales — El Semáforo de la Nota', 
+      tipo: 'Evaluación formativa', 
       dur: '90 min',
       obj: [
-        'Comprender la evaluación formativa de las capacidades socioemocionales como un proceso dialógico, ético, situado y continuo.',
-        'Diseñar rúbricas analíticas descriptivas que visibilicen la progresión real del ser sin etiquetar las emociones.',
-        'Identificar y mitigar los riesgos éticos de la asignación de calificaciones cuantitativas en el desarrollo socioemocional.'
+        'Comprender la evaluación formativa como un proceso dialógico, situado, ético y continuo.',
+        'Diseñar instrumentos de evaluación auténtica que evidencien el desarrollo real de competencias sin etiquetar las emociones.',
+        'Articular los procesos de evaluación formativa con el modelo concéntrico y las dimensiones del ser.'
       ],
       contenidos: [
-        '<strong>La evaluación formativa auténtica:</strong> Un proceso transparente de retroalimentación constructiva que empodera al estudiante para reconocer sus fortalezas y áreas de mejora, alejándose de los esquemas tradicionales de castigo o control conductual.',
-        '<strong>Los 8 aspectos clave de la evaluación (Salinas, 2025):</strong> Sentido ético, objetos claros, criterios públicos, actividades auténticas de campo, instrumentos diversos, retroalimentación dialógica horizontal, toma de decisiones oportunas y seguimiento sistémico.',
-        '<strong>El peligro de la nota cuantitativa en el DSE:</strong> Calificar numéricamente la empatía, el autorreconocimiento o la resiliencia fomenta la simulación conductual (*performance*) por parte del alumno para salvar la nota, destruyendo la autenticidad del desarrollo moral.',
-        '<strong>Tabla de Progresión Descriptiva vs. Calificación Cuantitativa:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAEEDA; color:#854F0B"><th style="padding:6px; border:1px solid var(--border)">Enfoque Tradicional</th><th style="background:#DCFCE7; color:#15803D; padding:6px; border:1px solid var(--border)">Enfoque MEN 2026 (Salinas)</th><th style="padding:6px; border:1px solid var(--border)">Instrumento de Aula</th></tr><tr><td style="padding:6px; border:1px solid var(--border); color:var(--muted)">Nota numérica fija (Ej: "Sacó 3.5 en empatía").</td><td style="padding:6px; border:1px solid var(--border); font-weight:600; color:#15803D">Nivel descriptor de progresión cualitativa.</td><td style="padding:6px; border:1px solid var(--border)">Rúbrica analítica descriptiva (Explorando -> Liderando).</td></tr><tr><td style="padding:6px; border:1px solid var(--border); color:var(--muted)">Examen teórico acumulativo sobre conceptos.</td><td style="padding:6px; border:1px solid var(--border); font-weight:600; color:#15803D">Evaluación de desempeño en contextos auténticos.</td><td style="padding:6px; border:1px solid var(--border)">Portafolios de evidencias de aula, bitácoras y coevaluación de pares.</td></tr></table>'
+        '<strong>Evaluación formativa versus medición tradicional:</strong> La evaluación concebida como un proceso dinámico, dialógico y continuo de retroalimentación constructiva que visibiliza la progresión, distanciándose de la calificación de control.',
+        '<strong>Los ocho aspectos clave de la evaluación (Salinas, 2025):</strong> Sentido pedagógico, objetos claros, criterios públicos transparentes, actividades auténticas de campo, instrumentos diversos, retroalimentación dialógica horizontal, decisiones oportunas y seguimiento sistémico.',
+        '<strong>La premisa de Santos Guerra (2003):</strong> <i>"Si la evaluación no transforma la práctica y las instituciones, entonces no evalúa, solo califica."</i> El peligro ético de la nota cuantitativa en el DSE al promover simulaciones conductuales destructivas del desarrollo moral.',
+        '<strong>Tabla de Correspondencia Evaluativa y Modelos Cualitativos (Salinas 2025):</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAEEDA; color:#854F0B"><th style="padding:6px; border:1px solid var(--border)">Enfoque Tradicional Punitivo</th><th style="background:#DCFCE7; color:#15803D; padding:6px; border:1px solid var(--border)">Enfoque MEN 2026 (Salinas)</th><th style="padding:6px; border:1px solid var(--border)">Instrumento de Aula Aplicado</th></tr><tr><td style="padding:6px; border:1px solid var(--border); color:var(--muted)">Nota numérica fija (Ej: "Tiene 3.5 en empatía o convivencia").</td><td style="padding:6px; border:1px solid var(--border); font-weight:600; color:#15803D">Nivel descriptor de progresión cualitativa y andamiaje didáctico.</td><td style="padding:6px; border:1px solid var(--border)">Rúbricas analíticas descriptivas de progresión (Explorando -> Liderando).</td></tr><tr><td style="padding:6px; border:1px solid var(--border); color:var(--muted)">Examen teórico acumulativo cerrado sobre conceptos.</td><td style="padding:6px; border:1px solid var(--border); font-weight:600; color:#15803D">Evaluación integral del desempeño en contextos auténticos de campo.</td><td style="padding:6px; border:1px solid var(--border)">Portafolios de evidencias de aula, bitácoras colectivas y observación participante.</td></tr></table>'
       ],
       actividades: [
-        '<strong>Taller de Dilemas Evaluativos "El Semáforo de la Nota":</strong> Analiza el siguiente caso crítico: <i>Un estudiante exhibe una excelente autorregulación en la entrega de sus trabajos y domina los conceptos ciudadanos teóricos en los exámenes, pero agrede verbalmente de forma reiterada a un compañero durante el recreo.</i> Diseña una estrategia de retroalimentación dialógica para intervenir el caso sin recurrir a la anulación cuantitativa de su nota académica.',
-        '<strong>Diseño de Rúbrica de Progresión:</strong> Toma una de las dimensiones analizadas en los módulos 3 o 4 y estructura una rúbrica analítica basada exclusivamente en descriptores de comportamiento observables para el nivel escolar en el que trabajas.'
+        '<strong>Taller de Diseño de Instrumentos Auténticos:</strong> Construcción detallada de una rúbrica analítica descriptiva para una competencia ciudadana o socioemocional específica, diferenciando los descriptores por niveles de desempeño.',
+        '<strong>Laboratorio "El Semáforo de la Nota" (Análisis Crítico):</strong> Estudio de caso: <i>Un estudiante exhibe excelente autorregulación en sus trabajos y domina los conceptos ciudadanos teóricos en exámenes, pero agride verbalmente de forma reiterada a un compañero en el recreo.</i> Diseña una ruta formativa y dialógica de intervención sin recurrir a la anulación de su nota cuantitativa.',
+        '<strong>Diseño de Portafolios de Formación:</strong> Estructuración metodológica de un portafolio estudiantil integrado para el auto-monitoreo de los climas de aula y competencias del ser.',
+        '<strong>Auditoría Evaluativa Institucional:</strong> Examen analítico de los enfoques actuales: ¿Qué evalúa actualmente mi institución en el área de ciudadanía y de qué manera lo hace?'
       ],
       recursos: [
-        'Guía Técnica: "Pautas de Salinas (2025) para la Construcción de Instrumentos de Evaluación Dialógica"',
-        'Lectura de Soporte: Black & Wiliam (1998). Assessment and classroom learning (Síntesis de hallazgos estructurales)'
+        'Figura 8 del documento original: Esquema de la evaluación para los aprendizajes',
+        'Black & Wiliam (1998). Assessment and classroom learning (Síntesis y aplicaciones de retroalimentación)'
       ],
-      rq: 'Si en el boletín oficial de tu colegio se exige asignar una nota numérica al comportamiento o a las competencias socioemocionales, ¿qué acciones pedagógicas implementas para evitar que tus estudiantes simulen conductas deseables solo por incentivos externos?',
-      aq: '¿Qué nivel de destreza consideras que posees para construir retroalimentaciones dialógicas escritas que motiven la autorreflexión de tus alumnos en lugar de emitir juicios morales?'
+      rq: 'Si en el boletín oficial de tu institución se exige asignar una nota numérica al comportamiento o a las capacidades del ser, ¿qué acciones pedagógicas implementas para evitar que tus estudiantes simulen conductas deseables solo por incentivos externos o miedo?',
+      aq: '¿Qué nivel de destreza consideras que posees para construir rúbricas e instrumentos cualitativos descriptivos centrados en los procesos y progresiones del estudiante?'
     },
     { 
-      title: 'Sesión 2: Integración, Cierre y Proyección — Mi Manifiesto de Aula Transformadora', 
-      tipo: 'Cierre y Metacognición Global', 
+      title: 'Sesión 2: Integración, cierre y proyección institucional — Mi Manifiesto de Aula Transformadora', 
+      tipo: 'Cierre y proyección', 
       dur: '120 min',
       obj: [
-        'Sintetizar los aprendizajes conceptuales, epistémicos y didácticos abordados a lo largo de los 6 módulos del curso.',
-        'Estructurar un Plan de Implementación Institucional y de Aula contextualizado en las normativas técnicas y legales colombianas.',
-        'Asumir compromisos éticos públicos y explícitos para transformar la práctica pedagógica y los escenarios del currículo oculto.'
+        'Sintetizar los aprendizajes conceptuales, normativos y didácticos abordados a lo largo del curso y proyectarlos a la práctica institucional.',
+        'Construir un Plan de Implementación Curricular e Institucional contextualizado con las realidades del territorio.',
+        'Asumir compromisos concretos y públicos de transformación pedagógica del aula y del currículo oculto.'
       ],
       contenidos: [
-        '<strong>Revisión Sistémica Integrada:</strong> La articulación indisoluble entre el modelo concéntrico (Ejes A-D), las 14 competencias clave, las pedagogías críticas activas (Aprendizaje-Servicio) y la evaluación formativa.',
-        '<strong>Coherencia de la Política Institucional:</strong> La necesidad imperativa de alinear las transformaciones curriculares de aula con la actualización del Proyecto Educativo Institucional (PEI), el Manual de Convivencia y el Sistema Institucional de Evaluación de los Estudiantes (SIEE).',
-        '<strong>El Educador como Agente de Transformación Cultural:</strong> Comprender que el maestro no es un operario de contenidos centralizados, sino un intelectual de la pedagogía capaz de co-construir escenarios de paz, hospitalidad y co-regulación viva en el territorio.',
-        '<strong>Esquema Técnico del Plan de Implementación Institucional:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAEEDA; color:#854F0B"><th style="padding:6px; border:1px solid var(--border)">Fase de Proyección</th><th style="padding:6px; border:1px solid var(--border)">Eje Operativo (MEN 2026)</th><th style="padding:6px; border:1px solid var(--border)">Evidencia y Soporte de Gestión</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fase 1: Aula Viva</td><td style="padding:6px; border:1px solid var(--border)">Unidades didácticas integradas con metodologías activas.</td><td style="padding:6px; border:1px solid var(--border)">Canvas de Diseño Curricular aplicados en las planeaciones semanales.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fase 2: Convivencia Escolar</td><td style="padding:6px; border:1px solid var(--border)">Reformas restaurativas al Manual de Convivencia y el SIEE.</td><td style="padding:6px; border:1px solid var(--border)">Acta de radicado ante el Consejo Directivo y Académico.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fase 3: Alianza Territorial</td><td style="padding:6px; border:1px solid var(--border)">Proyectos transversales vinculados con actores del entorno.</td><td style="padding:6px; border:1px solid var(--border)">Portafolios del Diario Pedagógico como soporte técnico (Ley 2503).</td></tr></table>'
+        '<strong>Revisión Sistémica Integrada:</strong> Consolidación del engranaje entre el modelo concéntrico (Ejes A-D), las 7 Competencias Ciudadanas, las 7 Competencias Socioemocionales, la estructura de aprendizajes esenciales y la evaluación formativa dialógica.',
+        '<strong>Coherencia de la Política Educativa Escolar:</strong> Alineación estratégica obligatoria entre el Proyecto Educativo Institucional (PEI), el diseño curricular transversal, las matrices de progresión de aprendizajes, el Manual de Convivencia y el SIEE.',
+        '<strong>La escuela como escenario de ciudadanía viva:</strong> El centro educativo comprendido como un nodo de co-construcción democrática real, donde la democracia y el cuidado se aprenden ejerciéndolos en la cotidianidad cotidiana.',
+        '<strong>Esquema Técnico del Plan de Implementación Institucional:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#FAEEDA; color:#854F0B"><th style="padding:6px; border:1px solid var(--border)">Fase de Proyección</th><th style="padding:6px; border:1px solid var(--border)">Eje Operativo Transversal (MEN 2026)</th><th style="padding:6px; border:1px solid var(--border)">Evidencia y Soporte Técnico de Gestión</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fase 1: Aula Activa</td><td style="padding:6px; border:1px solid var(--border)">Unidades didácticas integradas con metodologías críticas de Aprendizaje-Servicio.</td><td style="padding:6px; border:1px solid var(--border)">Canvas de Diseño Curricular aplicados en las planeaciones bimestrales de área.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fase 2: Convivencia Democrática</td><td style="padding:6px; border:1px solid var(--border)">Reformas restaurativas y participativas al Manual de Convivencia y al SIEE.</td><td style="padding:6px; border:1px solid var(--border)">Acta de radicado oficial y sustentación ante el Consejo Directivo y Académico.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fase 3: Nodo Territorial</td><td style="padding:6px; border:1px solid var(--border)">Proyectos transversales en red vinculados con actores, familias y líderes del entorno.</td><td style="padding:6px; border:1px solid var(--border)">Portafolios unificados del Diario Pedagógico como soporte de la Ley 2503.</td></tr></table>'
       ],
       actividades: [
-        '<strong>Lienzo de Consolidación "Mi Manifiesto de Aula Transformadora":</strong> Revisa el historial de tus reflexiones guardadas en las estaciones del Diario Pedagógico. Compila las propuestas curriculares del Módulo 5 y los resguardos éticos analizados en las competencias socioemocionales para redactar tu documento final de compromisos pedagógicos.',
-        '<strong>El Botón de Oro (Exportación):</strong> Utiliza el comando de la interfaz de la plataforma en la sección de Diario para imprimir o exportar tu bitácora integrada en formato PDF. Este insumo consolidará tu soporte técnico de cumplimiento transversal para la Cátedra de Educación Emocional ante las directivas de tu institución.'
+        '<strong>Construcción del Plan de Implementación Institucional:</strong> Estructuración de la matriz de gestión del curso definiendo objetivos, acciones de aula, responsables, cronogramas y evidencias medibles.',
+        '<strong>Lienzo de Consolidación "Mi Manifiesto de Aula Transformadora":</strong> Compilación de las reflexiones guardadas en las estaciones del Diario Pedagógico. Formulación de los compromisos individuales: <i>¿Qué cambio concreto y verificable implementaré en mis aulas en los próximos 30 días?</i>',
+        '<strong>Diseño de la Carta a la Comunidad Educativa:</strong> Redacción de un documento o manifiesto institucional participativo bajo la pregunta: <i>¿Cómo comunicamos y socializamos de forma asertiva estos lineamientos curriculares con las familias y el territorio?</i>',
+        '<strong>El Botón de Oro (Exportación de Evidencias):</strong> Uso de la interfaz para exportar o imprimir las bitácoras integradas, constituyendo el soporte técnico de cumplimiento transversal para la Cátedra de Educación Emocional (Ley 2503).'
       ],
       recursos: [
-        'Documento Maestro de Cierre: Lineamientos Curriculares Nacionales para la Formación Integral (MEN 2026)',
-        'Formato Ejecutivo de Gestión: Plantilla Oficial para el Plan de Ajuste al Manual de Convivencia y el SIEE'
+        'Documento completo: Lineamientos Curriculares para la Formación Ciudadana y el DSE (MEN 2026)',
+        'Todos los recursos, formatos editables y herramientas didácticas de apoyo del curso'
       ],
       rq: 'Al llegar a la línea de cierre de este viaje de cirugía curricular profunda y autoformación, ¿en qué mutó o se reconfiguró tu comprensión de ti mismo/a como modelo de co-regulación emocional y promotor de la ciudadanía crítica en Colombia?',
       aq: '¿Qué tan listo/a, empoderado/a y respaldado/a técnicamente te sientes para liderar los debates de actualización curricular y los comités de convivencia dentro de tu comunidad educativa?'
     }
   ],
   
-  // ── EVALUACIÓN FORMATIVA Y CONTROL DE PROGRESO (QUIZ) ──────────────────
+  // ── EVALUACIÓN FORMATIVA DEL MÓDULO 6 ───────────────────────────────────
   quiz: [
     {
-      q: 'Al evaluar formativamente los aprendizajes en el desarrollo socioemocional y ciudadano (Módulo 6), ¿cuál enfoque metodológico cumple con el sentido ético planteado por Salinas (2025)?',
+      q: 'Al evaluar formativamente los aprendizajes en el desarrollo socioemocional y ciudadano (Módulo 6), ¿cuál enfoque metodológico cumple con el sentido ético planteado por Salinas (2025) y los lineamientos del MEN?',
       opts: [
         'Estructurar una prueba escrita acumulativa de opción múltiple al término de cada período para calificar la memoria de los conceptos teóricos.',
         'Asignar una calificación cuantitativa del 1.0 al 5.0 en el boletín de notas oficial basándose en el nivel de obediencia, silencio y pasividad exhibido por el estudiante.',
