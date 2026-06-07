@@ -1,275 +1,802 @@
-/* ══════════════════════════════════════════════════════════════════════════
-   MÓDULO 4: COMPETENCIAS SOCIOEMOCIONALES (SESIONES 14 A 20 COMPLETAS - MEN 2026)
-   ══════════════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════
+   M4 — Las 7 Competencias Socioemocionales (CSE)
+   Fuente: Capítulo 4 del documento MEN 2026
+   ══════════════════════════════════════════════════════════ */
 
-if (typeof MODULOS === 'undefined') { var MODULOS = []; }
-
-MODULOS.push({ 
-  id: 'm4', 
-  num: 'Módulo 4', 
-  color: '#993556', 
-  bg: '#FBEAF0', 
-  icon: 'ti-heart',
-  title: 'Competencias Socioemocionales',
-  sub: 'Siete competencias para habitar la interioridad y la relación',
-  
-  // ── 7 SESIONES INDIVIDUALES COMPLETAS SEGÚN EL DOCUMENTO ORIGINAL (MEN 2026)
+MODULOS.push({
+  id: 'm4',
+  num: 'Módulo 4',
+  icon: '💚',
+  color: '#9B2750',
+  bg: '#FDEDF3',
+  titulo: 'Las 7 Competencias Socioemocionales',
+  subtitulo: 'Conciencia, regulación, empatía, decisión y resiliencia como base del ejercicio ciudadano',
+  duracion: '7 sesiones · 10.5 horas',
+  descripcion: 'Estudiamos en profundidad cada una de las 7 Competencias Socioemocionales del MEN 2026: su fundamento científico, sus aprendizajes esenciales por nivel, sus indicadores y su articulación con las CC.',
   sesiones: [
-    { 
-      title: 'Sesión 14: Conciencia emocional — El Diccionario Fisiológico', 
-      tipo: 'CSE-1', 
-      dur: '75 min',
-      obj: [
-        'Identificar, nombrar y comprender las expresiones corporales de las emociones propias y ajenas.',
-        'Comprender las emociones como juicios evaluativos de valor basados en la teoría de Nussbaum.',
-        'Desarrollar estrategias pedagógicas estructuradas de conciencia emocional por niveles educativos.'
-      ],
-      contenidos: [
-        '<strong>Conciencia emocional como pilar fundamental:</strong> Constituye la base indispensable de la infraestructura de todo el Desarrollo Socioemocional (DSE). Las emociones modulan directamente la percepción, la toma de decisiones y el clima relacional colectivo.',
-        '<strong>Las emociones como juicios de valor:</strong> Análisis conceptual de la perspectiva de Martha Nussbaum; las emociones expresan de forma interna lo que consideramos valioso para nuestra subsistencia.',
-        '<strong>Glosario y granularidad afectiva (Barrett / Bisquerra):</strong> Ampliar el repertorio y vocabulario de términos emocionales similares permite respuestas conductuales más adaptativas, precisas y reguladas en contextos de aula.'
-      ],
-      actividades: [
-        '<strong>Laboratorio "El Mapa Corporal de las Emociones":</strong> Ejercicio de escaneo corporal profundo donde los participantes identifican y registran cartográficamente en una silueta en qué zonas físicas experimentan la rabia, el miedo, la indignación o la alegría antes de que se desborden conductualmente.',
-        '<strong>Diseño de Rutina de Apertura:</strong> Estructuración de un protocolo de sintonía emocional de 5 minutos (Check-in) adaptado al grupo de edad correspondiente para iniciar las clases tradicionales.',
-        '<strong>Bitácora del Diario Emocional:</strong> Implementación de un registro semanal para analizar de manera sistemática los detonadores contextuales del aula, las respuestas fisiológicas y los pensamientos automáticos.'
-      ],
-      recursos: [
-        'Tabla 18 del documento original: organización y modelos curriculares integrados',
-        'Bisquerra, R. (2009). Psicopedagogía de las emociones (Glosarios y dinámicas)'
-      ],
-      rq: 'Cuando un estudiante reacciona con agresividad o apatía crónicas en tu salón, ¿intentas castigar la conducta externa directamente o eres capaz de descifrar el juicio de valor oculto y la emoción desregulada que detonan su respuesta?',
-      aq: 'Análisis crítico sobre el nivel de desarrollo de tu propia granularidad emocional y la lectura fina de tus señales corporales de fatiga en las horas de mayor saturación laboral.'
-    },
-    { 
-      title: 'Sesión 15: Regulación emocional — Primeros Auxilios Emocionales', 
-      tipo: 'CSE-2', 
-      dur: '75 min',
-      obj: [
-        'Comprender la regulación emocional como un proceso activo, estratégico y adaptativo en el entorno educativo.',
-        'Desarrollar e implementar estrategias de autorregulación saludables aplicables en contextos de crisis escolar.',
-        'Diferenciar técnicamente entre los mecanismos de regulación adaptativa, inundación afectiva y supresión emocional crónica.'
-      ],
-      contenidos: [
-        '<strong>Regulación emocional (CSE-2):</strong> Capacidad de gestionar, modular y canalizar la experiencia emocional. El peligro sistémico de la supresión afectiva crónica como detonante de afecciones psicosomáticas y rupturas en el tejido interpersonal.',
-        '<strong>El modelo procesual de James Gross (2014):</strong> Selección de la situación, modificación del entorno, despliegue intencional de la atención, cambio cognitivo (reevaluación) y modulación conductual de la respuesta.',
-        '<strong>El educador como modelo de co-regulación:</strong> La urgencia de la coherencia entre el discurso y la práctica relacional diaria. La calma y el equilibrio nervioso se transmiten e interiorizan a través de la postura corporal y el tono de voz.'
-      ],
-      actividades: [
-        '<strong>Simulador de Emergencia "Primeros Auxilios Emocionales":</strong> Protocolo práctico ante situaciones de desregulación conductual masiva en el salón. Diseño de respuestas no verbales y técnicas de respiración consciente (reevaluación cognitiva) antes de la intervención verbal.',
-        '<strong>Diseño del "Rincón de la Calma":</strong> Estructuración física de un espacio pedagógico en el aula dotado de recursos sensoriales autorreguladores, normalizando su acceso no como castigo, sino como derecho al bienestar.',
-        '<strong>Mapeo de Disparadores Docentes:</strong> Análisis de caso enfocado en decodificar los propios detonadores de frustración del maestro para evitar dinámicas reactivas.'
-      ],
-      recursos: [
-        'Gross, J.J. (2014). Handbook of emotion regulation (Segunda edición)',
-        'CASEL (2020). SEL Framework: Estrategias organizacionales de regulación'
-      ],
-      rq: '¿Cuál es tu detonador emocional más recurrente en el aula de clases? Cuando ese disparador se activa, ¿qué estrategia real de reevaluación cognitiva o pausa reflexiva utilizas para evitar una lucha de poder con el estudiante?',
-      aq: '¿Qué tan preparado/a te sientes para mantener la calma profunda y modelar la co-regulación nerviosa cuando un salón se encuentra desbordado emocionalmente?'
-    },
-    { 
-      title: 'Sesión 16: Toma de decisiones responsables y éticas — Matriz de Impacto', 
-      tipo: 'CSE-3', 
-      dur: '75 min',
-      obj: [
-        'Desarrollar la capacidad de deliberación ética autónoma ante situaciones escolares complejas.',
-        'Articular de forma sistémica las emociones, los valores éticos institucionales y el razonamiento analítico.',
-        'Diseñar dilemas morales situados y contextualizados apropiados para distintos niveles educativos.'
-      ],
-      contenidos: [
-        '<strong>La secuencia de la decisión ética:</strong> Identificación objetiva de la situación, consideración profunda de perspectivas diversas, evaluación crítica de consecuencias colectivas, actuación coherente y auto-reflexión.',
-        '<strong>Teoría de los Marcadores Somáticos (Antonio Damasio):</strong> Las emociones analizadas no como obstáculos de la razón, sino como indicadores imprescindibles para la toma de decisiones responsables.',
-        '<strong>Autonomía deliberativa frente a heteronomía (Kohlberg):</strong> Educar y potenciar que el estudiante actúe guiado por convicciones éticas internas y por el bien común, superando el miedo punitivo al castigo o la simple búsqueda de recompensa.'
-      ],
-      actividades: [
-        '<strong>Taller de Dilemas Morales Situados:</strong> Análisis de casos complejos contextualizados en la realidad escolar colombiana (ej. el uso de tecnologías para el fraude, la presión de grupo frente a exclusiones o el cuidado de los recursos públicos de la sede).',
-        '<strong>Diseño con la "Matriz de Impacto Cruzado":</strong> Estructuración de una secuencia didáctica de aula que obligue a los alumnos a proyectar el impacto a corto y largo plazo de sus decisiones personales sobre múltiples actores comunitarios.'
-      ],
-      recursos: [
-        'Damasio, A. (2010). Self comes to mind: Constructing the conscious brain',
-        'Marcos conceptuales del desarrollo moral de Lawrence Kohlberg (Fichas analíticas)'
-      ],
-      rq: 'Cuando tus estudiantes cumplen las normas de convivencia del salón, ¿lo hacen desde la autonomía y la convicción del respeto mutuo o por una respuesta heterónoma de miedo al reporte del observador?',
-      aq: '¿Qué nivel de habilidad consideras que posees para estructurar dilemas éticos abiertos que dividan la opinión del grupo y obliguen a la deliberación argumentada?'
-    },
-    { 
-      title: 'Sesión 17: Empatía y reconocimiento del otro — Círculos de Historias', 
-      tipo: 'CSE-4', 
-      dur: '75 min',
-      obj: [
-        'Comprender la empatía en su triple dimensión complementaria: cognitiva, afectiva y ética (acción compasiva).',
-        'Desarrollar e implementar estrategias de escucha activa radical en la cotidianidad del aula.',
-        'Articular la empatía con la convivencia democrática pluralista y los procesos territoriales de reconciliación.'
-      ],
-      contenidos: [
-        '<strong>Los componentes de la empatía (Decety):</strong> Tomar la perspectiva mental del otro (cognitiva), experimentar resonancia afectiva (afectiva) y movilizarse hacia la solidaridad solidaria (respuesta empática / compasión).',
-        '<strong>Empatía y justicia democrática:</strong> Análisis de la perspectiva de Martha Nussbaum; la imaginación literaria y la capacidad de concebir los mundos internos de aquellos marginados es el cimiento de las instituciones justas.',
-        '<strong>La escucha activa en el aula:</strong> Condiciones de presencia plena, suspensión de juicios de valor, paráfrasis de validación y formulación de preguntas de clarificación abiertas.'
-      ],
-      actividades: [
-        '<strong>Ejercicio de Escucha Radical "Círculos de Historias":</strong> Dinámica estructurada en parejas donde los estudiantes escuchan un relato de vida de su compañero durante 5 minutos continuos sin interrumpir, obligándose luego a parafrasear y validar sus sentimientos.',
-        '<strong>Análisis Narrativo de Memoria Histórica:</strong> Estudio didáctico de un testimonio oficial de víctimas del conflicto armado colombiano orientando el desarrollo de la empatía histórica.',
-        '<strong>Taller de Prevención de la Fatiga Empática:</strong> Estrategias de autocuidado relacional dirigidas especialmente al cuerpo docente.'
-      ],
-      recursos: [
-        'Decety & Lamm (2006). Human empathy through the lens of social neuroscience',
-        'Jones et al. (2017). Social and Emotional Learning (SEL) and academic achievement'
-      ],
-      rq: '¿Existe algún perfil de estudiante o familia en tu comunidad educativa con el que te cueste profundamente empatizar? Al examinar tus propios sesgos culturales, ¿qué barrera te impide comprender su historia?',
-      aq: '¿Qué tan capacitado/a te sientes para contener de forma segura las emociones intensas que emergen en el grupo cuando se abordan relatos de dolor o discriminación real?'
-    },
-    { 
-      title: 'Sesión 18: Habilidades de relación y resolución pacífica de conflictos — Guión CNV', 
-      tipo: 'CSE-5', 
-      dur: '90 min',
-      obj: [
-        'Desarrollar habilidades comunicativas asertivas para la gestión constructiva y pedagógica del conflicto escolar.',
-        'Conocer, apropiar y practicar estrategias técnicas de mediación escolar y círculos restaurativos.',
-        'Comprender el conflicto escolar como una oportunidad viva de aprendizaje ciudadano y socioemocional.'
-      ],
-      contenidos: [
-        '<strong>El conflicto como fenómeno inherente y natural:</strong> Cambiar el enfoque de supresión o eliminación del conflicto por el enfoque de transformación pedagógica para visibilizar necesidades insatisfechas.',
-        '<strong>Comunicación No Violenta (Marshall Rosenberg):</strong> Estructuración técnica de interacciones basadas en 4 pasos: Observación objetiva + Identificación del sentimiento + Expresión de la necesidad central + Formulación de una petición concreta.',
-        '<strong>Justicia restaurativa escolar:</strong> Responder colectivamente a las quiebras de convivencia mediante tres preguntas directas: ¿Quién fue afectado? ¿Qué necesita para reparar el daño? ¿Cómo restablecemos los vínculos de confianza?'
-      ],
-      actividades: [
-        '<strong>Laboratorio "Plantillas de Oraciones CNV":</strong> Práctica en tríos interpretando roles cruzados (agresor, parte afectada y mediador formativo) aplicando guiones lingüísticos precisos de CNV para desarmar incidentes comunes de pasillo.',
-        '<strong>Diseño de Acuerdos de Convivencia Co-construidos:</strong> Secuencia metodológica para elaborar los pactos del aula de forma horizontal con los estudiantes, traduciendo prohibiciones en compromisos de cuidado mutuo.',
-        '<strong>Auditoría de Autoridad Institucional:</strong> Evaluación de si tus prácticas reflejan autoridad legítima democrática o autoritarismo vertical.'
-      ],
-      recursos: [
-        'Bickmore, K. (2015). Procesos de mediación escolar y paz dialógica en contextos de exclusión',
-        'Centro Nacional de Memoria Histórica (CNMH) (2018). Pedagogías de la memoria para la escuela'
-      ],
-      rq: 'Cuando dialogas con un estudiante que cometió una falta de convivencia, ¿le hablas describiendo los hechos objetivos observables o inicias lanzando juicios, etiquetas y sermones morales que bloquean su disposición al cambio?',
-      aq: '¿Qué nivel de fluidez consideras que posees para estructurar peticiones concretas, viables y respetuosas utilizando el modelo técnico de la CNV?'
-    },
-    { 
-      title: 'Sesión 19: Transformación de emociones políticas en acción ciudadana — Canvas de Esperanza', 
-      tipo: 'CSE-6', 
-      dur: '90 min',
-      obj: [
-        'Comprender las emociones políticas colectivas como motores de acción ciudadana de transformación.',
-        'Desarrollar la capacidad didáctica de canalizar el malestar o la indignación social hacia la deliberación y la propuesta.',
-        'Diseñar proyectos de aula transversales que vinculen la emoción pública con el análisis crítico y la intervención.'
-      ],
-      contenidos: [
-        '<strong>La política cultural de las emociones (Sara Ahmed):</strong> Las emociones no se restringen a la intimidad individual; viajan entre discursos y cuerpos de forma colectiva, configurando comunidades afectivas, exclusiones y barreras sociales.',
-        '<strong>Educar las emociones políticas (Martha Nussbaum):</strong> Comprender cómo el cultivo intencional del amor, la compasión y la indignación ética frente a la injusticia sustenta y da estabilidad a las instituciones democráticas.',
-        '<strong>La transformación democrática del aula:</strong> Rutas metodológicas para guiar al grupo a transitar de la queja destructiva pasiva hacia la deliberación informada, la movilización pacífica y la propuesta de cambio.'
-      ],
-      actividades: [
-        '<strong>Taller con el "Canvas Diseñador de Esperanza Activa":</strong> Toma una noticia local o conflicto socioambiental del territorio que despierte indignación o frustración en tus jóvenes. Aplica el canvas para estructurar un proyecto de Aprendizaje-Servicio que convierta ese malestar en una iniciativa comunitaria pacífica.',
-        '<strong>Análisis de Expresiones Colectivas:</strong> Estudio de movimientos juveniles e iniciativas escolares de arte y música que canalizan emociones de forma restaurativa.',
-        '<strong>Simulacro de Mediación de Debates Polarizados:</strong> Estrategias de moderación docente para neutralizar la agresión verbal en discusiones de alta polarización política o social.'
-      ],
-      recursos: [
-        'Ahmed, S. (2004). The cultural politics of emotion (Análisis de discursos afectivos)',
-        'Nussbaum, M. (2014). Emociones políticas: ¿Por qué el amor es importante para la justicia?'
-      ],
-      rq: '¿Tus estudiantes expresan apatía y desesperanza frente al futuro del país, o logras ofrecerles herramientas pedagógicas para que sientan que sus iniciativas pueden transformar la realidad de su entorno inmediato?',
-      aq: '¿Qué tan preparado/a te sientes para mediar una discusión en clase sobre un tema político álgido y polarizante sin perder tu neutralidad pedagógica?'
-    },
-    { 
-      title: 'Sesión 20: Resiliencia comunitaria orientada a la paz — El Cofre del Territorio', 
-      tipo: 'CSE-7', 
-      dur: '90 min',
-      obj: [
-        'Comprender la resiliencia no como un atributo biológico individual, sino como una capacidad ecosistémica colectiva.',
-        'Desarrollar estrategias pedagógicas transversales que fortalezcan la esperanza activa como fuerza social transformadora.',
-        'Diseñar experiencias escolares de reconstrucción de confianza y reparación simbólica en contextos de adversidad.'
-      ],
-      contenidos: [
-        '<strong>Resiliencia comunitaria (Boris Cyrulnik):</strong> La capacidad colectiva de los sistemas humanos de afrontar adversidades históricas y tejer andamiajes afectivos, redes de apoyo mutuo y ciclos de protección relacional para transformar el sufrimiento en fuerza activa.',
-        '<strong>La esperanza como disposición activa:</strong> Superar el optimismo pasivo ingenuo; la esperanza entendida como una práctica deliberada y comunitaria orientada hacia el porvenir (Nussbaum).',
-        '<strong>La Imaginación Moral (Lederach):</strong> Capacidad de concebir el nacimiento de una realidad escolar pacífica diferente arraigada en contextos marcados por historias crónicas de violencia o vulnerabilidad.'
-      ],
-      actividades: [
-        '<strong>Taller de Campo "El Cofre del Territorio":</strong> Diseño de una secuencia didáctica para guiar al grupo en la documentación y celebración de las fortalezas culturales e historias de resistencia pacífica ocultas en su barrio.',
-        '<strong>Codiseño de un Ritual de Reparación Simbólica Escolar:</strong> Planificación de un acto colectivo institucional (siembra de un jardín de la memoria, mural colectivo o cápsula del tiempo del curso) para sanar colectivamente una herida de convivencia.',
-        '<strong>Cartografía Social de Esperanza:</strong> Mapeo interactivo de actores de protección comunitaria que rodean la escuela.'
-      ],
-      recursos: [
-        'Tabla 16 del documento original: Indicadores de resiliencia ecosistémica comunitaria',
-        'Lederach, J.P. (2005). La imaginación moral: el arte y el alma de la construcción de la paz'
-      ],
-      rq: 'Al mirar la historia de adversidad de la comunidad que rodea tu escuela (brechas, secuelas de la violencia, desplazamiento), ¿qué fortalezas invisibles y saberes de las familias has ignorado y podrías empezar a honrar públicamente en tu aula?',
-      aq: '¿Qué nivel de preparación emocional y técnica consideras que posees para liderar actos escolares solemnes de memoria histórica y reconciliación comunitaria?'
-    }
-  ],
-  
-  // ── EVALUACIÓN FORMATIVA DEL MÓDULO 4 ───────────────────────────────────
-  quiz: [
     {
-      q: '¿Cuál es el enfoque central que diferencia a la "resiliencia comunitaria" (Sesión 20 - CSE-7) de la visión psicológica clínica tradicional de la resiliencia?',
-      opts: [
-        'La resiliencia comunitaria sostiene que las personas deben soportar el sufrimiento de forma individual y silenciosa sin solicitar auxilio de las redes externas.',
-        'Plantea que la resiliencia no es una característica genética o puramente individual, sino una capacidad colectiva que se edifica tejiendo redes de apoyo, andamiajes afectivos comunitarios y expresiones culturales comunes para transformar el trauma social en fuerza activa de cambio.',
-        'Afirma que las comunidades afectadas de forma crónica por la exclusión carecen de recursos internos y dependen exclusivamente de la intervención de expertos externos.',
-        'Establece que la resiliencia es una asignatura teórica abstracta que debe evaluarse únicamente con metodologías memorísticas cuantitativas.'
+      id: 's4_intro',
+      num: 'Sesión 0',
+      titulo: 'Panorama general: las 7 CSE y su organización por ejes',
+      duracion: '30 min',
+      tipo: 'Introducción visual',
+      objetivo: 'Tener una visión de conjunto de las 7 Competencias Socioemocionales, su relación con los ejes concéntricos y la interdependencia que las une.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: 'Las 7 CSE: una arquitectura con sentido',
+          texto: `Las 7 Competencias Socioemocionales del MEN 2026 no son una lista arbitraria. Están organizadas en tres ejes del modelo concéntrico y se articulan de forma que el desarrollo de una refuerza a las otras:
+
+<ul>
+<li><strong>Eje A (Yo conmigo mismo):</strong> CSE-1 Conciencia emocional → CSE-2 Regulación emocional → CSE-3 Toma de decisiones éticas. Sin conocerse, no se puede regular. Sin regular, no se puede decidir bien.</li>
+<li><strong>Eje B (Yo con los otros):</strong> CSE-4 Empatía → CSE-5 Habilidades de relación. La empatía sin habilidades de comunicación queda en intención. Las habilidades sin empatía quedan en técnica.</li>
+<li><strong>Eje C (Yo con la sociedad):</strong> CSE-6 Emociones políticas → CSE-7 Resiliencia comunitaria. La indignación sin esperanza paraliza. La esperanza sin acción colectiva se vuelve ingenuidad.</li>
+</ul>
+
+<blockquote>"El desarrollo de las competencias socioemocionales no puede entenderse como el trabajo aislado de habilidades específicas, sino como el cultivo de una disposición integral hacia la vida personal y colectiva." <cite>— MEN, 2026, p. 67</cite></blockquote>`
+        },
+        {
+          tipo: 'grafico',
+          titulo: 'Figura 4 — Las 7 CSE organizadas por eje (MEN 2026)',
+          tipo_grafico: 'figura_cse',
+          nota: 'Fuente: Figura 4, MEN 2026, p. 68. Las 7 CSE son interdependientes: el desarrollo de una fortalece a todas las demás.',
+          datos: []
+        }
       ],
-      c: 1,
-      exp: 'Para Boris Cyrulnik y los marcos de la formación integral del MEN, la resiliencia es un fenómeno ecosistémico relacional; surge de la calidad de los vínculos, las redes de apoyo mutuo y la capacidad de la comunidad educativa de otorgar un nuevo sentido colectivo a sus historias de adversidad, protegiendo las trayectorias de sus niños.'
+      actividades: [
+        {
+          tipo: 'reflexion',
+          titulo: '¿Cuál CSE es mi punto más fuerte? ¿Y el más débil?',
+          icono: '🪞',
+          instruccion: 'Observa el mapa de las 7 CSE. Sin pensarlo demasiado: ¿cuál reconoces más desarrollada en tu práctica docente? ¿Cuál sientes que tienes menos presente o menos trabajada? Escribe una línea para cada una. Esta autoevaluación inicial servirá como punto de referencia al final del módulo.',
+          tiempo: '10 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — Sección 2.7.2: Competencias socioemocionales (pp. 66–90)', url: '#', meta: 'Definición completa de las 7 CSE' }
+      ],
+      evaluacion: { titulo: '', preguntas: [] },
+      metacognicion: {
+        preguntas: [
+          '¿Qué te dice sobre la arquitectura del modelo que las CSE de autoconciencia (eje A) preceden a las de relación (eje B) y estas a las de participación social (eje C)?',
+          '¿Cuál de los tres ejes está más ausente en el currículo de tu institución actualmente?'
+        ]
+      }
     },
     {
-      q: 'Al aplicar el modelo procesual de regulación emocional (Sesión 15 - CSE-2) en el aula a través de los "Primeros Auxilios Emocionales", ¿qué acción define a la co-regulación docente adaptativa?',
-      opts: [
-        'Elevar el volumen de voz e imponer de forma amenazante la autoridad directiva para suprimir la conducta disruptiva del alumno de manera inmediata.',
-        'Utilizar de forma consciente el sistema nervioso del propio educador (manteniendo un tono de voz pausado, una postura física corporal no amenazante y una respiración profunda controlada) para estabilizar el entorno del aula antes de intervenir verbalmente.',
-        'Ignorar por completo la conducta del estudiante desregulado hasta que se calme de forma autónoma fuera del salón sin acompañamiento.',
-        'Enviar inmediatamente al estudiante a la coordinación de convivencia sin entablar ningún tipo de diálogo, contención o análisis previo.'
+      id: 's4_0',
+      num: 'Sesión 1',
+      titulo: 'CSE1 · Conciencia emocional: reconocer, nombrar y comprender las emociones',
+      duracion: '90 min',
+      tipo: 'CSE-1',
+      objetivo: 'Comprender la CSE1 en sus dimensiones cognitiva, afectiva y corporal, y desarrollar estrategias pedagógicas para trabajar la conciencia emocional en todos los niveles educativos.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. Definición desde el documento MEN 2026',
+          texto: `<blockquote>"La conciencia emocional es la capacidad de reconocer, identificar y comprender las propias emociones y las de los demás, incluyendo la habilidad para nombrarlas con precisión y entender su impacto en el comportamiento y las relaciones." <cite>— MEN, 2026, p. 135</cite></blockquote>
+
+El documento fundamenta esta competencia en tres tradiciones científicas convergentes:
+
+<strong>1. Neurociencia afectiva (Damasio, 2010):</strong> Las emociones son procesos biológicos y cognitivos simultáneamente. No son opuestas a la razón: son su base. Sin señales emocionales, la toma de decisiones se deteriora gravemente.
+
+<strong>2. Teoría de la evaluación cognitiva (Lazarus, 1991):</strong> Las emociones son respuestas a valoraciones que hacemos del mundo. Sentir miedo no es automático: es el resultado de evaluar una situación como amenazante. Esta cognición puede ser enseñada y transformada.
+
+<strong>3. Granularidad emocional (Barrett, 2018):</strong> Las personas con mayor vocabulario emocional gestionan mejor sus estados internos. No es lo mismo "estar mal" que distinguir entre frustración, decepción, vergüenza o tristeza. Cada emoción pide una respuesta diferente.`
+        },
+        {
+          tipo: 'grafico',
+          titulo: '2. Las dimensiones de la conciencia emocional',
+          tipo_grafico: 'tres_niveles',
+          datos: [
+            { nivel: 'Reconocer', desc: 'Identificar la emoción cuando ocurre en el cuerpo y la mente. ¿Qué estoy sintiendo ahora?', color: '#F59E0B' },
+            { nivel: 'Nombrar', desc: 'Ponerle nombre preciso. No "mal", sino "frustrado porque mis esfuerzos no son reconocidos".', color: '#3B82F6' },
+            { nivel: 'Comprender', desc: 'Entender qué la generó, qué significa y qué pide de mí. ¿Qué me dice esta emoción sobre lo que valoro?', color: '#0C7A4A' },
+          ]
+        },
+        {
+          tipo: 'tabla',
+          titulo: '3. Aprendizajes esenciales por nivel educativo',
+          tabla: {
+            cabeceras: ['Nivel', 'Aprendizaje esencial', 'Indicadores de desempeño'],
+            filas: [
+              ['Educación Inicial', 'Reconoce y expresa sus emociones básicas (alegría, tristeza, miedo, enojo) y comienza a identificarlas en los demás.', '• Nombra al menos 4 emociones básicas
+• Señala en su cuerpo dónde siente las emociones
+• Reconoce expresiones emocionales en rostros y gestos'],
+              ['Básica Primaria', 'Identifica un vocabulario ampliado de emociones, las conecta con situaciones que las generan y las expresa de forma apropiada.', '• Usa más de 10 palabras emocionales con precisión
+• Explica qué causó su emoción
+• Diferencia la emoción de la reacción'],
+              ['Básica Secundaria', 'Analiza sus estados emocionales con profundidad, reconoce la influencia del contexto social y cultural en las emociones.', '• Identifica emociones complejas (vergüenza, orgullo, envidia)
+• Conecta emociones con valores y creencias
+• Reconoce cómo el contexto social moldea lo que siente'],
+              ['Educación Media', 'Comprende las emociones como señales de información sobre sí mismo y el mundo, y las usa para la toma de decisiones éticas.', '• Usa las emociones como información en decisiones complejas
+• Reconoce sesgos emocionales en su razonamiento
+• Articula emoción con acción ciudadana'],
+            ]
+          }
+        },
+        {
+          tipo: 'lectura',
+          titulo: '4. La conciencia emocional del docente: por qué importa',
+          texto: `El documento MEN 2026 hace un énfasis especial en la conciencia emocional del docente, no solo del estudiante:
+
+<blockquote>"Un docente que no reconoce sus propias emociones en el aula las actuará sin conciencia: el miedo se volverá rigidez, la frustración se volverá hostilidad, la inseguridad se volverá autoritarismo. El docente emocionalmente consciente transforma esas emociones en información pedagógica." <cite>— MEN, 2026, p. 140</cite></blockquote>
+
+Las emociones del docente más frecuentes en el aula y su potencial pedagógico:
+<ul>
+<li><strong>Frustración:</strong> Señal de que algo no está funcionando como esperaba. ¿Qué necesita cambiar?</li>
+<li><strong>Aburrimiento:</strong> Señal de que la actividad no conecta con los intereses genuinos. ¿Qué dice esto sobre mi clase?</li>
+<li><strong>Alegría:</strong> Señal de que hay flujo y conexión. ¿Qué lo generó? ¿Cómo replicarlo?</li>
+<li><strong>Ansiedad:</strong> Señal de incertidumbre. ¿Qué no sé que necesito saber?</li>
+</ul>`
+        }
       ],
-      c: 1,
-      exp: 'La co-regulación se fundamenta en la neurobiología interpersonal: un sistema nervioso en calma tiene la capacidad de estabilizar a otro que se encuentra inundado emocionalmente. Al proyectar equilibrio corporal y tonal, el maestro reduce la reactividad del cerebro del alumno, abriendo el camino para la reevaluación cognitiva posterior.'
+      actividades: [
+        {
+          tipo: 'individual',
+          titulo: 'Mapa corporal de mis emociones en el aula',
+          icono: '🧠',
+          instruccion: 'Dibuja un contorno de cuerpo humano. Ubica en él dónde sientes físicamente: la frustración cuando un estudiante no entiende, la alegría cuando una clase sale bien, el miedo antes de una observación de clase, la indignación ante una injusticia. ¿Son los mismos lugares para todos?',
+          tiempo: '15 min'
+        },
+        {
+          tipo: 'grupal',
+          titulo: 'Ampliando el vocabulario emocional',
+          icono: '📝',
+          instruccion: 'En grupos: partan de la palabra "enojo". Generen 10 palabras más específicas que distingan tipos de enojo (frustración, indignación, resentimiento, irritación...). Hagan lo mismo con "tristeza" y "miedo". Discutan: ¿Por qué importa esta distinción en el aula?',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'diseno',
+          titulo: 'Rutina de conciencia emocional para el aula',
+          icono: '✏️',
+          instruccion: 'Diseña una rutina de 5 minutos de conciencia emocional para iniciar tus clases. Debe ser apropiada para tu nivel, no invasiva, y generar datos que te ayuden a tomar decisiones pedagógicas. ¿Cómo la evaluarías después de un mes?',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mi alfabetización emocional',
+          icono: '🪞',
+          instruccion: 'Escribe: "La emoción que más trabajo en reconocer en mí mismo/a es... La emoción que más me cuesta mostrar frente a mis estudiantes es... Lo que cambiaría en mi aula si fuera más emocionalmente consciente es..."',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE1: Conciencia emocional (pp. 135-148)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'libro', titulo: 'Damasio, A. (2010) — El error de Descartes', url: '#', meta: 'Base neurológica de las emociones' },
+        { tipo: 'libro', titulo: 'Barrett, L.F. (2018) — How emotions are made', url: '#', meta: 'Granularidad emocional' },
+        { tipo: 'herramienta', titulo: 'Rueda de las emociones de Plutchik', url: '#', meta: 'Herramienta visual para el aula' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Qué es la "granularidad emocional" según Barrett (2018)?',
+            opciones: [
+              'La capacidad de sentir muchas emociones al mismo tiempo',
+              'La habilidad de distinguir con precisión entre emociones similares usando un vocabulario amplio, lo que mejora la regulación',
+              'La intensidad con que se sienten las emociones',
+              'El proceso de controlar las emociones para no expresarlas'
+            ],
+            correcta: 1,
+            explicacion: 'La granularidad emocional es la capacidad de hacer distinciones finas entre emociones. Una persona que solo distingue "estar bien" o "estar mal" tiene baja granularidad. Una que distingue entre frustración, decepción, indignación y tristeza tiene alta granularidad, y puede responder de manera más apropiada a cada estado.'
+          },
+          {
+            pregunta: 'Según Damasio, ¿cuál es la relación entre emoción y razón?',
+            opciones: [
+              'Son opuestas: las emociones interfieren con el pensamiento racional',
+              'Las emociones son la base biológica de la razón; sin señales emocionales la toma de decisiones se deteriora',
+              'La razón debe controlar completamente las emociones para tomar buenas decisiones',
+              'Las emociones son solo reacciones físicas sin valor cognitivo'
+            ],
+            correcta: 1,
+            explicacion: 'El "error de Descartes" fue pensar que razón y emoción son opuestas. Damasio demostró con pacientes con daño en la corteza prefrontal que sin emociones las personas no pueden tomar buenas decisiones, aunque mantengan intacta su capacidad lógica. Las emociones son marcadores somáticos indispensables.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Cuántas palabras emocionales distintas usaste en la última semana de trabajo? ¿Qué dice eso sobre tu granularidad emocional?',
+          '¿Qué emoción docente sueles "actuar" sin conciencia y qué efecto tiene en tus estudiantes?',
+          '¿Cómo cambiaría tu evaluación de los estudiantes si incluyera indicadores de conciencia emocional?'
+        ]
+      }
+    },
+    {
+      id: 's4_1',
+      num: 'Sesión 2',
+      titulo: 'CSE2 · Regulación emocional: gestionar, no suprimir',
+      duracion: '90 min',
+      tipo: 'CSE-2',
+      objetivo: 'Comprender la CSE2 como proceso activo de gestión emocional (no supresión), conocer las estrategias basadas en evidencia y diseñar entornos que favorezcan la autorregulación.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. Regulación no es supresión',
+          texto: `<blockquote>"La regulación emocional es la capacidad de gestionar la experiencia y expresión de las emociones de forma flexible y apropiada al contexto, de manera que se puedan alcanzar metas personales y relacionales sin causar daño." <cite>— MEN, 2026, p. 149</cite></blockquote>
+
+La distinción más importante que hace el documento es entre <strong>regulación</strong> y <strong>supresión</strong>:
+
+<strong>Supresión:</strong> Reprimir, esconder, ignorar la emoción. Tiene costos: la emoción no desaparece, se desplaza. Los estudios de Gross (2014) muestran que la supresión habitual aumenta el cortisol, deteriora la memoria y daña las relaciones.
+
+<strong>Regulación:</strong> Transformar la emoción de manera que pueda expresarse apropiadamente. No es eliminar el enojo, sino canalizarlo hacia una conversación productiva. No es eliminar la ansiedad, sino usarla para prepararse mejor.
+
+El documento adopta el <strong>modelo procesual de regulación emocional</strong> de Gross (2014), que identifica 5 estrategias según el momento en que intervienen.`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. Las 5 estrategias de regulación emocional (Gross, 2014)',
+          tabla: {
+            cabeceras: ['Estrategia', 'Cuándo actúa', 'Ejemplo en el aula', 'Efectividad'],
+            filas: [
+              ['Selección de situación', 'Antes: evitar o buscar situaciones', 'El docente elige cuándo dar retroalimentación difícil para hacerlo con calma', 'Alta a largo plazo'],
+              ['Modificación de la situación', 'Durante: cambiar el entorno', 'Cambiar la disposición del aula antes de una actividad de alta tensión', 'Alta si es posible'],
+              ['Despliegue atencional', 'Durante: redirigir la atención', 'Pedir al estudiante que respire antes de responder en caliente', 'Moderada, práctica'],
+              ['Cambio cognitivo (reappraisal)', 'Durante: reinterpretar la situación', 'El docente piensa "este estudiante está asustado, no desafiante"', 'Muy alta, duradera'],
+              ['Modulación de la respuesta', 'Después: modificar la expresión', 'Hablar en voz calmada aunque por dentro esté perturbado', 'Baja y costosa si es la única estrategia'],
+            ]
+          }
+        },
+        {
+          tipo: 'lectura',
+          titulo: '3. Burnout docente: cuando la regulación falla sistemáticamente',
+          texto: `El documento MEN 2026 incluye una sección específica sobre <strong>bienestar docente</strong> como condición para la formación socioemocional de los estudiantes:
+
+<blockquote>"No es posible enseñar regulación emocional desde un estado de agotamiento crónico. El bienestar docente no es un lujo: es una condición estructural para la calidad educativa." <cite>— MEN, 2026, p. 157</cite></blockquote>
+
+El <strong>síndrome de burnout</strong> (Maslach, 2001) tiene tres dimensiones en docentes:
+<ul>
+<li><strong>Agotamiento emocional:</strong> Sentir que no quedan recursos emocionales para dar más.</li>
+<li><strong>Despersonalización:</strong> Distanciarse emocionalmente de los estudiantes como mecanismo de defensa.</li>
+<li><strong>Reducción del logro personal:</strong> Sentir que el trabajo ya no tiene impacto ni sentido.</li>
+</ul>
+
+Colombia tiene una de las tasas más altas de burnout docente en América Latina. El MEN reconoce que los lineamientos que piden más competencia socioemocional sin apoyar el bienestar docente son contradictorios.`
+        }
+      ],
+      actividades: [
+        {
+          tipo: 'individual',
+          titulo: 'Mi inventario de estrategias de regulación',
+          icono: '🛠️',
+          instruccion: 'Revisa la tabla de 5 estrategias. Para cada una: ¿La usas? ¿Cuándo? ¿Con qué efectividad? ¿Cuál nunca usas? Diseña un plan personal de una semana para practicar la estrategia que menos usas (cambio cognitivo es la más recomendada).',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'grupal',
+          titulo: 'Diseño de un "rincón de la calma" institucional',
+          icono: '🏠',
+          instruccion: 'En grupos: diseñen un espacio físico y un protocolo de "rincón de la calma" para su institución. ¿Dónde estaría? ¿Qué habría en él? ¿Cómo se activaría? ¿Quién lo gestiona? ¿Cómo se evalúa su uso? Piénsenlo para estudiantes Y para docentes.',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mi termómetro de burnout',
+          icono: '🪞',
+          instruccion: 'Usa la escala Maslach simplificada: ¿Qué tanto agotamiento emocional sientes (1-10)? ¿Qué tanto te distancias de tus estudiantes (1-10)? ¿Qué tanto sientes que tu trabajo tiene impacto (1-10)? No hay respuestas correctas. Escribe qué necesitas para cuidarte.',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE2: Regulación emocional (pp. 149-162)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'libro', titulo: 'Gross, J.J. (2014) — Handbook of emotion regulation', url: '#', meta: 'Base científica de la regulación' },
+        { tipo: 'libro', titulo: 'Maslach, C. — Job burnout: new directions', url: '#', meta: 'Diagnóstico del burnout docente' },
+        { tipo: 'herramienta', titulo: 'Técnica de respiración 4-7-8 para el aula', url: '#', meta: 'Herramienta práctica' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Por qué la estrategia de "modulación de la respuesta" (hablar calmado aunque esté perturbado) es la menos recomendada como estrategia única?',
+            opciones: [
+              'Porque los estudiantes se dan cuenta de que el docente está fingiendo',
+              'Porque actúa después de que la emoción ya está activa y tiene costos altos si es la única estrategia: aumenta el cortisol y es psicológicamente costosa a largo plazo',
+              'Porque es demasiado difícil de aprender',
+              'Porque no funciona con estudiantes de secundaria'
+            ],
+            correcta: 1,
+            explicacion: 'Gross demostró que las estrategias que actúan antes de que la emoción se active (selección de situación, cambio cognitivo) son más efectivas y menos costosas que las que actúan después (modulación de la respuesta). Suprimir la expresión cuando la emoción ya está activa requiere mucho esfuerzo cognitivo y tiene efectos negativos en la salud.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Cuál estrategia de regulación emocional te parece más aplicable de manera inmediata en tu aula?',
+          '¿Tu institución tiene algún mecanismo de cuidado del bienestar docente? ¿Es suficiente?',
+          '¿Qué le pedirías a tu rector que cambiara para favorecer el bienestar de los docentes?'
+        ]
+      }
+    },
+    {
+      id: 's4_2',
+      num: 'Sesión 3',
+      titulo: 'CSE3 · Toma de decisiones éticas y responsables',
+      duracion: '90 min',
+      tipo: 'CSE-3',
+      objetivo: 'Comprender la CSE3 como integración de emoción, razón y ética en la acción, y desarrollar estrategias pedagógicas para cultivar la autonomía moral en los estudiantes.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. La decisión ética como proceso integrado',
+          texto: `<blockquote>"La toma de decisiones éticas es la capacidad de analizar situaciones complejas considerando consecuencias, valores y perspectivas diversas, para actuar de manera responsable y coherente con principios de justicia, cuidado y dignidad." <cite>— MEN, 2026, p. 163</cite></blockquote>
+
+El documento integra tres tradiciones éticas:
+<ul>
+<li><strong>Ética deontológica (Kant):</strong> Actuar por principios universales. ¿Esto es correcto independientemente de las consecuencias?</li>
+<li><strong>Ética consecuencialista:</strong> Actuar para maximizar el bienestar. ¿Qué produce el mayor bien para el mayor número?</li>
+<li><strong>Ética del cuidado (Gilligan):</strong> Actuar desde la responsabilidad hacia las personas concretas y sus necesidades.</li>
+</ul>
+
+El hallazgo clave del documento es que la deliberación ética madura integra las tres perspectivas. Una decisión que es correcta por principio pero ignora las consecuencias reales sobre personas concretas es incompleta.`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. El proceso de decisión ética: pasos y preguntas',
+          tabla: {
+            cabeceras: ['Paso', 'Pregunta orientadora', 'Herramienta pedagógica'],
+            filas: [
+              ['1. Reconocer la dimensión ética', '¿Hay valores en tensión aquí? ¿Alguien puede resultar dañado?', 'Identificación de stakeholders: ¿a quiénes afecta?'],
+              ['2. Reunir información', '¿Qué sé? ¿Qué no sé? ¿Qué perspectivas no he escuchado?', 'Mapa de perspectivas: ¿quién ve esto de manera diferente?'],
+              ['3. Identificar opciones', '¿Cuáles son las alternativas reales disponibles?', 'Lluvia de opciones sin juicio previo'],
+              ['4. Evaluar consecuencias', '¿Qué pasaría si todos hicieran esto? ¿A quién beneficia y a quién daña?', 'Análisis de consecuencias a corto y largo plazo'],
+              ['5. Decidir y actuar', '¿Puedo defender esta decisión ante quienes resultan afectados?', 'Test de coherencia: ¿lo haría igual si lo vieran mis estudiantes?'],
+              ['6. Reflexionar', '¿Qué aprendí de este proceso? ¿Cambiaría algo?', 'Diario de decisiones éticas'],
+            ]
+          }
+        }
+      ],
+      actividades: [
+        {
+          tipo: 'grupal',
+          titulo: 'Dilema ético escolar colombiano',
+          icono: '⚖️',
+          instruccion: 'Dilema: Tu estudiante más brillante te confiesa que copiará en el examen de Estado porque su familia depende de que obtenga una beca. Llevan años de sacrificio. Aplica los 6 pasos del proceso de decisión ética. ¿A qué conclusión llegan? ¿Hay una sola respuesta correcta?',
+          tiempo: '30 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mis dilemas docentes reales',
+          icono: '🪞',
+          instruccion: 'Escribe sobre una decisión difícil que hayas tomado como docente donde hubiera valores en tensión. ¿Cómo decidiste? ¿Usaste algún proceso sistemático? ¿Cambiarías algo hoy?',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE3: Toma de decisiones (pp. 163-175)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'libro', titulo: 'Kohlberg, L. — Psicología del desarrollo moral', url: '#', meta: 'Estadios del desarrollo moral' },
+        { tipo: 'libro', titulo: 'Gilligan, C. (1982) — In a different voice', url: '#', meta: 'Ética del cuidado' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Por qué el documento MEN integra las tres tradiciones éticas en lugar de elegir solo una?',
+            opciones: [
+              'Para no tomar posición política',
+              'Porque una decisión ética madura considera principios, consecuencias Y el cuidado de personas concretas simultáneamente',
+              'Porque ninguna tradición ética ha demostrado ser válida',
+              'Para adaptarse a las preferencias religiosas de cada comunidad'
+            ],
+            correcta: 1,
+            explicacion: 'El MEN adopta un enfoque integrador porque cada tradición captura algo real: los principios importan (deontología), las consecuencias importan (consecuencialismo) y las personas concretas importan (cuidado). Una ética que ignora cualquiera de estas dimensiones produce decisiones incompletas o dañinas.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Cuál de las tres tradiciones éticas domina más en tus decisiones cotidianas como docente?',
+          '¿Hay situaciones en tu institución donde la "ética institucional" y tu "ética personal" entran en tensión?'
+        ]
+      }
+    },
+    {
+      id: 's4_3',
+      num: 'Sesión 4',
+      titulo: 'CSE4 · Empatía, reconocimiento y perspectiva del otro',
+      duracion: '90 min',
+      tipo: 'CSE-4',
+      objetivo: 'Comprender la empatía en sus tres componentes —cognitivo, afectivo y compasivo— y distinguirla de la simpatía y la proyección, desarrollando estrategias pedagógicas que la cultiven.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. Empatía: tres componentes inseparables',
+          texto: `<blockquote>"La empatía es la capacidad de reconocer y comprender los estados emocionales de los demás, de adoptar su perspectiva y de responder de manera apropiada y compasiva." <cite>— MEN, 2026, p. 176</cite></blockquote>
+
+La neurociencia contemporánea distingue tres componentes de la empatía que el documento MEN adopta:
+
+<strong>Empatía cognitiva</strong> (toma de perspectiva): Entender intelectualmente cómo piensa y siente el otro. "Veo cómo ves el mundo." Es enseñable y entrenable.
+
+<strong>Empatía afectiva</strong> (resonancia emocional): Sentir algo de lo que siente el otro. Los neurocientíficos la relacionan con las neuronas espejo.
+
+<strong>Empatía compasiva</strong> (preocupación empática): Querer hacer algo para ayudar. Sin esta dimensión, la empatía puede quedarse en observación.
+
+La distinción crítica del documento: <strong>empatía ≠ simpatía</strong>. La simpatía dice "qué pena que te pase eso". La empatía dice "entiendo cómo se siente eso desde adentro". Brené Brown (2013): la simpatía alimenta la desconexión; la empatía construye conexión.`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. Empatía vs. otras respuestas relacionales',
+          tabla: {
+            cabeceras: ['Respuesta', 'Qué hace', 'Efecto en la relación'],
+            filas: [
+              ['Empatía', 'Se sitúa en la perspectiva del otro, siente con él/ella, responde con cuidado', 'Construye conexión, confianza y apoyo genuino'],
+              ['Simpatía', 'Expresa lástima o pena desde afuera, sin situarse en la perspectiva del otro', 'Puede crear distancia; el otro se siente "compadeciéndose de él"'],
+              ['Proyección', 'Asume que el otro siente lo mismo que yo sentiría en esa situación', 'Malentendidos frecuentes; ignora la singularidad del otro'],
+              ['Solución prematura', 'Salta a "ayudar" antes de comprender el problema real', 'El otro se siente no escuchado, su emoción invalidada'],
+              ['Invalidación', '"No es para tanto", "otros están peor"', 'Daño relacional profundo; el otro cierra la comunicación'],
+            ]
+          }
+        },
+        {
+          tipo: 'lectura',
+          titulo: '3. La empatía como fundamento de la democracia (Nussbaum)',
+          texto: `La filósofa Martha Nussbaum, ampliamente citada en el documento MEN, plantea que la democracia requiere ciudadanos empáticos:
+
+<blockquote>"La imaginación narrativa —la capacidad de verse como ser humano que busca florecimiento en el lugar de otro ser humano— es el núcleo de la educación para la ciudadanía democrática." <cite>— Nussbaum, 2010, citada en MEN 2026, p. 181</cite></blockquote>
+
+Sin empatía, la democracia se degrada en suma de intereses individuales. Con empatía, se convierte en proyecto colectivo donde cada quien puede ver al otro como igual.
+
+Para el aula colombiana, esto tiene implicaciones concretas: trabajar la empatía con los estudiantes más difíciles, con las familias que generan más resistencia, con los colegas con quienes hay conflicto. La empatía no es solo un valor personal: es una competencia política.`
+        }
+      ],
+      actividades: [
+        {
+          tipo: 'individual',
+          titulo: 'Ejercicio de perspectiva narrativa',
+          icono: '📖',
+          instruccion: 'Escribe durante 10 minutos desde la perspectiva de un estudiante que te resulta difícil de entender o con quien hay tensión. No desde lo que observas: desde cómo crees que él/ella vive la escuela, sus clases contigo, sus relaciones. ¿Qué descubres? ¿Qué cambia en tu comprensión?',
+          tiempo: '15 min'
+        },
+        {
+          tipo: 'grupal',
+          titulo: 'Círculo empático docente',
+          icono: '💬',
+          instruccion: 'Uno del grupo comparte un desafío real (no hipotético) de su práctica docente. Los demás practican empatía genuina: sin consejos, sin soluciones, sin "yo también". Solo escucha activa y preguntas que ayuden a quien habla a comprenderse mejor. Reflexión posterior: ¿cómo se sintió ser escuchado/a así?',
+          tiempo: '25 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mi capacidad empática en el aula',
+          icono: '🪞',
+          instruccion: 'Escribe: "El estudiante con quien me cuesta más empatizar es (sin nombre, describe la situación)... Creo que me cuesta porque... Si aplicara la empatía cognitiva, vería la situación de esta manera diferente..."',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE4: Empatía (pp. 176-188)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'video', titulo: 'Brené Brown: El poder de la vulnerabilidad', url: '#', meta: 'TED Talk · 20 min (subtítulos)' },
+        { tipo: 'libro', titulo: 'Nussbaum, M. (2010) — Sin fines de lucro', url: '#', meta: 'Educación para la democracia empática' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Cuál es la diferencia clave entre empatía y simpatía según Brown y el documento MEN?',
+            opciones: [
+              'La empatía es más intensa que la simpatía emocionalmente',
+              'La simpatía expresa lástima desde afuera; la empatía se sitúa en la perspectiva del otro y construye conexión genuina',
+              'La simpatía es para adultos; la empatía es para niños',
+              'La empatía requiere sentir exactamente lo mismo que el otro'
+            ],
+            correcta: 1,
+            explicacion: 'Brené Brown hace esta distinción de manera memorable: la simpatía alimenta la desconexión porque mantiene al otro en su dolor desde arriba ("qué pena"). La empatía construye conexión porque baja al nivel del otro y le dice "no estás solo/a". Tampoco requiere sentir lo mismo: requiere comprender desde adentro.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Hubo una persona en tu vida que te enseñó empatía con su ejemplo? ¿Qué hacía específicamente?',
+          '¿En qué momentos del día escolar te resulta más difícil responder con empatía? ¿Qué lo genera?'
+        ]
+      }
+    },
+    {
+      id: 's4_4',
+      num: 'Sesión 5',
+      titulo: 'CSE5 · Habilidades de relación, comunicación y resolución de conflictos',
+      duracion: '90 min',
+      tipo: 'CSE-5',
+      objetivo: 'Comprender la CSE5 como el conjunto de habilidades que permiten construir relaciones saludables y resolver conflictos de manera constructiva, aplicando la Comunicación No Violenta y la mediación.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. Las relaciones como competencia',
+          texto: `<blockquote>"Las habilidades de relación son el conjunto de capacidades que permiten establecer vínculos interpersonales saludables, comunicarse de manera asertiva y colaborar eficazmente hacia metas comunes." <cite>— MEN, 2026, p. 189</cite></blockquote>
+
+El documento identifica cuatro componentes de la CSE5:
+<ul>
+<li><strong>Comunicación asertiva:</strong> Expresar pensamientos, sentimientos y necesidades de manera clara y respetuosa.</li>
+<li><strong>Escucha activa:</strong> Prestar atención plena al otro, comprender antes de responder.</li>
+<li><strong>Colaboración:</strong> Trabajar hacia metas compartidas respetando las contribuciones de cada uno.</li>
+<li><strong>Resolución constructiva de conflictos:</strong> Usar el conflicto como oportunidad de aprendizaje y fortalecimiento de la relación.</li>
+</ul>
+
+El documento incorpora el modelo de <strong>Comunicación No Violenta (CNV)</strong> de Marshall Rosenberg (2003) como herramienta práctica. La CNV tiene cuatro pasos:
+<ol>
+<li><strong>Observar</strong> sin evaluar: "Cuando veo que llegan tarde..." (no "Cuando son irresponsables...")</li>
+<li><strong>Sentir:</strong> "Me siento frustrado/preocupado..."</li>
+<li><strong>Necesitar:</strong> "Porque necesito que el grupo aprenda colaborativamente..."</li>
+<li><strong>Pedir</strong> (no exigir): "¿Pueden decirme qué los impide llegar a tiempo?"</li>
+</ol>`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. Comunicación violenta vs. No Violenta: comparación',
+          tabla: {
+            cabeceras: ['Situación', 'Comunicación habitual (evaluativa)', 'CNV (observación + emoción + necesidad + petición)'],
+            filas: [
+              ['Estudiante no entrega tareas', '"Eres irresponsable y perezoso"', '"Cuando veo que no entregaste tres tareas seguidas, me preocupo porque quiero que tengas las bases. ¿Qué está pasando?"'],
+              ['Estudiante interrumpe', '"¡Siempre interrumpes! Respeta cuando hablan"', '"Cuando alguien habla y se le interrumpe, me cuesta continuar la clase. Necesito que esperemos el turno. ¿Puedes ayudarme con eso?"'],
+              ['Conflicto entre estudiantes', '"Están portándose muy mal los dos"', '"Veo que hay tensión entre ustedes. Eso me preocupa porque quiero que todos se sientan seguros aquí. ¿Pueden contarme qué pasó?"'],
+              ['Docente con colega', '"Siempre llega tarde a las reuniones"', '"Cuando la reunión empieza sin ti, se nos dificulta tomar decisiones completas. Necesitamos poder contar con todos. ¿Qué necesitas para poder llegar?"'],
+            ]
+          }
+        }
+      ],
+      actividades: [
+        {
+          tipo: 'grupal',
+          titulo: 'Práctica de CNV en parejas',
+          icono: '🗣️',
+          instruccion: 'Con un compañero: uno comparte un conflicto real de su aula (sin nombres). El otro practica responder con los 4 pasos de la CNV. Luego intercambien roles. Reflexionen: ¿Qué fue más difícil? ¿Qué efecto tuvo en cómo se sintió quien compartió el conflicto?',
+          tiempo: '25 min'
+        },
+        {
+          tipo: 'diseno',
+          titulo: 'Protocolo de mediación para mi nivel',
+          icono: '✏️',
+          instruccion: 'Diseña un protocolo de mediación de conflictos entre estudiantes adaptado a tu nivel (lenguaje, duración, roles). Debe poder implementarse en 20 minutos durante una clase. ¿Quién facilita? ¿Qué preguntas guían? ¿Cómo se cierra?',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mi estilo comunicativo',
+          icono: '🪞',
+          instruccion: 'Escribe: "Mi estilo comunicativo habitual en el aula tiende hacia... (evaluativo / asertivo / pasivo / agresivo). Lo sé porque mis estudiantes reaccionan con... Si aplicara la CNV de manera consistente, cambiaría específicamente..."',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE5: Habilidades de relación (pp. 189-202)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'libro', titulo: 'Rosenberg, M. (2003) — Comunicación no violenta', url: '#', meta: 'Manual práctico · Capítulos 1-3' },
+        { tipo: 'video', titulo: 'CNV en el aula: casos prácticos', url: '#', meta: '15 min · Aplicación pedagógica' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Cuál es la diferencia entre "observar" y "evaluar" en la CNV?',
+            opciones: [
+              'Son sinónimos en el modelo de Rosenberg',
+              'Observar describe hechos concretos sin juicio; evaluar mezcla hechos con interpretaciones y juicios morales',
+              'Observar es para docentes; evaluar es para estudiantes',
+              'La observación es más importante que la evaluación en el aula'
+            ],
+            correcta: 1,
+            explicacion: 'La distinción observación/evaluación es central en la CNV. "Llegas tarde" es observación. "Eres irresponsable" es evaluación. Cuando empezamos con evaluaciones, el otro se pone a la defensiva y el diálogo se cierra. Cuando empezamos con observaciones neutras, el diálogo puede abrirse.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Cuántos de tus intercambios con estudiantes en una semana típica son evaluativos vs. observacionales?',
+          '¿Qué impediría que toda tu institución adoptara la CNV como práctica comunicativa?'
+        ]
+      }
+    },
+    {
+      id: 's4_5',
+      num: 'Sesión 6',
+      titulo: 'CSE6 · Emociones colectivas y participación ciudadana',
+      duracion: '90 min',
+      tipo: 'CSE-6',
+      objetivo: 'Comprender cómo las emociones colectivas (indignación, esperanza, vergüenza, orgullo) son motores de la acción ciudadana, y cómo la escuela puede cultivar emociones democráticas.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. Las emociones no solo son individuales',
+          texto: `<blockquote>"Las emociones colectivas son estados afectivos compartidos que emergen en grupos y comunidades, orientan la acción colectiva y tienen un papel constitutivo en la vida democrática." <cite>— MEN, 2026, p. 203</cite></blockquote>
+
+La filósofa Martha Nussbaum, en <em>Emociones políticas</em> (2014), plantea que la democracia no puede sostenerse solo en razones y normas: necesita también <strong>emociones que la sustenten</strong>.
+
+Las emociones colectivas que el documento identifica como pedagógicamente relevantes:
+<ul>
+<li><strong>Indignación moral:</strong> La emoción que activa la lucha por la justicia. Sin ella, la injusticia se normaliza.</li>
+<li><strong>Esperanza activa:</strong> La disposición a actuar hacia un futuro mejor. Diferente al optimismo ingenuo.</li>
+<li><strong>Vergüenza y orgullo colectivos:</strong> La identidad grupal se construye también emocionalmente.</li>
+<li><strong>Compasión política:</strong> La capacidad de conmoverse ante el sufrimiento del otro como ciudadano, no solo como individuo.</li>
+</ul>
+
+En Colombia, el conflicto armado generó emociones colectivas que todavía estructuran la vida pública: miedo, desconfianza, resentimiento. Los lineamientos proponen que la escuela trabaje activamente estas emociones para transformarlas.`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. Emociones colectivas: de la parálisis a la acción',
+          tabla: {
+            cabeceras: ['Emoción colectiva', 'Función democrática', 'Riesgo si no se trabaja', 'Estrategia pedagógica'],
+            filas: [
+              ['Indignación moral', 'Activa la lucha por la justicia, impide la normalización del daño', 'Se convierte en rabia destructiva o en apatía disfrazada', 'Canalizar hacia propuestas concretas de cambio'],
+              ['Esperanza activa', 'Sostiene la acción a largo plazo frente a obstáculos reales', 'Se convierte en optimismo ingenuo o en cinismo paralizante', 'Construir proyectos colectivos con logros verificables'],
+              ['Miedo colectivo', 'Señal de amenaza real que pide atención y cuidado', 'Se convierte en repliegue, desconfianza y autoritarismo', 'Nombrar el miedo, construir seguridad colectiva'],
+              ['Vergüenza colectiva', 'Impulsa la reparación y el no repetir errores', 'Se convierte en negación, victimización o culpa paralizante', 'Transformar en responsabilidad hacia el futuro'],
+              ['Orgullo colectivo', 'Construye identidad y compromiso con la comunidad', 'Se convierte en nacionalismo excluyente o superioridad', 'Anclar en logros concretos compartidos, no en mitos'],
+            ]
+          }
+        }
+      ],
+      actividades: [
+        {
+          tipo: 'grupal',
+          titulo: 'Mapa emocional de mi comunidad educativa',
+          icono: '🗺️',
+          instruccion: '¿Cuál es la emoción colectiva dominante en tu institución hoy? ¿Esperanza, miedo, agotamiento, indignación, orgullo? ¿Cómo afecta esa emoción colectiva al aprendizaje? ¿Qué haría un docente que trabaja conscientemente con emociones colectivas para transformar el clima institucional?',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'diseno',
+          titulo: 'Un proyecto de esperanza activa',
+          icono: '✨',
+          instruccion: 'Diseña un proyecto de 4 semanas que transforme una emoción colectiva negativa (miedo, apatía, desconfianza) de tu institución en acción ciudadana. ¿Cuál sería el primer paso? ¿Quiénes participarían? ¿Cómo sabrías que funcionó?',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mi emoción política como docente',
+          icono: '🪞',
+          instruccion: 'Escribe: "La emoción política que más me mueve a actuar como docente y ciudadano/a es... La emoción que más me paraliza es... Lo que hago (o haría) para transformar la parálisis en acción es..."',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE6: Emociones colectivas (pp. 203-214)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'libro', titulo: 'Nussbaum, M. (2014) — Emociones políticas', url: '#', meta: 'Por qué el amor importa para la justicia' },
+        { tipo: 'libro', titulo: 'Ahmed, S. (2004) — The cultural politics of emotion', url: '#', meta: 'Emociones como política social' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Por qué Nussbaum dice que la democracia necesita emociones y no solo razones?',
+            opciones: [
+              'Porque las personas son incapaces de razonar políticamente',
+              'Porque sin emociones como la compasión y la esperanza los ciudadanos no se comprometen activamente con el proyecto democrático',
+              'Porque las emociones son más fáciles de manipular que las razones',
+              'Para justificar que los políticos apelen a las emociones en sus discursos'
+            ],
+            correcta: 1,
+            explicacion: 'Nussbaum argumenta que las normas e instituciones democráticas son frágiles sin el sustento emocional que las hace significativas. La compasión política hace que los ciudadanos se importen mutuamente. La esperanza activa sostiene el compromiso cuando los resultados tardan. Sin estas emociones, la democracia se vacía.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Qué emoción colectiva tiene tu institución que es un obstáculo para la formación ciudadana?',
+          '¿Has tenido alguna vez una experiencia de indignación moral que te llevó a actuar? ¿Qué generó ese movimiento?'
+        ]
+      }
+    },
+    {
+      id: 's4_6',
+      num: 'Sesión 7',
+      titulo: 'CSE7 · Resiliencia comunitaria, esperanza y construcción de futuro',
+      duracion: '90 min',
+      tipo: 'CSE-7',
+      objetivo: 'Comprender la resiliencia no como capacidad individual de resistencia, sino como proceso colectivo de transformación, y desarrollar pedagogías de la esperanza contextualizadas en el posconflicto colombiano.',
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. Resiliencia: más allá del "rebotar"',
+          texto: `<blockquote>"La resiliencia comunitaria es la capacidad colectiva para afrontar adversidades, aprender de ellas y transformarlas en oportunidades de crecimiento y fortalecimiento del tejido social." <cite>— MEN, 2026, p. 215</cite></blockquote>
+
+El documento supera la concepción individualista de la resiliencia ("volver a la normalidad después de un golpe") y adopta la perspectiva de <strong>resiliencia comunitaria</strong>:
+
+<strong>Boris Cyrulnik (2002):</strong> La resiliencia no es una característica individual; se construye en la relación con otros. Sin vínculos, sin un "tutor de resiliencia", el ser humano no puede sobreponerse.
+
+<strong>Lederach (2005) — Imaginación moral:</strong> La paz duradera en contextos de conflicto requiere imaginación moral: la capacidad de concebir y crear lo que aún no existe, construyendo relaciones que trascienden el círculo de la violencia.
+
+En Colombia, comunidades que han sufrido desplazamiento, masacres y pérdidas han desarrollado formas extraordinarias de resiliencia comunitaria. Estas experiencias son materiales pedagógicos invaluables que la escuela debe reconocer y amplificar.`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. Aprendizajes esenciales por nivel educativo',
+          tabla: {
+            cabeceras: ['Nivel', 'Aprendizaje esencial', 'Indicadores de desempeño'],
+            filas: [
+              ['Educación Inicial', 'Experimenta que puede superar dificultades con el apoyo de adultos y pares, desarrollando confianza básica.', '• Busca apoyo cuando tiene problemas
+• Celebra sus logros con otros
+• Reconoce que los errores son parte del aprendizaje'],
+              ['Básica Primaria', 'Reconoce sus fortalezas personales y comunitarias, y usa el apoyo de otros para enfrentar dificultades.', '• Identifica 3 de sus fortalezas personales
+• Busca y ofrece ayuda en situaciones difíciles
+• Transforma errores en aprendizaje visible'],
+              ['Básica Secundaria', 'Analiza experiencias de adversidad colectiva e identifica los factores que permitieron la recuperación comunitaria.', '• Documenta historias locales de resiliencia
+• Conecta adversidades personales con contextos colectivos
+• Propone acciones de fortalecimiento comunitario'],
+              ['Educación Media', 'Diseña proyectos de reconstrucción del tejido social desde la imaginación moral, articulando memoria, justicia y esperanza.', '• Lidera procesos de memoria y reparación simbólica
+• Construye narrativas de esperanza fundamentadas
+• Actúa como agente de resiliencia en su comunidad'],
+            ]
+          }
+        },
+        {
+          tipo: 'lectura',
+          titulo: '3. Pedagogía de la esperanza: Freire y el posconflicto',
+          texto: `Paulo Freire desarrolló el concepto de <strong>pedagogía de la esperanza</strong> como respuesta a los contextos de opresión y despojo. Para Freire, la esperanza no es ingenuidad: es una necesidad ontológica del ser humano y un acto político:
+
+<blockquote>"La esperanza es una especie de vocación ontológica [...] Mientras lucho, tengo esperanza. Y si peleo con esperanza, puedo esperar." <cite>— Freire, 1994, citado en MEN 2026, p. 220</cite></blockquote>
+
+Para el aula colombiana posconflicto, la pedagogía de la esperanza implica:
+<ul>
+<li><strong>Narrar el sufrimiento</strong> sin quedarse en él.</li>
+<li><strong>Documentar la resistencia</strong> junto con el daño.</li>
+<li><strong>Proyectar futuros posibles</strong> basados en lo que la comunidad ya ha construido.</li>
+<li><strong>Actuar desde el presente</strong> hacia ese futuro, con pasos concretos.</li>
+</ul>
+
+La escuela que solo enseña el horror del conflicto sin las historias de resistencia y reconstrucción forma estudiantes paralizados. La escuela que enseña ambos forma ciudadanos con agencia.`
+        }
+      ],
+      actividades: [
+        {
+          tipo: 'grupal',
+          titulo: 'Historias de resiliencia comunitaria',
+          icono: '💪',
+          instruccion: 'En grupos: identifiquen una comunidad en Colombia (puede ser cercana a su institución) que haya demostrado resiliencia notable frente a la adversidad. ¿Qué factores la hicieron posible? ¿Qué papel jugó la educación? ¿Cómo pueden usar esa historia como material pedagógico?',
+          tiempo: '25 min'
+        },
+        {
+          tipo: 'individual',
+          titulo: 'Mi carta de esperanza pedagógica',
+          icono: '💌',
+          instruccion: 'Escribe una carta a tus estudiantes describiendo el futuro que quieres para ellos y el que crees que es posible. No el futuro ideal perfecto: el futuro posible si trabajan juntos. ¿Qué cambiaría en tu práctica si realmente creyeras en ese futuro?',
+          tiempo: '15 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición cierre del módulo CSE',
+          icono: '🪞',
+          instruccion: 'Mirando las 7 CSE del módulo: ¿Cuál desarrollas más en tu práctica actual? ¿Cuál está más ausente? ¿Cuál te resultó más desafiante conceptualmente? Escribe un compromiso específico para las próximas 4 semanas.',
+          tiempo: '15 min'
+        }
+      ],
+      recursos: [
+        { tipo: 'doc', titulo: 'MEN 2026 — CSE7: Resiliencia (pp. 215-226)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'libro', titulo: 'Cyrulnik, B. (2002) — Los patitos feos', url: '#', meta: 'La resiliencia como proceso relacional' },
+        { tipo: 'libro', titulo: 'Lederach, J.P. (2005) — La imaginación moral', url: '#', meta: 'Paz y resiliencia en el posconflicto' },
+        { tipo: 'libro', titulo: 'Freire, P. (1994) — Pedagogía de la esperanza', url: '#', meta: 'Esperanza como acto pedagógico político' },
+      ],
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Cuál es la diferencia entre resiliencia individual y resiliencia comunitaria según el MEN 2026?',
+            opciones: [
+              'La resiliencia individual es más importante para los estudiantes',
+              'La resiliencia comunitaria es el proceso colectivo de afrontar adversidades y transformarlas; no depende solo del individuo sino de los vínculos y el tejido social',
+              'Son sinónimos con diferente escala',
+              'La comunitaria aplica solo en zonas de conflicto'
+            ],
+            correcta: 1,
+            explicacion: 'Cyrulnik demostró que la resiliencia no se desarrolla en el aislamiento: requiere vínculos, tutores de resiliencia y comunidad. El MEN adopta esta perspectiva colectiva porque en Colombia la adversidad ha sido mayoritariamente colectiva (desplazamiento, conflicto, pobreza estructural) y la respuesta debe serlo también.'
+          },
+          {
+            pregunta: '¿Qué entiende Freire por "esperanza" en su pedagogía?',
+            opciones: [
+              'Optimismo ingenuo sobre el futuro',
+              'Una necesidad ontológica y un acto político: la condición de posibilidad de la lucha y la transformación',
+              'Un estado emocional positivo que mejora el aprendizaje',
+              'La creencia religiosa en que las cosas mejorarán solas'
+            ],
+            correcta: 1,
+            explicacion: 'Para Freire la esperanza no es pasividad ni ingenuidad. Es la condición ontológica que hace posible la acción transformadora. Sin esperanza no hay lucha; sin lucha no hay cambio. La pedagogía de la esperanza trabaja activamente para que los sujetos se reconozcan como agentes capaces de transformar su realidad.'
+          }
+        ]
+      },
+      metacognicion: {
+        preguntas: [
+          '¿Qué historias de resiliencia de tu comunidad educativa podrías usar como material pedagógico?',
+          'Después de estudiar las 7 CSE: ¿Cuál crees que es la más urgente para Colombia hoy? ¿Por qué?',
+          '¿Qué tan esperanzado/a te sientes sobre la posibilidad de transformar la educación en tu institución? ¿Qué lo sostiene o lo debilita?'
+        ]
+      }
     }
   ]
 });
-
-// BASE DE DATOS EXCLUSIVA PARA EL PANEL DE DEEP DIVE EXTERNO DE LA PÁGINA 2
-const CSE = [
-  { 
-    id: 'cse1', 
-    num: 'CSE-1', 
-    color: '#534AB7', 
-    bg: '#EEEDFE', 
-    tc: '#3C3489', 
-    icon: 'ti-eye',
-    title: 'Conciencia emocional', 
-    eje: 'Yo conmigo mismo',
-    def: 'Capacidad de identificar, nombrar y comprender las propias emociones y las de los demás, reconociendo las señales corporales, cognitivas y contextuales que las generan.',
-    secuencia: [
-      { fase: 'Apertura (Termómetro de Granularidad)', tiempo: '15 min', desc: 'Rutina de conciencia corporal profunda: los participantes cierran los ojos, respiran pausadamente y ejecutan un escaneo de su cuerpo de pies a cabeza. Deben registrar cartográficamente en qué órganos o músculos se aloja físicamente su estado emocional actual, asignándole un color y una textura metafórica sin emitir juicios.', rol: 'El facilitador guía con voz suave y pausas largas, modelando el ejercicio compartiendo primero su propio estado corporal interno. Protege la seguridad psicológica del grupo.' },
-      { fase: 'Exploración conceptual', tiempo: '20 min', desc: 'Análisis del continuum de granularidad emocional: Diferenciación técnica entre la emoción de respuesta biológica automática, el sentimiento como elaboración cognitiva y el estado de ánimo sostenido. Uso de la analogía de Nussbaum: las emociones como juicios de valor que revelan lo que consideramos valioso para nuestra subsistencia.', rol: 'Docente presenta marcos conceptuales con ejemplos reales extraídos de las crisis escolares cotidianas, promoviendo la expansión del vocabulario emocional del grupo.' },
-      { fase: 'Práctica activa (El Diccionario Fisiológico)', tiempo: '25 min', desc: 'Construcción del mapa de sensaciones: En una silueta humana impresa, cada participante mapea con marcadores la ubicación exacta de las emociones primarias y complejas (indignación, vergüenza, orgullo, frustración). Posteriormente, inician el diseño de su libreta personal de bitácora emocional de aula.', rol: 'El facilitador circula por los subgrupos realizando preguntas reflexivas abiertas: ¿Qué pensamientos precedieron a esa opresión en el pecho? ¿Qué conducta automática desató?' },
-      { fase: 'Transferencia pedagógica', tiempo: '20 min', desc: 'Grupos por niveles educativos co-diseñan una rutina de sintonía emocional de 5 minutos para implementar al inicio de sus clases tradicionales. Definen el vocabulario matizado adecuado para las edades y estructuran cómo el docente de forma regulada expondrá su propia interioridad.', rol: 'Acompaña el diseño metodológico. Recuerda a los grupos que la rutina de conciencia debe ser un recurso protector, nunca una obligación invasiva para el estudiante.' },
-      { fase: 'Cierre y metacognición', tiempo: '10 min', desc: 'Ronda de salida: Cada participante comparte en una única palabra precisa el estado emocional con el que se retira del espacio y un hallazgo de autoconciencia relevante de la sesión. Se da espacio al silencio reflexivo.', rol: 'Recoge las palabras de salida en un mural visual para evaluar el clima final del ecosistema del grupo.' }
-    ],
-    actividades: [
-      { nivel: 'Educación Inicial (0–5 años)', bg: '#E1F5EE', tc: '#085041', items: ['Dado de Granularidad: Cubo grande de espuma con expresiones faciales complejas. Los niños lo lanzan, imitan el gesto y narran una historia de un juguete que experimentó esa misma emoción.', 'El monstruo de los colores (Lectura Dialógica): Lectura guiada en voz alta utilizando frascos reales de vidrio donde los niños clasifican lanas de colores según la emoción diaria.', 'Espejo de la Alteridad: En parejas frente a frente, un niño gesticula sutilmente una emoción corporal y su compañero actúa como un espejo exacto, intentando adivinar el estado emocional reflejado.'] },
-      { nivel: 'Básica Primaria (1°–5°)', bg: '#E6F1FB', tc: '#0C447C', items: ['Semáforo Corporal Diario: Registro en una mini-tarjeta de escritorio antes de iniciar la jornada (Rojo = Inundado/Tenso, Amarillo = Inquieto, Verde = En calma), ayudando al maestro a regular los andamiajes didácticos.', 'Línea de Tiempo de los Picos Emocionales: Dibujo de una gráfica semanal de montañas y valles que registre los eventos del colegio que detonaron estados de alegría, frustración o exclusión.', 'Auditoría Emocional de Cuentos: Lectura crítica de un relato identificando los mensajes corporales ocultos de los personajes y cómo el contexto influyó en sus sentimientos.'] },
-      { nivel: 'Básica Secundaria (6°–9°)', bg: '#FBEAF0', tc: '#72243E', items: ['Bitácora de Granularidad Emocional: Registro escrito individual que analice de forma precisa: Detonador objetivo de aula + Fuente corporal + Pensamiento + Emoción exacta.', 'Análisis del Lenguaje Juvenil: Debate grupal sobre las implicaciones de reducir todo el vocabulario emocional a expresiones genéricas o jergas locales, expandiendo el glosario semántico del curso.', 'Lectura de emociones públicas en la historia local: Análisis de los testimonios de memoria oral comunitaria del barrio identificando las emociones subyacentes de los relatos.'] },
-      { nivel: 'Media (10°–11°)', bg: '#FAECE7', tc: '#712B13', items: ['Ensayo Argumentativo Crítico: "Las emociones como juicios evaluativos de valor en la teoría de Martha Nussbaum aplicada a la justicia escolar colombiana".', 'Investigación de Campo Intercultural: Entrevistas estudiantiles a miembros de la comunidad con diversas raíces culturales o generacionales sobre cómo identifican y nombran sus emociones, presenting los hallazgos al grupo.', 'Producción Audiovisual: Creación de un micro-podcast de 3 minutos diseñado para visibilizar la importancia de la salud mental y la granularidad emocional en la adolescencia contemporánea.'] }
-    ],
-    rubrica: [
-      { criterio: 'Identificación emocional precisa', d: ['Incapaz de reconocer o nombrar estados emocionales propios o del entorno.', 'Identifica emociones básicas únicamente cuando se le interroga con preguntas cerradas directas.', 'Identifica y nombra de forma autónoma una gama variada de emociones primarias utilizando vocabulario matizado.', 'Analiza con fluidez semántica la complejidad de múltiples emociones simultáneas en sí mismo y en los otros en diversos contextos de tensión.'] },
-      { criterio: 'Reconocimiento de señales corporales', d: ['Ignora las señales físicas y fisiológicas asociadas a sus estados emocionales.', 'Identifica algunas reacciones corporales básicas (ej. sudoración, llanto) con acompañamiento del docente.', 'Describe con precisión las señales corporales internas asociadas a sus emociones de forma regular.', 'Integra de forma autónoma la lectura de sus señales corporales, cognitivas y contextuales para prevenir desbordamientos emocionales conductuales.'] },
-      { criterio: 'Vocabulario y granularidad semántica', d: ['Reduce toda su expresión emocional a términos genéricos vagos como "bien" o "mal".', 'Utiliza un glosario limitado de emociones básicas (alegría, tristeza, rabia, miedo) de manera repetitiva.', 'Posee un repertorio amplio y diferenciado de términos emocionales (30+ palabras), aplicándolos con precisión.', 'Apropia un vocabulario emocional matizado, culturalmente situado, y es capaz de desglosar variaciones sutiles de estados de ánimo complejos.'] }
-    ],
-    guia: { 
-      prop: 'Garantizar que los docentes desarrollen una alta granularidad emocional y una lectura corporal fina de sus propios estados internos, estructurando de forma técnica andamiajes didácticos viables para transferir esta competencia protectora a las aulas de clase colombianas.',
-      adv: [
-        'Bajo ninguna circunstancia obligue a un estudiante o participante a exponer públicamente una experiencia emocional traumática o dolorosa.',
-        'El facilitador debe modelar el ejercicio exponiendo primero su propia interioridad de forma vulnerable pero regulada.',
-        'Evite catalogar las emociones como "positivas" o "negativas"; todas las emociones son legítimas y contienen información cognitiva valiosa sobre lo que el sujeto valora.',
-        'Tenga estructurado un canal de derivación institucional discreto si durante los ejercicios de autoconciencia emerge un caso crítico de afectación de salud mental.'
-      ],
-      mat: [
-        'Siluetas impresas del mapa corporal humano',
-        'Crayones, marcadores o lápices de colores variados',
-        'Tarjetas didácticas de granularidad y vocabulario emocional',
-        'Libretas de bitácora personal de autoformación'
-      ],
-      cierre: 'Concluya la sesión implementando la rutina de la "Palabra de Salida". Este ejercicio estabiliza el cierre del grupo, valida la experiencia individual de forma horizontal y ofrece datos de control clave sobre el clima emocional del taller para el facilitador.'
-    } 
-  }
-];
