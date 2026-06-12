@@ -1,1022 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta 
-        name="description" 
-        content="LeoEnglish es una plataforma interactiva para aprender inglés con ruta guiada, diagnóstico de nivel, homologación, refuerzos personalizados, gramática, vocabulario, reading, writing y gamificación."
-    >
-
-    <meta name="theme-color" content="#1C3F7A">
-
-    <title>LeoEnglish | Ruta de Aprendizaje</title>
-
-    <!-- ESTILOS PRINCIPALES -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- ICONOS LUCIDE -->
-    <!-- Lucide Icons (ejercicios y app.js dinámico) -->
-    <script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
-    <!-- Phosphor Icons (UI estática: sidebar, login, dashboard) -->
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formación Ciudadana &amp; DSE · MEN 2026</title>
+  
+  <!-- Fonts loaded via CSS @import -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="css/estilos.css"/>
 </head>
-
 <body>
 
-    <!-- FIX: app-loader visible por defecto. Se oculta en onAuthStateChanged cuando
-         Firebase confirma el estado de sesión, eliminando el flash de contenido en
-         móviles lentos. El login-overlay ya NO tiene 'hidden' hardcodeado: Firebase
-         lo mostrará/ocultará según corresponda. -->
-    <div id="app-loader" style="
-        position: fixed; inset: 0; z-index: 9999;
-        display: flex; align-items: center; justify-content: center;
-        background: var(--bg, #0f172a);
-    ">
-        <div style="text-align:center; color:#94a3b8; font-family:sans-serif;">
-            <div style="width:40px;height:40px;border:3px solid #334155;border-top-color:#6366f1;
-                        border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;"></div>
-            <span style="font-size:13px;">Cargando LeoEnglish…</span>
-        </div>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-icon">🌱</div>
+      <span class="logo-text">Formación Ciudadana · MEN 2026</span>
     </div>
-    <style>@keyframes spin{to{transform:rotate(360deg)}}.hidden{display:none!important}</style>
-
-    <!-- ========================================== -->
-    <!-- PANTALLA DE LOGIN                          -->
-    <!-- ========================================== -->
-    <div id="login-overlay" class="login-overlay hidden">
-
-        <!-- Panel izquierdo: identidad de la plataforma -->
-        <div class="login-pitch" aria-hidden="true">
-            <div class="login-pitch-inner">
-                <div class="login-logo-row">
-                    <div class="logo-icon"><i class="ph-duotone ph-books"></i></div>
-                    <span class="login-logo-name">Leo<span>English</span></span>
-                </div>
-                <h2 class="login-pitch-headline">De A1 a C1.<br>Sin excusas.</h2>
-                <p class="login-pitch-sub">
-                    Una ruta adaptativa completa — gramática, vocabulario, reading y writing — 
-                    alineada al Marco Europeo. Tu progreso, tu racha, tu nivel.
-                </p>
-
-                <div class="login-features">
-                    <div class="lf-item">
-                        <div class="lf-icon" style="background:rgba(245,200,66,0.18);color:var(--yellow-deep)">
-                            <i class="ph-duotone ph-path"></i>
-                        </div>
-                        <div>
-                            <strong>Ruta adaptativa A1 → C1</strong>
-                            <span>El sistema diagnostica tu nivel y construye tu camino</span>
-                        </div>
-                    </div>
-                    <div class="lf-item">
-                        <div class="lf-icon" style="background:rgba(34,197,94,0.13);color:var(--green)">
-                            <i class="ph-fill ph-fire"></i>
-                        </div>
-                        <div>
-                            <strong>Racha diaria + XP</strong>
-                            <span>Gamificación real que hace que vuelvas cada día</span>
-                        </div>
-                    </div>
-                    <div class="lf-item">
-                        <div class="lf-icon" style="background:rgba(207,43,43,0.12);color:var(--red)">
-                            <i class="ph-duotone ph-medal"></i>
-                        </div>
-                        <div>
-                            <strong>Portfolio MCER oficial</strong>
-                            <span>Evidencias reales para cada nivel del Marco Europeo</span>
-                        </div>
-                    </div>
-                    <div class="lf-item">
-                        <div class="lf-icon" style="background:rgba(255,255,255,0.12);color:#fff">
-                            <i class="ph-duotone ph-briefcase"></i>
-                        </div>
-                        <div>
-                            <strong>Business English</strong>
-                            <span>Módulos profesionales B1/B2/C1 desbloqueables</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="login-level-strip">
-                    <span class="lls-label">Niveles disponibles</span>
-                    <div class="lls-levels">
-                        <span class="lls-node done">A1</span>
-                        <span class="lls-line"></span>
-                        <span class="lls-node done">A2</span>
-                        <span class="lls-line"></span>
-                        <span class="lls-node done">B1</span>
-                        <span class="lls-line"></span>
-                        <span class="lls-node done">B2</span>
-                        <span class="lls-line"></span>
-                        <span class="lls-node done">C1</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Panel derecho: formulario -->
-        <div class="login-card">
-
-            <div class="login-header">
-                <div class="logo-icon login-card-logo"><i class="ph-duotone ph-books"></i></div>
-                <h1>Leo<span>English</span></h1>
-            </div>
-
-            <h2 id="auth-title">¡Hola! Inicia sesión</h2>
-
-            <p>
-                Cada estudiante tiene su propia ruta, diagnóstico, progreso y XP.
-            </p>
-
-            <!-- VISTA DE INICIO DE SESIÓN -->
-            <div class="login-form" id="login-view">
-                <input 
-                    type="email" 
-                    id="login-email" 
-                    placeholder="Correo electrónico" 
-                    class="setting-input" 
-                    autocomplete="email"
-                >
-
-                <input 
-                    type="password" 
-                    id="login-password" 
-                    placeholder="Contraseña" 
-                    class="setting-input" 
-                    autocomplete="current-password"
-                >
-
-                <button class="btn-primary-full" onclick="handleEmailLogin()">
-                    Entrar
-                </button>
-
-                <p style="text-align:center;margin-top:15px;font-size:13px;color:#6B5F58;">
-                    ¿No tienes cuenta?
-                    <a 
-                        href="#" 
-                        onclick="toggleAuthView('register'); return false;" 
-                        style="color:#D7262E;font-weight:900;text-decoration:none;"
-                    >
-                        Regístrate aquí
-                    </a>
-                </p>
-            </div>
-
-            <!-- VISTA DE REGISTRO -->
-            <div class="login-form" id="register-view" style="display:none;">
-                <input 
-                    type="text" 
-                    id="reg-name" 
-                    placeholder="Tu nombre" 
-                    class="setting-input" 
-                    autocomplete="name"
-                >
-
-                <input 
-                    type="email" 
-                    id="reg-email" 
-                    placeholder="Correo electrónico" 
-                    class="setting-input" 
-                    autocomplete="email"
-                >
-
-                <input 
-                    type="password" 
-                    id="reg-password" 
-                    placeholder="Crea una contraseña, mínimo 6 caracteres" 
-                    class="setting-input" 
-                    autocomplete="new-password"
-                >
-
-                <button class="btn-primary-full" onclick="handleEmailRegister()">
-                    Crear mi cuenta
-                </button>
-
-                <p style="text-align:center;margin-top:15px;font-size:13px;color:#6B5F58;">
-                    ¿Ya tienes cuenta?
-                    <a 
-                        href="#" 
-                        onclick="toggleAuthView('login'); return false;" 
-                        style="color:#D7262E;font-weight:900;text-decoration:none;"
-                    >
-                        Inicia sesión
-                    </a>
-                </p>
-            </div>
-
-            <div class="login-divider">
-                <span>O INGRESA CON</span>
-            </div>
-
-            <button class="btn-google" onclick="handleGoogleLogin()">
-                <svg 
-                    width="20" 
-                    height="20" 
-                    viewBox="0 0 48 48" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    aria-hidden="true"
-                >
-                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-                </svg>
-
-                Continuar con Google
-            </button>
-
-        </div><!-- /login-card -->
-    </div><!-- /login-overlay -->
-
-
-    <!-- ========================================== -->
-    <!-- CONTENEDOR PRINCIPAL                       -->
-    <!-- ========================================== -->
-    <div class="app-container">
-
-        <!-- ========================================== -->
-        <!-- SIDEBAR                                   -->
-        <!-- ========================================== -->
-        <nav class="sidebar" id="sidebar">
-
-            <div class="sidebar-top">
-                <div class="logo-section">
-                    <div class="logo-icon">
-                        <i class="ph-duotone ph-books"></i>
-                    </div>
-
-                    <h1>Leo<span>English</span></h1>
-                </div>
-
-                <button 
-                    class="sidebar-toggle" 
-                    onclick="toggleSidebar()" 
-                    title="Colapsar menú"
-                    aria-label="Colapsar menú"
-                >
-                    <i class="ph-bold ph-sidebar-simple" id="toggle-icon"></i>
-                </button>
-            </div>
-
-            <div class="streak-card">
-                <i class="ph-fill ph-fire streak-icon"></i>
-
-                <div class="streak-info">
-                    <span class="streak-label">Racha</span>
-                    <span class="streak-val" id="streak-display">1 Día</span>
-                </div>
-
-                <div class="xp-pill" id="xp-pill">0 XP</div>
-            </div>
-
-            <div class="nav-links">
-
-                <div class="nav-sep">
-                    <span>Aprendizaje</span>
-                </div>
-
-                <button class="nav-btn active" onclick="showScreen('dashboard'); setActiveNav(this)">
-                    <i class="ph-duotone ph-map-trifold"></i>
-                    <span class="nav-label">Mi Ruta</span>
-                </button>
-
-                <button class="nav-btn" id="diagnostic-nav-btn" onclick="showScreen('diagnostic'); setActiveNav(this)">
-                    <i class="ph-duotone ph-scan"></i>
-                    <span class="nav-label">Diagnóstico</span>
-                </button>
-
-                <button class="nav-btn" onclick="showScreen('cefr-portfolio'); setActiveNav(this)">
-                    <i class="ph-duotone ph-medal"></i>
-                    <span class="nav-label">Mi Portfolio MCER</span>
-                </button>
-
-                <button class="nav-btn" onclick="showScreen('business-english'); setActiveNav(this)">
-                    <i class="ph-duotone ph-briefcase"></i>
-                    <span class="nav-label">Business English</span>
-                </button>
-
-                <button class="nav-btn" onclick="showScreen('settings'); setActiveNav(this)">
-                    <i class="ph-duotone ph-gear"></i>
-                    <span class="nav-label">Configuración</span>
-                </button>
-
-            </div>
-
-            <div class="user-profile">
-
-                <div class="profile-header">
-                    <div class="avatar" id="avatar-initials">E</div>
-
-                    <div class="user-info">
-                        <span class="user-name" id="user-name-display">Estudiante</span>
-                        <span class="user-level" id="level-display">Nivel 1 · A1</span>
-                    </div>
-                </div>
-
-                <div class="xp-progress-container">
-                    <div class="xp-bar-wrap">
-                        <div class="xp-bar">
-                            <div class="xp-fill" id="xp-fill"></div>
-                        </div>
-
-                        <span class="xp-text" id="xp-display">0 / 100 XP</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </nav>
-
-
-        <!-- ========================================== -->
-        <!-- MAIN CONTENT                              -->
-        <!-- ========================================== -->
-        <main class="main-content" id="main-content">
-
-            <!-- ========================================== -->
-            <!-- DASHBOARD / MI RUTA                       -->
-            <!-- ========================================== -->
-            <section id="screen-dashboard" class="screen active">
-
-                <header class="page-header">
-                    <div>
-                        <h2 id="greeting-text">¡Buenos días, Estudiante!</h2>
-                        <p>
-                            Aquí tienes tu ruta de aprendizaje personalizada según el Marco Europeo de Lenguas.
-                        </p>
-                    </div>
-
-                    <div class="header-actions">
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('diagnostic')" 
-                            title="Hacer diagnóstico"
-                            aria-label="Hacer diagnóstico"
-                        >
-                            <i class="ph-duotone ph-scan"></i>
-                        </button>
-
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('settings')" 
-                            title="Configuración"
-                            aria-label="Configuración"
-                        >
-                            <i class="ph-duotone ph-gear"></i>
-                        </button>
-                    </div>
-                </header>
-
-
-                <!-- HERO DE IDENTIDAD GRÁFICA -->
-                <div class="brand-hero-card">
-                    <div class="brand-hero-content">
-                        <span class="brand-kicker">British Sketch Edition</span>
-
-                        <h3>
-                            Aprende inglés como si abrieras un cuaderno visual
-                        </h3>
-
-                        <p>
-                            Una sola ruta con gramática, vocabulario, reading, writing,
-                            dictados, refuerzos, diagnóstico y avance por nivel.
-                        </p>
-
-                        <div class="btn-row" style="justify-content:flex-start;margin-top:18px;">
-                            <button class="btn-check" onclick="showScreen('diagnostic')">
-                                <i class="ph-duotone ph-scan"></i>
-                                Hacer diagnóstico
-                            </button>
-
-                            <button class="btn-secondary" onclick="document.getElementById('modules-status-grid')?.scrollIntoView({behavior:'smooth'});">
-                                <i class="ph-duotone ph-map-trifold"></i>
-                                Ver mi ruta
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="brand-hero-doodles" aria-hidden="true">
-                        <span>🇬🇧</span>
-                        <span>📘</span>
-                        <span>☕</span>
-                        <span>☂️</span>
-                    </div>
-                </div>
-
-
-                <!-- EMPTY STATE — visible solo para usuarios nuevos (0 XP) -->
-                <div class="empty-state-banner" id="empty-state-banner">
-                    <div class="esb-left">
-                        <span class="esb-kicker">🚀 Tu aventura comienza aquí</span>
-                        <h3 class="esb-title">Descubre tu nivel real en 5 minutos</h3>
-                        <p class="esb-desc">
-                            Haz el diagnóstico gratuito. El sistema detecta tu nivel A1–C1 y construye tu ruta personal 
-                            con gramática, vocabulario, reading y writing.
-                        </p>
-                        <button class="btn-primary-full" onclick="showScreen('diagnostic')" style="margin-top:14px;width:fit-content;">
-                            <i class="ph-duotone ph-scan"></i>
-                            Hacer diagnóstico gratis
-                        </button>
-                    </div>
-                    <div class="esb-path" aria-hidden="true">
-                        <div class="esb-node esb-future">A1</div>
-                        <div class="esb-connector"></div>
-                        <div class="esb-node esb-future">A2</div>
-                        <div class="esb-connector"></div>
-                        <div class="esb-node esb-future">B1</div>
-                        <div class="esb-connector"></div>
-                        <div class="esb-node esb-future">B2</div>
-                        <div class="esb-connector"></div>
-                        <div class="esb-node esb-target">C1 ✦</div>
-                    </div>
-                </div>
-
-                <!-- STATS ROW -->
-                <div class="stats-row">
-
-                    <div class="stat-card">
-                        <div class="stat-icon" style="background:rgba(207,43,43,0.12);color:var(--red)">
-                            <i class="ph-fill ph-lightning"></i>
-                        </div>
-                        <div class="stat-texts">
-                            <div class="stat-num" id="stat-xp">0</div>
-                            <div class="stat-lbl">XP Total</div>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon" style="background:rgba(34,197,94,0.13);color:var(--green)">
-                            <i class="ph-fill ph-check-circle"></i>
-                        </div>
-                        <div class="stat-texts">
-                            <div class="stat-num" id="stat-done">0</div>
-                            <div class="stat-lbl">Actividades</div>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon" style="background:var(--yellow-pale);color:var(--yellow-deep)">
-                            <i class="ph-fill ph-fire"></i>
-                        </div>
-                        <div class="stat-texts">
-                            <div class="stat-num" id="stat-streak">1</div>
-                            <div class="stat-lbl">Días racha</div>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon" style="background:rgba(207,43,43,0.12);color:var(--red)">
-                            <i class="ph-fill ph-crosshair-simple"></i>
-                        </div>
-                        <div class="stat-texts">
-                            <div class="stat-num" id="stat-accuracy">—</div>
-                            <div class="stat-lbl">Precisión</div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!-- DASHBOARD GRID -->
-                <div class="dashboard-grid">
-
-                    <!-- SKILLS -->
-                    <div class="skills-card">
-                        <h3>
-                            <i class="ph-duotone ph-chart-bar"></i>
-                            Habilidades MCER
-                        </h3>
-
-                        <div class="skill-bars-container" id="skills-bars"></div>
-
-                        <div class="course-progress">
-                            <div class="progress-lbl-row">
-                                <span class="progress-lbl">Progreso Total de la Ruta</span>
-                                <span class="total-pct" id="total-progress-pct">0%</span>
-                            </div>
-
-                            <div class="total-bar">
-                                <div class="total-fill" id="total-progress-fill"></div>
-                            </div>
-                        </div>
-
-                        <!-- WIDGET ADAPTATIVO -->
-                        <div id="adaptive-widget" style="margin-top:14px;display:none;">
-                            <div style="height:1px;background:var(--border);margin-bottom:12px;"></div>
-                            <div style="font-size:9px;font-weight:900;letter-spacing:.10em;text-transform:uppercase;color:var(--text-4);margin-bottom:8px;">
-                                🧠 Recomendación adaptativa
-                            </div>
-                            <div id="adaptive-content"></div>
-                        </div>
-                    </div>
-
-
-                    <!-- COLUMNA DERECHA -->
-                    <div class="right-column-grid" style="display:flex;flex-direction:column;gap:20px;">
-
-                        <!-- FEEDBACK -->
-                        <div class="feedback-card">
-                            <h3>
-                                <i data-lucide="message-circle"></i>
-                                Feedback del Profesor IA
-                            </h3>
-
-                            <div class="feedback-content" id="teacher-feedback">
-                                <div class="fb-item fb-info">
-                                    <i data-lucide="info"></i>
-                                    <span>
-                                        Completa tu diagnóstico o tu primera actividad para recibir feedback personalizado.
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="rank-section">
-                                <div class="rank-badge">
-                                    <span class="rank-lbl">Rango Actual</span>
-                                    <span class="rank-val" id="rank-display">Explorador Novato</span>
-                                </div>
-
-                                <div class="cefr-badge" id="cefr-badge">A1</div>
-                            </div>
-                        </div>
-
-
-                        <!-- LEADERBOARD -->
-                        <div class="leaderboard-card animate-pop">
-                            <h3>
-                                <i data-lucide="trophy" style="color:#D99A2B;"></i>
-                                Ranking Familiar
-                            </h3>
-
-                            <div class="leaderboard-list" id="leaderboard-list">
-                                <div class="activity-empty">Cargando posiciones...</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- RUTA DE APRENDIZAJE -->
-                <div class="section-header">
-                    <h3>Ruta de Aprendizaje</h3>
-                    <span class="section-sub">
-                        Todo el contenido vive aquí: gramática, vocabulario, reading y writing.
-                    </span>
-                </div>
-
-                <div id="modules-status-grid"></div>
-
-
-                <!-- ACTIVIDAD RECIENTE -->
-                <div class="section-header" style="margin-top:32px">
-                    <h3>Actividad Reciente</h3>
-                </div>
-
-                <div id="activity-log" class="activity-log">
-                    <div class="activity-empty">
-                        Aún no hay actividad. ¡Empieza una lección o haz el diagnóstico!
-                    </div>
-                </div>
-
-            </section>
-
-
-            <!-- ========================================== -->
-            <!-- DIAGNÓSTICO                               -->
-            <!-- ========================================== -->
-            <section id="screen-diagnostic" class="screen">
-
-                <header class="page-header">
-                    <div>
-                        <h2>Diagnóstico de nivel</h2>
-                        <p>
-                            Evalúa tu nivel, homologa lo que ya dominas y recibe refuerzos obligatorios.
-                        </p>
-                    </div>
-
-                    <div class="header-actions">
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('dashboard')" 
-                            title="Volver a mi ruta"
-                            aria-label="Volver a mi ruta"
-                        >
-                            <i class="ph-duotone ph-map-trifold"></i>
-                        </button>
-                    </div>
-                </header>
-
-                <div id="diagnostic-content">
-
-                    <div class="card-theory animate-pop">
-                        <h3>Prueba diagnóstica</h3>
-
-                        <p>
-                            Esta prueba revisa tus conocimientos actuales, estima tu nivel y ajusta tu ruta.
-                            Si demuestras dominio, algunas actividades podrán quedar homologadas.
-                        </p>
-
-                        <div class="theory-grid">
-                            <div class="t-box" style="border-color:#12375A;background:#EAF0F7">
-                                <strong style="color:#12375A">Diagnosticar</strong>
-                                <small>Identifica tu nivel probable según tu desempeño.</small>
-                            </div>
-
-                            <div class="t-box" style="border-color:#1D9E75;background:#EAF3DE">
-                                <strong style="color:#276749">Homologar</strong>
-                                <small>Marca como dominado lo que ya sabes hacer bien.</small>
-                            </div>
-
-                            <div class="t-box" style="border-color:#D7262E;background:#FFE7E4">
-                                <strong style="color:#9B2C2C">Reforzar</strong>
-                                <small>Te muestra los temas que aún debes completar.</small>
-                            </div>
-                        </div>
-
-                        <div class="tip-callout">
-                            <i data-lucide="lightbulb"></i>
-                            Responde con honestidad. La prueba no busca castigarte, sino ubicarte mejor.
-                        </div>
-
-                        <div class="btn-row">
-                            <button class="btn-check" onclick="startDiagnostic()">
-                                <i class="ph-duotone ph-scan"></i>
-                                Iniciar diagnóstico
-                            </button>
-
-                            <button class="btn-secondary" onclick="showScreen('dashboard')">
-                                <i class="ph-duotone ph-map-trifold"></i>
-                                Volver a mi ruta
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="diagnostic-zone"></div>
-
-                </div>
-
-            </section>
-
-
-            <!-- ========================================== -->
-            <!-- MÓDULO DE GRAMÁTICA / ACTIVIDAD PRINCIPAL -->
-            <!-- ========================================== -->
-            <section id="screen-module" class="screen">
-                <div id="module-content"></div>
-            </section>
-
-
-            <!-- ========================================== -->
-            <!-- CONTENEDOR INTERNO: READING                -->
-            <!-- No aparece en el menú. Se abre desde ruta. -->
-            <!-- ========================================== -->
-            <section id="screen-reading-hub" class="screen">
-
-                <header class="page-header">
-                    <div>
-                        <h2>Reading</h2>
-                        <p>
-                            Comprensión lectora integrada a tu ruta de aprendizaje.
-                        </p>
-                    </div>
-
-                    <div class="header-actions">
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('dashboard')" 
-                            title="Volver a mi ruta"
-                            aria-label="Volver a mi ruta"
-                        >
-                            <i class="ph-duotone ph-map-trifold"></i>
-                        </button>
-                    </div>
-                </header>
-
-                <div id="reading-hub-content"></div>
-
-            </section>
-
-
-            <!-- ========================================== -->
-            <!-- CONTENEDOR INTERNO: WRITING                -->
-            <!-- No aparece en el menú. Se abre desde ruta. -->
-            <!-- ========================================== -->
-            <section id="screen-writing-hub" class="screen">
-
-                <header class="page-header">
-                    <div>
-                        <h2>Writing</h2>
-                        <p>
-                            Escritura, corrección, dictado y producción guiada dentro de tu ruta.
-                        </p>
-                    </div>
-
-                    <div class="header-actions">
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('dashboard')" 
-                            title="Volver a mi ruta"
-                            aria-label="Volver a mi ruta"
-                        >
-                            <i class="ph-duotone ph-map-trifold"></i>
-                        </button>
-                    </div>
-                </header>
-
-                <div id="writing-hub-content"></div>
-
-            </section>
-
-
-            <!-- ========================================== -->
-            <!-- CONTENEDOR INTERNO: VOCABULARIO            -->
-            <!-- No aparece en el menú. Se abre desde ruta. -->
-            <!-- ========================================== -->
-            <section id="screen-vocab-hub" class="screen">
-
-                <header class="page-header">
-                    <div>
-                        <h2>Vocabulario</h2>
-                        <p>
-                            Tarjetas, audio, práctica temática y repetición activa dentro de tu ruta.
-                        </p>
-                    </div>
-
-                    <div class="header-actions">
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('dashboard')" 
-                            title="Volver a mi ruta"
-                            aria-label="Volver a mi ruta"
-                        >
-                            <i class="ph-duotone ph-map-trifold"></i>
-                        </button>
-                    </div>
-                </header>
-
-                <div id="vocab-hub-content"></div>
-
-            </section>
-
-
-            <!-- ========================================== -->
-            <!-- SETTINGS                                  -->
-            <!-- ========================================== -->
-            <section id="screen-settings" class="screen">
-
-                <header class="page-header">
-                    <div>
-                        <h2>Configuración</h2>
-                        <p>
-                            Personaliza tu experiencia de aprendizaje, meta diaria y progreso.
-                        </p>
-                    </div>
-
-                    <div class="header-actions">
-                        <button 
-                            class="icon-btn" 
-                            onclick="showScreen('dashboard')" 
-                            title="Volver a mi ruta"
-                            aria-label="Volver a mi ruta"
-                        >
-                            <i class="ph-duotone ph-map-trifold"></i>
-                        </button>
-                    </div>
-                </header>
-
-                <div class="settings-grid">
-
-                    <!-- PERFIL -->
-                    <div class="settings-card">
-                        <h3>
-                            <i data-lucide="user"></i>
-                            Perfil
-                        </h3>
-
-                        <label class="setting-label" for="setting-name">
-                            Tu nombre
-                        </label>
-
-                        <input 
-                            type="text" 
-                            id="setting-name" 
-                            class="setting-input" 
-                            placeholder="Escribe tu nombre..." 
-                            value="Estudiante"
-                        >
-
-                        <label class="setting-label">
-                            Meta diaria de XP
-                        </label>
-
-                        <div class="goal-options">
-                            <button 
-                                class="goal-btn active" 
-                                data-goal="50" 
-                                onclick="setGoal(this)"
-                            >
-                                Básico
-                                <br>
-                                <small>50 XP/día</small>
-                            </button>
-
-                            <button 
-                                class="goal-btn" 
-                                data-goal="100" 
-                                onclick="setGoal(this)"
-                            >
-                                Regular
-                                <br>
-                                <small>100 XP/día</small>
-                            </button>
-
-                            <button 
-                                class="goal-btn" 
-                                data-goal="200" 
-                                onclick="setGoal(this)"
-                            >
-                                Intensivo
-                                <br>
-                                <small>200 XP/día</small>
-                            </button>
-                        </div>
-
-                        <button class="btn-primary-full" onclick="saveSettings()">
-                            Guardar cambios
-                        </button>
-
-                        <button 
-                            class="btn-secondary" 
-                            style="width:100%;justify-content:center;margin-top:10px;background:#4A5568;" 
-                            onclick="handleLogout()"
-                        >
-                            Cerrar sesión
-                        </button>
-                    </div>
-
-
-                    <!-- PROGRESO -->
-                    <div class="settings-card">
-                        <h3>
-                            <i data-lucide="refresh-ccw"></i>
-                            Progreso
-                        </h3>
-
-                        <p style="color:#6B5F58;font-size:14px;margin-bottom:16px;line-height:1.6;">
-                            Reinicia tu progreso para empezar desde cero. Esta acción no se puede deshacer.
-                        </p>
-
-                        <button class="btn-danger-full" onclick="confirmReset()">
-                            Reiniciar progreso
-                        </button>
-
-
-                        <!-- ZONA ADMIN -->
-                        <div 
-                            id="admin-zone" 
-                            style="display:none;margin-top:30px;border-top:1px dashed #E6BFA6;padding-top:20px;"
-                        >
-                            <h4 style="font-size:14px;color:#243447;margin-bottom:8px;">
-                                <i 
-                                    data-lucide="shield-alert" 
-                                    style="width:14px;height:14px;display:inline-block;vertical-align:middle;"
-                                ></i>
-                                Zona de Administración
-                            </h4>
-
-                            <button 
-                                class="btn-primary-full" 
-                                style="background:#12375A;" 
-                                onclick="toggleAdminView()"
-                            >
-                                Activar/Desactivar Candados
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- ========================================== -->
-            <!-- PANTALLA: PORTFOLIO MCER                   -->
-            <!-- ========================================== -->
-            <section id="screen-cefr-portfolio" class="screen">
-                <div class="screen-inner">
-                    <div class="screen-header">
-                        <button class="back-btn" onclick="showScreen('dashboard');setActiveNavById('dashboard')">
-                            <i class="ph-bold ph-arrow-left"></i>
-                        </button>
-                        <div>
-                            <h2 class="screen-title">Mi Portfolio MCER</h2>
-                            <p class="screen-subtitle">Evidencias y competencias según el Marco Común Europeo de Referencia</p>
-                        </div>
-                    </div>
-                    <div id="cefr-portfolio-content">
-                        <div class="empty-state"><i data-lucide="loader"></i><p>Cargando portfolio...</p></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========================================== -->
-            <!-- PANTALLA: BUSINESS ENGLISH                 -->
-            <!-- ========================================== -->
-            <section id="screen-business-english" class="screen">
-                <div class="screen-inner">
-                    <div class="screen-header">
-                        <button class="back-btn" onclick="showScreen('dashboard');setActiveNavById('dashboard')">
-                            <i class="ph-bold ph-arrow-left"></i>
-                        </button>
-                        <div>
-                            <h2 class="screen-title">Business English</h2>
-                            <p class="screen-subtitle">Módulos opcionales de inglés profesional — MCER Cap. 4.1.2</p>
-                        </div>
-                    </div>
-                    <div id="business-english-content">
-                        <div class="empty-state"><i data-lucide="loader"></i><p>Cargando módulos...</p></div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+    <div class="topbar-div"></div>
+    
+    <div class="topbar-progress" id="topbar-prog" style="display:none">
+      <span id="topbar-prog-txt">0%</span>
+      <div class="topbar-progress-bar">
+        <div class="topbar-progress-fill" id="topbar-prog-fill" style="width:0%"></div>
+      </div>
     </div>
 
+    <nav class="nav-pills">
+      <button class="npill on" id="nav-curso" onclick="showPage('curso', event)">📚 Curso</button>
+      <button class="npill" id="nav-profundizacion" onclick="showPage('profundizacion', event)">📊 Competencias CSE</button>
+      <button class="npill" id="nav-diario" onclick="showPage('diario', event)">📓 Diario</button>
+      <button class="npill" id="nav-dashboard" onclick="showPage('dashboard', event)">📊 Dashboard</button>
+    </nav>
+  </header>
 
-    <!-- ========================================== -->
-    <!-- TOAST Y MODAL                              -->
-    <!-- ========================================== -->
-    <!-- CONFETTI CANVAS -->
-    <canvas id="confetti-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:9800;display:none;"></canvas>
+  <!-- ═══════════════════════ PAGE: CURSO ═══════════════════════ -->
+  <div id="page-curso" class="page active">
 
-    <!-- LEVEL UP OVERLAY -->
-    <div id="levelup-overlay" style="display:none;position:fixed;inset:0;z-index:9700;
-        background:rgba(26,24,20,0.80);backdrop-filter:blur(10px);
-        display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
-        <div id="levelup-box" style="
-            background:var(--bg-2);border:2px solid var(--border-md);
-            border-radius:var(--r-2xl);padding:40px 48px;text-align:center;
-            box-shadow:var(--shadow-lg);animation:popIn 0.35s var(--ease-spring) both;max-width:360px;width:90%;">
-            <div style="font-size:56px;margin-bottom:10px;animation:bounceIn 0.5s var(--ease-spring) 0.1s both;">🏆</div>
-            <div style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:8px;">¡NIVEL SUBIDO!</div>
-            <div id="levelup-num" style="font-family:var(--font-display);font-size:52px;font-weight:800;letter-spacing:-.06em;color:var(--text-1);line-height:1;margin-bottom:8px;"></div>
-            <div id="levelup-cefr" style="font-size:14px;color:var(--text-2);margin-bottom:20px;line-height:1.5;"></div>
-            <button onclick="closeLevelUp()" style="
-                background:var(--red);
-                color:#fff;border:none;border-radius:var(--r-sm);
-                padding:12px 28px;font-size:14px;font-weight:700;cursor:pointer;
-                font-family:var(--font);box-shadow:var(--shadow-brand);width:100%;">
-                ¡Seguir aprendiendo! 🚀
-            </button>
+    <div class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-badge"><span class="hero-dot"></span>MEN Colombia · Lineamientos 2026</div>
+      <h1>Formación <em>Ciudadana</em><br>&amp; Desarrollo Socioemocional</h1>
+      <p class="hero-desc">Lineamientos Curriculares para la Formación Integral — Educación Inicial, Básica y Media. Un programa transformador para docentes comprometidos con Colombia.</p>
+      
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">9</div><div class="lbl">Módulos</div></div>
+        <div class="hero-stat"><div class="num">33</div><div class="lbl">Sesiones</div></div>
+        <div class="hero-stat"><div class="num">40h+</div><div class="lbl">Formación</div></div>
+        <div class="hero-stat"><div class="num">4</div><div class="lbl">Niveles Educ.</div></div>
+      </div>
+
+      <div class="progress-hero" id="progress-hero" style="display:none">
+        <div class="progress-hero-top">
+          <span class="progress-hero-label">Tu progreso en el curso</span>
+          <span class="progress-hero-pct" id="hero-pct">0%</span>
         </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="hero-bar" style="width:0%"></div>
+        </div>
+        <div style="font-size:12px; opacity:.75; margin-top:.4rem" id="hero-sub-txt">0 de 33 sesiones completadas</div>
+        <button class="resume-btn" id="resume-btn" onclick="resumeCourse()" style="display:none">
+          <i class="ti ti-player-play"></i> Retomar donde lo dejé
+        </button>
+      </div>
     </div>
 
-    <div id="toast" class="toast"></div>
-
-    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
-        <div class="modal-box" onclick="event.stopPropagation()">
-            <div id="modal-content"></div>
-        </div>
+    <div class="container" id="view-modulos">
+      <div class="section-title">Módulos del curso</div>
+      <div id="modulos-list"></div>
+      <div class="note-box">
+        <strong style="color:var(--verde-dk)">Nota pedagógica:</strong> Este curso puede implementarse de manera flexible, adaptado a las realidades territoriales, culturales y sociales de cada institución educativa. Las competencias ciudadanas y socioemocionales se desarrollan tanto en el currículo explícito como en el currículo oculto que permea toda la vida institucional.
+      </div>
+      <button onclick="showPage('diario', event)" style="margin-top:.85rem; width:100%; padding:11px; background:var(--surface); border:1.5px solid var(--border); border-radius:var(--radius); cursor:pointer; font-size:13px; font-weight:600; color:var(--text2); display:flex; align-items:center; justify-content:center; gap:8px; font-family:Inter,sans-serif; box-shadow:var(--shadow-sm); transition:all .15s">
+        <i class="ti ti-notebook"></i> Ver mi diario pedagógico
+      </button>
     </div>
 
+    <div class="container" id="view-sesiones" style="display:none">
+      <button class="back-btn" onclick="backToModulos()"><i class="ti ti-arrow-left"></i> Volver al curso</button>
+      <div id="mod-header"></div>
+      <div class="section-title" id="ses-count-label"></div>
+      <div id="sesiones-list"></div>
+    </div>
 
-    <!-- ========================================== -->
-    <!-- SCRIPTS DE DATOS                           -->
-    <!-- ========================================== -->
-    <script src="data-grammar.js"></script>
-    <script src="data-grammar-b1.js"></script>
-    <script src="data-grammar-b2.js"></script>
-    <script src="data-grammar-c1.js"></script>
-    <script src="data-reading-writing.js"></script>
-    <script src="data-reading-writing-b1.js"></script>
-    <script src="data-reading-writing-b2.js"></script>
-    <script src="data-reading-writing-c1.js"></script>
-    <script src="data-vocab.js"></script>
-    <script src="data-vocab-b1.js"></script>
-    <script src="data-vocab-b2.js"></script>
-    <script src="data-vocab-c1.js"></script>
-    <script src="data-cefr-framework.js"></script>
-    <script src="data-business-english.js"></script>
+    <div class="container" id="view-sesion" style="display:none">
+      <button class="back-btn" onclick="backToSesiones()"><i class="ti ti-arrow-left"></i> Volver al módulo</button>
+      <div class="ses-header">
+        <div id="ses-badge-row"></div>
+        <h2 id="ses-title"></h2>
+        <div id="ses-meta" style="font-size:13px; color:var(--muted)"></div>
+      </div>
+      
+      <div class="tab-bar" id="ses-tabs">
+        <button class="tab-btn active" onclick="switchTab('contenido', this)">Contenidos</button>
+        <button class="tab-btn" onclick="switchTab('actividades', this)">Actividades</button>
+        <button class="tab-btn" onclick="switchTab('recursos', this)">Recursos</button>
+      </div>
+      
+      <div id="tab-contenido"></div>
+      <div id="tab-actividades" style="display:none"></div>
+      <div id="tab-recursos" style="display:none"></div>
+      
+
+      <div class="nav-footer">
+        <button class="nav-prev" id="btn-prev" onclick="navSesion(-1)"><i class="ti ti-arrow-left"></i> Anterior</button>
+        <button class="nav-next" id="btn-next" onclick="navSesion(1)">Siguiente <i class="ti ti-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ PAGE: PROFUNDIZACIÓN CSE ═══════════════════════ -->
+  <div id="page-profundizacion" class="page">
+    <div class="hero" style="background:linear-gradient(135deg,#534AB7 0%,#993556 100%)">
+      <div class="hero-label">Material ampliado</div>
+      <h1>7 Competencias Socioemocionales</h1>
+      <div class="hero-sub">Secuencia didáctica · Actividades por nivel · Rúbrica · Guía del facilitador</div>
+    </div>
+    <div class="container">
+      <div class="section-title">Selecciona una competencia</div>
+      <div id="cse-list"></div>
+    </div>
+    <div class="container" id="view-cse-detail" style="display:none">
+      <button class="back-btn" onclick="backToCSE()"><i class="ti ti-arrow-left"></i> Volver</button>
+      <div id="cse-header"></div>
+      <div class="tab-bar" id="cse-tabs">
+        <button class="tab-btn active" onclick="switchCSETab('secuencia', this)">Secuencia didáctica</button>
+        <button class="tab-btn" onclick="switchCSETab('actividades', this)">Por nivel educativo</button>
+        <button class="tab-btn" onclick="switchCSETab('rubrica', this)">Rúbrica</button>
+        <button class="tab-btn" onclick="switchCSETab('guia', this)">Guía del facilitador</button>
+      </div>
+      <div id="cse-secuencia"></div>
+      <div id="cse-actividades" style="display:none"></div>
+      <div id="cse-rubrica" style="display:none"></div>
+      <div id="cse-guia" style="display:none"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ PAGE: DIARIO ═══════════════════════ -->
+  <div id="page-diario" class="page">
+    <div class="hero" style="background:linear-gradient(145deg,#1A1917 0%,#4A4845 100%)">
+      <div class="hero-label">Registro personal</div>
+      <h1>Mi Diario Pedagógico</h1>
+      <div class="hero-sub">Reflexiones guardadas a lo largo del curso</div>
+    </div>
+    <div class="container">
+      <div class="section-title">Entradas guardadas</div>
+      <div id="diario-entries"></div>
+      <div id="diario-empty" style="text-align:center; padding:3rem 1rem; color:var(--muted); display:none">
+        <i class="ti ti-notebook" style="font-size:40px; display:block; margin-bottom:1rem; opacity:.4"></i>
+        <p style="font-size:14px; line-height:1.6">Aún no tienes reflexiones guardadas.<br>Ve a cualquier sesión del curso y escribe tu primera reflexión.</p>
+      </div>
+      <button id="diario-clear-btn" onclick="clearDiario()" style="margin-top:1.5rem; padding:9px 18px; background:none; border:1.5px solid #FCA5A5; border-radius:9px; color:#DC2626; font-size:13px; font-weight:600; cursor:pointer; font-family:Inter,sans-serif; display:none">
+        <i class="ti ti-trash"></i> Borrar todo el diario
+      </button>
+    </div>
+  </div>
 
 
-    <!-- ========================================== -->
-    <!-- MOTOR PRINCIPAL                            -->
-    <!-- ========================================== -->
-    <!-- Diagnóstico mejorado v6: inferencia, escucha, A1→C1 -->
-    <!-- Contenido expandido v7: gramática + vocabulario con neuroeducación A1→C1 -->
-    <script src="data-grammar-expanded.js"></script>
-    <script src="data-vocab-expanded.js"></script>
-    <script src="data-diagnostic-enhanced.js"></script>
-    <!-- Motor adaptativo + Generador de portafolio —  sin costo API -->
-    <script src="data-listening-spaced.js"></script>
-    <script src="data-exercises-expanded.js"></script>
-    <script src="data-adaptive-portfolio.js"></script>
-    <script type="module" src="app.js"></script>
+  <!-- ═══════════════════════ PAGE: DASHBOARD ═══════════════════════ -->
+  <div id="page-dashboard" class="page">
+    <div class="hero" style="background:linear-gradient(145deg,#1A1917 0%,#2D2C2A 100%)">
+      <div class="hero-label">Tus datos</div>
+      <h1>Mi Dashboard</h1>
+      <div class="hero-sub">Progreso, evaluaciones y metacognición en un solo lugar</div>
+    </div>
+    <div class="container">
+      <div id="dashboard-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ SCRIPTS ═══════════════════════ -->
+  <!-- Inicializa el array global antes de que lleguen los módulos -->
+  <script>var MODULOS = []; var CSE = [];</script>
+
+  <!-- Módulos del curso (cada uno hace push a MODULOS) -->
+  <script src="js/modulos/m0.js"></script>
+  <script src="js/modulos/m1.js"></script>
+  <script src="js/modulos/m2.js"></script>
+  <script src="js/modulos/m3.js"></script>
+  <script src="js/modulos/m4.js"></script>
+  <script src="js/modulos/m5.js"></script>
+  <script src="js/modulos/m6.js"></script>
+  <script src="js/modulos/m7.js"></script>
+  <script src="js/modulos/m8.js"></script>
+  <script src="js/modulos/m_legal.js"></script>
+
+  <!-- CSE Deep Dive (hace push a CSE) -->
+  <script src="js/modulos/cse.js"></script>
+
+  <!-- Motor de la app (se ejecuta después de que MODULOS y CSE están completos) -->
+  <script src="js/app.js"></script>
+  <!-- app.js v3: quiz engine, lock system, likert metacognition -->
 
 </body>
 </html>
