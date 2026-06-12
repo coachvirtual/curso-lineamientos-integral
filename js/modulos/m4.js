@@ -15,55 +15,6 @@ MODULOS.push({
   descripcion: 'Estudiamos en profundidad cada una de las 7 Competencias Socioemocionales del MEN 2026: su fundamento científico, sus aprendizajes esenciales por nivel, sus indicadores y su articulación con las CC.',
   sesiones: [
     {
-      id: 's4_intro',
-      num: 'Sesión 0',
-      titulo: 'Panorama general: las 7 CSE y su organización por ejes',
-      duracion: '30 min',
-      tipo: 'Introducción visual',
-      objetivo: 'Tener una visión de conjunto de las 7 Competencias Socioemocionales, su relación con los ejes concéntricos y la interdependencia que las une.',
-      contenido: [
-        {
-          tipo: 'lectura',
-          titulo: 'Las 7 CSE: una arquitectura con sentido',
-          texto: `Las 7 Competencias Socioemocionales del MEN 2026 no son una lista arbitraria. Están organizadas en tres ejes del modelo concéntrico y se articulan de forma que el desarrollo de una refuerza a las otras:
-
-<ul>
-<li><strong>Eje A (Yo conmigo mismo):</strong> CSE-1 Conciencia emocional → CSE-2 Regulación emocional → CSE-3 Toma de decisiones éticas. Sin conocerse, no se puede regular. Sin regular, no se puede decidir bien.</li>
-<li><strong>Eje B (Yo con los otros):</strong> CSE-4 Empatía → CSE-5 Habilidades de relación. La empatía sin habilidades de comunicación queda en intención. Las habilidades sin empatía quedan en técnica.</li>
-<li><strong>Eje C (Yo con la sociedad):</strong> CSE-6 Emociones políticas → CSE-7 Resiliencia comunitaria. La indignación sin esperanza paraliza. La esperanza sin acción colectiva se vuelve ingenuidad.</li>
-</ul>
-
-<blockquote>"El desarrollo de las competencias socioemocionales no puede entenderse como el trabajo aislado de habilidades específicas, sino como el cultivo de una disposición integral hacia la vida personal y colectiva." <cite>— MEN, 2026, p. 67</cite></blockquote>`
-        },
-        {
-          tipo: 'grafico',
-          titulo: 'Figura 4 — Las 7 CSE organizadas por eje (MEN 2026)',
-          tipo_grafico: 'figura_cse',
-          nota: 'Fuente: Figura 4, MEN 2026, p. 68. Las 7 CSE son interdependientes: el desarrollo de una fortalece a todas las demás.',
-          datos: []
-        }
-      ],
-      actividades: [
-        {
-          tipo: 'reflexion',
-          titulo: '¿Cuál CSE es mi punto más fuerte? ¿Y el más débil?',
-          icono: '🪞',
-          instruccion: 'Observa el mapa de las 7 CSE. Sin pensarlo demasiado: ¿cuál reconoces más desarrollada en tu práctica docente? ¿Cuál sientes que tienes menos presente o menos trabajada? Escribe una línea para cada una. Esta autoevaluación inicial servirá como punto de referencia al final del módulo.',
-          tiempo: '10 min'
-        }
-      ],
-      recursos: [
-        { tipo: 'doc', titulo: 'MEN 2026 — Sección 2.7.2: Competencias socioemocionales (pp. 66–90)', url: '#', meta: 'Definición completa de las 7 CSE' }
-      ],
-      evaluacion: { titulo: '', preguntas: [] },
-      metacognicion: {
-        preguntas: [
-          '¿Qué te dice sobre la arquitectura del modelo que las CSE de autoconciencia (eje A) preceden a las de relación (eje B) y estas a las de participación social (eje C)?',
-          '¿Cuál de los tres ejes está más ausente en el currículo de tu institución actualmente?'
-        ]
-      }
-    },
-    {
       id: 's4_0',
       num: 'Sesión 1',
       titulo: 'CSE1 · Conciencia emocional: reconocer, nombrar y comprender las emociones',
@@ -100,18 +51,10 @@ El documento fundamenta esta competencia en tres tradiciones científicas conver
           tabla: {
             cabeceras: ['Nivel', 'Aprendizaje esencial', 'Indicadores de desempeño'],
             filas: [
-              ['Educación Inicial', 'Reconoce y expresa sus emociones básicas (alegría, tristeza, miedo, enojo) y comienza a identificarlas en los demás.', '• Nombra al menos 4 emociones básicas
-• Señala en su cuerpo dónde siente las emociones
-• Reconoce expresiones emocionales en rostros y gestos'],
-              ['Básica Primaria', 'Identifica un vocabulario ampliado de emociones, las conecta con situaciones que las generan y las expresa de forma apropiada.', '• Usa más de 10 palabras emocionales con precisión
-• Explica qué causó su emoción
-• Diferencia la emoción de la reacción'],
-              ['Básica Secundaria', 'Analiza sus estados emocionales con profundidad, reconoce la influencia del contexto social y cultural en las emociones.', '• Identifica emociones complejas (vergüenza, orgullo, envidia)
-• Conecta emociones con valores y creencias
-• Reconoce cómo el contexto social moldea lo que siente'],
-              ['Educación Media', 'Comprende las emociones como señales de información sobre sí mismo y el mundo, y las usa para la toma de decisiones éticas.', '• Usa las emociones como información en decisiones complejas
-• Reconoce sesgos emocionales en su razonamiento
-• Articula emoción con acción ciudadana'],
+              ['Educación Inicial', 'Reconoce y expresa sus emociones básicas (alegría, tristeza, miedo, enojo) y comienza a identificarlas en los demás.', '• Nombra al menos 4 emociones básicas\n• Señala en su cuerpo dónde siente las emociones\n• Reconoce expresiones emocionales en rostros y gestos'],
+              ['Básica Primaria', 'Identifica un vocabulario ampliado de emociones, las conecta con situaciones que las generan y las expresa de forma apropiada.', '• Usa más de 10 palabras emocionales con precisión\n• Explica qué causó su emoción\n• Diferencia la emoción de la reacción'],
+              ['Básica Secundaria', 'Analiza sus estados emocionales con profundidad, reconoce la influencia del contexto social y cultural en las emociones.', '• Identifica emociones complejas (vergüenza, orgullo, envidia)\n• Conecta emociones con valores y creencias\n• Reconoce cómo el contexto social moldea lo que siente'],
+              ['Educación Media', 'Comprende las emociones como señales de información sobre sí mismo y el mundo, y las usa para la toma de decisiones éticas.', '• Usa las emociones como información en decisiones complejas\n• Reconoce sesgos emocionales en su razonamiento\n• Articula emoción con acción ciudadana'],
             ]
           }
         },
@@ -701,18 +644,10 @@ En Colombia, comunidades que han sufrido desplazamiento, masacres y pérdidas ha
           tabla: {
             cabeceras: ['Nivel', 'Aprendizaje esencial', 'Indicadores de desempeño'],
             filas: [
-              ['Educación Inicial', 'Experimenta que puede superar dificultades con el apoyo de adultos y pares, desarrollando confianza básica.', '• Busca apoyo cuando tiene problemas
-• Celebra sus logros con otros
-• Reconoce que los errores son parte del aprendizaje'],
-              ['Básica Primaria', 'Reconoce sus fortalezas personales y comunitarias, y usa el apoyo de otros para enfrentar dificultades.', '• Identifica 3 de sus fortalezas personales
-• Busca y ofrece ayuda en situaciones difíciles
-• Transforma errores en aprendizaje visible'],
-              ['Básica Secundaria', 'Analiza experiencias de adversidad colectiva e identifica los factores que permitieron la recuperación comunitaria.', '• Documenta historias locales de resiliencia
-• Conecta adversidades personales con contextos colectivos
-• Propone acciones de fortalecimiento comunitario'],
-              ['Educación Media', 'Diseña proyectos de reconstrucción del tejido social desde la imaginación moral, articulando memoria, justicia y esperanza.', '• Lidera procesos de memoria y reparación simbólica
-• Construye narrativas de esperanza fundamentadas
-• Actúa como agente de resiliencia en su comunidad'],
+              ['Educación Inicial', 'Experimenta que puede superar dificultades con el apoyo de adultos y pares, desarrollando confianza básica.', '• Busca apoyo cuando tiene problemas\n• Celebra sus logros con otros\n• Reconoce que los errores son parte del aprendizaje'],
+              ['Básica Primaria', 'Reconoce sus fortalezas personales y comunitarias, y usa el apoyo de otros para enfrentar dificultades.', '• Identifica 3 de sus fortalezas personales\n• Busca y ofrece ayuda en situaciones difíciles\n• Transforma errores en aprendizaje visible'],
+              ['Básica Secundaria', 'Analiza experiencias de adversidad colectiva e identifica los factores que permitieron la recuperación comunitaria.', '• Documenta historias locales de resiliencia\n• Conecta adversidades personales con contextos colectivos\n• Propone acciones de fortalecimiento comunitario'],
+              ['Educación Media', 'Diseña proyectos de reconstrucción del tejido social desde la imaginación moral, articulando memoria, justicia y esperanza.', '• Lidera procesos de memoria y reparación simbólica\n• Construye narrativas de esperanza fundamentadas\n• Actúa como agente de resiliencia en su comunidad'],
             ]
           }
         },
