@@ -82,7 +82,7 @@ function renderModulos() {
     const allDone = done === total && total > 0;
     return `<button class="mod-card" onclick="openModulo(${i})">
       <div class="mod-icon" style="background:${m.bg}">
-        <span style="font-size:22px">${m.icon||'📚'}</span>
+        ${(m.icon||'').startsWith('ti-') ? `<i class="ti ${m.icon}" style="font-size:22px;color:${m.color}"></i>` : `<span style="font-size:22px">${m.icon||'📚'}</span>`}
       </div>
       <div style="flex:1;min-width:0">
         <div class="mod-meta" style="color:${m.color}">${m.num} · ${m.duracion||''}</div>
@@ -110,7 +110,7 @@ function openModulo(idx) {
 
   document.getElementById('mod-header').innerHTML = `
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:.85rem;padding:1.1rem;background:${m.bg};border-radius:var(--r-lg)">
-      <span style="font-size:34px">${m.icon||'📚'}</span>
+      ${(m.icon||'').startsWith('ti-') ? `<i class="ti ${m.icon}" style="font-size:34px;color:${m.color}"></i>` : `<span style="font-size:34px">${m.icon||'📚'}</span>`}
       <div>
         <div class="mod-meta" style="color:${m.color}">${m.num}</div>
         <div style="font-size:18px;font-weight:700;color:var(--text);letter-spacing:-.02em">${m.titulo||m.title}</div>
@@ -200,6 +200,13 @@ function openSesion(idx) {
     const el = document.getElementById('tab-' + t);
     if (el) el.style.display = t === 'contenido' ? 'block' : 'none';
   });
+
+  /* ── Color active tab ── */
+  const firstTab = tabsEl.querySelector('.tab-btn.active');
+  if (firstTab) {
+    firstTab.style.color = m.color;
+    firstTab.style.borderBottomColor = m.color;
+  }
 
   /* Apply lock states */
   updateTabLocks(m, s);
@@ -302,7 +309,10 @@ function switchTab(tab, btn) {
   });
   if (btn) { btn.classList.add('active'); }
   const m = MODULOS[curModIdx];
-  if (btn) btn.style.color = m.color;
+  if (btn) {
+    btn.style.color = m.color;
+    btn.style.borderBottomColor = m.color;
+  }
 
   /* Unlock actividades when user clicks contenidos and returns */
   if (tab === 'actividades') unlockActividades();
