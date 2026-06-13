@@ -1,110 +1,298 @@
-/* ══════════════════════════════════════════════════════════════════════════
-   MÓDULO 0: INTRODUCCIÓN Y CONTEXTO (SOPORTE DE 33 SESIONES REALES - MEN 2026)
-   ══════════════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════
+   M0 — Introducción y Contexto
+   Lineamientos Curriculares MEN 2026
+   Fuente: Capítulo 1 del documento oficial
+   ══════════════════════════════════════════════════════════ */
 
-if (typeof MODULOS === 'undefined') {
-  var MODULOS = [];
-}
-
-MODULOS.push({ 
-  id: 'm0', 
-  num: 'Módulo 0', 
-  color: '#1D9E75', 
-  bg: '#E1F5EE', 
-  icon: 'ti-compass',
-  title: 'Introducción y Contexto',
-  sub: 'El viaje curricular: rutas estratégicas para la transformación profunda del ser y el saber escolar',
-  
-  // ── SESIONES / LABORATORIOS DE APRENDIZAJE ──────────────────────────────
+MODULOS.push({
+  id: 'm0',
+  num: 'Módulo 0',
+  icon: '🧭',
+  color: '#0C7A4A',
+  bg: '#E6F6EE',
+  titulo: 'Introducción y Contexto',
+  subtitulo: 'Las raíces históricas, normativas y conceptuales de los lineamientos MEN 2026',
+  duracion: '2 sesiones · 3 horas',
+  descripcion: 'Comprendemos por qué Colombia construyó estos lineamientos, cuál es su marco legal y qué significa el concepto de "formación integral" en el siglo XXI.',
   sesiones: [
-    { 
-      title: 'Sesión 1: ¿Por qué este curso? — Termómetro Escolar Interactivo', 
-      tipo: 'Presentación y Justificación', 
-      dur: '60 min',
-      obj: [
-        'Comprender el propósito transformador de los Lineamientos Curriculares para la Formación Integral (MEN 2026).',
-        'Ejecutar un autodiagnóstico crítico sobre las prioridades socioemocionales y climas de convivencia institucionales.',
-        'Reconocer la institución educativa como el microcosmos donde las competencias ciudadanas se viven, ejercen y aprenden.'
+    {
+      id: 's0_0',
+      num: 'Sesión 1',
+      titulo: '¿Por qué nuevos lineamientos? Historia y contexto',
+      duracion: '90 min',
+      tipo: 'Contexto histórico',
+      objetivo: 'Comprender el proceso participativo y la evolución histórica que dieron origen a los Lineamientos Curriculares MEN 2026, reconociendo su anclaje en tres décadas de desarrollo normativo colombiano.',
+
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. El punto de partida: 30 años de evolución',
+          texto: `Los Lineamientos Curriculares para la Formación Ciudadana y el Desarrollo Socioemocional (MEN, 2026) son el resultado de <strong>tres décadas de evolución</strong> en la comprensión de qué significa educar integralmente en y para una sociedad democrática.
+
+Colombia cuenta con uno de los marcos legales más avanzados de la región: dos décadas de experiencia desde los Estándares básicos de competencias ciudadanas (MEN, 2004) y una perspectiva <em>"glocal"</em> —que articula lo global con lo local— que proporciona doble legitimidad a estos lineamientos, situando al país en posición de liderazgo regional.
+
+<blockquote>"La formación ciudadana no es una asignatura aislada, sino una responsabilidad compartida que atraviesa todas las áreas e instancias de la institución escolar." <cite>— MEN, 2004, p. 10</cite></blockquote>
+
+El documento fue elaborado en 2026 mediante un proceso participativo con docentes, directivos, estudiantes, familias y comunidades en mesas territoriales realizadas en municipios de todo el país. Sus voces, experiencias y reflexiones fueron el corazón de este proceso.`
+        },
+        {
+          tipo: 'tabla',
+          titulo: '2. Hitos normativos de la formación ciudadana en Colombia',
+          tabla: {
+            cabeceras: ['Año', 'Norma / Documento', 'Aporte clave'],
+            filas: [
+              ['1991', 'Constitución Política', 'Art. 67: educación forma en derechos humanos, paz y democracia. Art. 41: obligatoriedad del estudio constitucional.'],
+              ['1994', 'Ley 115 (Ley General de Educación)', 'Define la formación integral en todas las dimensiones del ser. Art. 5: pleno desarrollo de la personalidad.'],
+              ['1998', 'Lineamientos de Constitución y Ética', 'Primer marco para transformar hábitos y actitudes, más allá de contenidos institucionales.'],
+              ['2004', 'Estándares Básicos de Competencias Ciudadanas', 'Salto cualitativo: competencias cognitivas, emocionales, comunicativas e integradoras. La dimensión emocional se vuelve explícita.'],
+              ['2013', 'Ley 1620 (Convivencia Escolar)', 'Crea el Sistema Nacional de Convivencia. La convivencia es componente central de la formación integral.'],
+              ['2014', 'Sentido de la Educación Inicial (MEN)', 'Bases socioemocionales desde la primera infancia: identidad, vínculos, participación.'],
+              ['2014', 'Ley 1732 (Cátedra de la Paz)', 'Obligatoria en todas las instituciones: cultura de paz, sostenibilidad y bienestar general.'],
+              ['2026', 'Lineamientos FC & DSE (este documento)', 'Integra formación ciudadana y desarrollo socioemocional como dimensiones inseparables. Modelo concéntrico: 7 CC + 7 CSE.'],
+            ]
+          }
+        },
+        {
+          tipo: 'grafico',
+          titulo: '3. La perspectiva "glocal": articulando lo global y lo local',
+          subtitulo: 'Colombia dialoga con referentes internacionales desde su propia identidad',
+          tipo_grafico: 'comparacion',
+          datos: [
+            { label: 'CASEL (EE.UU.)', valor: 'Marco SEL: identidades saludables, gestión emocional, empatía, decisiones responsables', color: '#4B5563' },
+            { label: 'UNESCO', valor: 'Ciudadanía global, sostenibilidad, educación transformadora (ODS 4.7)', color: '#6366F1' },
+            { label: 'Colombia MEN 2026', valor: 'Síntesis propia: 7 CC + 7 CSE, modelo concéntrico, enfoque territorial y de paz', color: '#0C7A4A' },
+          ],
+          nota: 'Colombia no copia modelos externos: los re-significa desde su historia, diversidad y contexto de posconflicto.'
+        },
+        {
+          tipo: 'lectura',
+          titulo: '4. ¿Qué son estos lineamientos y qué NO son?',
+          texto: `Es fundamental comprender la naturaleza de este documento para usarlo correctamente:
+
+<strong>SÍ son:</strong> Un marco común que orienta la construcción, el desarrollo y la actualización de los currículos en las instituciones educativas. Ofrecen criterios y principios para que las comunidades educativas ejerzan su <strong>autonomía curricular</strong> con responsabilidad.
+
+<strong>NO son:</strong> Una prescripción rígida. No establecen un modelo o camino de construcción único. La escuela no es un implementador de lineamientos: es un <em>co-creador</em> situado en su territorio.
+
+<blockquote>"La formación ciudadana y el desarrollo socioemocional se conciben como procesos vivos, situados y construidos colectivamente." <cite>— MEN, 2026, Presentación</cite></blockquote>
+
+La invitación del MEN es apropiarse críticamente de estos lineamientos, reinterpretarlos desde los contextos propios y convertirlos en herramientas vivas para fortalecer prácticas pedagógicas incluyentes, participativas y humanizadoras.`
+        }
       ],
-      contenidos: [
-        '<strong>Retos estructurales del contexto colombiano:</strong> Análisis de la urgencia pedagógica frente al posconflicto territorial, la agudización de las brechas de equidad socioeconómica, la saturación por desinformación en entornos digitales y las alertas epidemiológicas de salud mental infanto-juvenil pospandemia.',
-        '<strong>La Formación Integral como imperativo ético:</strong> Superar la fragmentación curricular tradicional. La transformación y articulación indisoluble de las dimensiones cognitiva, socioemocional, ético-relacional y sociopolítica dentro del aula.',
-        '<strong>El giro copernicano en el PEI:</strong> Transitar del modelo pasivo basado en "enseñar asignaturas teóricas de urbanidad o cívica" hacia el codiseño intencional de entornos institucionales de ciudadanía activa y co-regulación emocional compartida.',
-        '<strong>Matriz de Urgencias del Entorno Escolar (Autodiagnóstico Técnico):</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#E1F5EE; color:#0F6E56"><th style="padding:6px; border:1px solid var(--border)">Fenómeno Crítico</th><th style="padding:6px; border:1px solid var(--border)">Manifestación en el Aula</th><th style="padding:6px; border:1px solid var(--border)">Enfoque de Intervención (MEN 2026)</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Fragilidad Psicosomática</td><td style="padding:6px; border:1px solid var(--border)">Ansiedad, crisis de pánico, repliegue o apatía crónica ante los logros.</td><td style="padding:6px; border:1px solid var(--border)">Eje A: Fortalecimiento de la autoconciencia y granularidad fina.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Ruptura de Vínculos</td><td style="padding:6px; border:1px solid var(--border)">Agresión verbal, microagresiones discriminatorias y exclusión en pasillos.</td><td style="padding:6px; border:1px solid var(--border)">Eje B: Prácticas de hospitalidad radical y círculos restaurativos.</td></tr></table>'
-      ],
+
       actividades: [
-        '<strong>Taller de Choque "Termómetro de Urgencias":</strong> Evalúa analíticamente en una escala descriptiva de 1 a 4 el estado actual de la salud mental, la cohesión relacional y los niveles de violencia manifiesta u oculta en tu sede educativa, consolidando un mapa térmico de prioridades institucionales.',
-        '<strong>Mapeo de Entornos de Riesgo Relacional:</strong> Recorre críticamente la infraestructura física y los tiempos escolares (recreos, salidas, baños) identificando zonas muertas de mediación donde el currículo oculto valide dinámicas de exclusión.'
+        {
+          tipo: 'individual',
+          titulo: 'Línea de tiempo personal',
+          icono: '📅',
+          instruccion: '¿Cuándo llegaste a la docencia? ¿Qué documentos del MEN conociste en tu formación? Ubica tu trayectoria docente en la línea de tiempo normativa de Colombia. ¿En qué momento histórico empezaste a enseñar? ¿Qué cambios has visto en la educación ciudadana?',
+          tiempo: '15 min'
+        },
+        {
+          tipo: 'grupal',
+          titulo: 'Análisis comparativo: antes y ahora',
+          icono: '🔄',
+          instruccion: 'En parejas: compara los Estándares de 2004 con los Lineamientos 2026. ¿Qué continuidades encuentras? ¿Qué es genuinamente nuevo? ¿Qué te genera más preguntas?',
+          tiempo: '20 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: ¿Qué sabía y qué no sabía?',
+          icono: '🪞',
+          instruccion: 'Escribe en tu diario pedagógico: "Antes de esta sesión pensaba que los lineamientos eran... Ahora entiendo que... La pregunta que me queda es..."',
+          tiempo: '10 min'
+        }
       ],
+
       recursos: [
-        'Presentación Ejecutiva Oficial: "Estructura y Dimensiones del Documento Maestro MEN 2026"',
-        'Plantilla Metodológica: "Guía de Ruta para la Activación de Comunidades de Práctica Docente en Colegios"'
+        { tipo: 'doc', titulo: 'Lineamientos Curriculares MEN 2026 — Documento completo', url: '#', meta: 'PDF oficial · 130 páginas' },
+        { tipo: 'doc', titulo: 'Estándares Básicos de Competencias Ciudadanas (2004)', url: '#', meta: 'MEN · Documento de referencia histórica' },
+        { tipo: 'web', titulo: 'Ley 1620 de 2013 — Convivencia Escolar', url: 'https://www.mineducacion.gov.co', meta: 'Marco normativo vigente' },
+        { tipo: 'video', titulo: 'Historia de la educación ciudadana en Colombia', url: '#', meta: 'Serie documental MEN · 18 min' },
       ],
-      rq: 'Al mirar con honestidad los pasillos, las dinámicas de la sala de profesores y las aulas de tu institución, ¿cuál es el síntoma más evidente y desgarrador de que la salud mental y la ciudadanía activa necesitan una intervención pedagógica de choque?',
-      aq: '¿Qué tan claros tienes los diagnósticos y desafíos estructurales de tu territorio que justifican la transformación del plan de estudios tradicional hacia un enfoque de formación integral?'
+
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Cuál fue el hito normativo que convirtió las competencias emocionales en objeto explícito de enseñanza y evaluación en Colombia?',
+            opciones: [
+              'La Constitución Política de 1991',
+              'Los Estándares Básicos de Competencias Ciudadanas (2004)',
+              'La Ley 1620 de 2013',
+              'Los Lineamientos MEN 2026'
+            ],
+            correcta: 1,
+            explicacion: 'Los Estándares de 2004 representaron un salto cualitativo: definieron competencias emocionales como "habilidades para la identificación y respuesta constructiva ante las emociones propias y las de los demás", convirtiéndolas en objeto explícito de enseñanza.'
+          },
+          {
+            pregunta: '¿Qué significa la perspectiva "glocal" de los Lineamientos 2026?',
+            opciones: [
+              'Que Colombia adoptó el modelo CASEL de EE.UU. para sus escuelas',
+              'Que los lineamientos articulan lo global con lo local, ubicando a Colombia en liderazgo regional',
+              'Que cada municipio puede construir sus propios lineamientos independientes',
+              'Que los lineamientos aplican solo en contextos urbanos globalizados'
+            ],
+            correcta: 1,
+            explicacion: 'La perspectiva "glocal" significa que Colombia dialoga con referentes internacionales (CASEL, UNESCO) pero los re-significa desde su propia historia, diversidad cultural y contexto de posconflicto, sin copiar modelos externos.'
+          },
+          {
+            pregunta: '¿Qué NO son los Lineamientos Curriculares MEN 2026?',
+            opciones: [
+              'Un marco común que orienta la construcción del currículo institucional',
+              'Una prescripción rígida que cada escuela debe implementar de manera uniforme',
+              'Criterios y principios para el ejercicio de la autonomía curricular',
+              'El resultado de un proceso participativo con comunidades educativas'
+            ],
+            correcta: 1,
+            explicacion: 'Los lineamientos no prescriben un modelo único ni un camino de construcción uniforme. Ofrecen criterios para que cada comunidad educativa ejerza su autonomía con responsabilidad, adaptándose a su contexto territorial.'
+          }
+        ]
+      },
+
+      metacognicion: {
+        preguntas: [
+          '¿Qué conocías ya sobre los Lineamientos MEN 2026 antes de esta sesión? ¿Qué fue sorprendente?',
+          '¿Cómo sitúas tu práctica docente actual en la línea de tiempo normativa que viste hoy?',
+          '¿Cuál de los hitos normativos ha tenido más impacto real en tu práctica cotidiana? ¿Por qué?'
+        ]
+      }
     },
-    { 
-      title: 'Sesión 2: Marco normativo de tres décadas — El Inspector del PEI', 
-      tipo: 'Fundamentos Legales', 
-      dur: '60 min',
-      obj: [
-        'Trazar la evolución histórico-normativa de la educación ciudadana en Colombia, desde la Carta Política de 1991 hasta los decretos vigentes.',
-        'Analizar las implicaciones técnico-pedagógicas de la reciente Ley 2503 de 2025 y la obligatoriedad de la Cátedra de Educación Emocional.',
-        'Proponer reformas normativas viables para armonizar el PEI, el SIEE y el Manual de Convivencia bajo enfoques de justicia escolar.'
+
+    {
+      id: 's0_1',
+      num: 'Sesión 2',
+      titulo: 'El enfoque de competencias y la formación integral',
+      duracion: '90 min',
+      tipo: 'Marco conceptual',
+      objetivo: 'Comprender qué son las competencias en el marco de estos lineamientos, cómo se articulan con la formación integral y por qué el enfoque socioemocional es inseparable del ciudadano.',
+
+      contenido: [
+        {
+          tipo: 'lectura',
+          titulo: '1. ¿Qué son las competencias en este marco?',
+          texto: `El concepto de competencia en estos lineamientos va mucho más allá de "saber hacer". El documento asume las competencias como:
+
+<blockquote>"La resolución de problemas, dado su uso en situaciones inéditas, la utilización del conocimiento en forma diferente a como fue aprendido, la integración de conocimiento de diferentes dominios y la combinación de conocimiento con habilidades de pensamiento de alto orden." <cite>— MEN, 2026, p. 31</cite></blockquote>
+
+Las competencias en formación ciudadana y DSE tienen tres dimensiones interdependientes:
+<ul>
+<li><strong>Cognitiva:</strong> Comprender conceptos, analizar contextos, evaluar situaciones complejas.</li>
+<li><strong>Socioemocional:</strong> Reconocer y gestionar emociones, empatizar, relacionarse éticamente.</li>
+<li><strong>Ética y ciudadana:</strong> Actuar con responsabilidad, participar, transformar la vida colectiva.</li>
+</ul>
+
+Un sujeto competente en ciudadanía no solo <em>conoce</em> los derechos: los <em>ejerce</em>, los <em>defiende</em> y trabaja para que otros también los tengan. Eso requiere las tres dimensiones simultáneamente.`
+        },
+        {
+          tipo: 'grafico',
+          titulo: '2. Enfoques epistemológicos del Desarrollo Socioemocional',
+          subtitulo: 'El DSE se fundamenta en seis perspectivas complementarias (MEN, 2026)',
+          tipo_grafico: 'hexagono',
+          datos: [
+            { label: 'Procesual-Cognitivo', desc: 'El DSE como proceso de aprendizaje que puede enseñarse intencionalmente', color: '#3B82F6' },
+            { label: 'Valorativo-Ético', desc: 'Las emociones como expresión de valores y compromisos morales', color: '#8B5CF6' },
+            { label: 'Regulación Motivacional', desc: 'La capacidad de gestionar estados internos para alcanzar metas', color: '#EC4899' },
+            { label: 'Político-Ciudadano', desc: 'Las emociones como base de la participación y la vida democrática', color: '#0C7A4A' },
+            { label: 'Filosófico-Hermenéutico', desc: 'El sujeto que se comprende a sí mismo mediante el diálogo con el mundo', color: '#F59E0B' },
+            { label: 'Decolonial', desc: 'Los saberes emocionales de comunidades indígenas, afro y campesinas como conocimiento legítimo', color: '#A84020' },
+          ]
+        },
+        {
+          tipo: 'tabla',
+          titulo: '3. Enfoques de las Competencias Ciudadanas',
+          tabla: {
+            cabeceras: ['Enfoque', 'Qué enfatiza', 'Referentes clave'],
+            filas: [
+              ['Socioemocional', 'Las emociones como base del ejercicio ciudadano. Sin regulación emocional no hay participación responsable.', 'CASEL, Bisquerra, Damasio'],
+              ['Ético-relacional', 'La ciudadanía como práctica de cuidado y responsabilidad hacia el otro. Ética del cuidado.', 'Gilligan, Noddings, Cortina'],
+              ['Sociopolítico crítico', 'La ciudadanía como acción transformadora frente a las injusticias estructurales.', 'Apple, Fraser, Freire'],
+              ['Ciudadanía global e intercultural', 'La responsabilidad planetaria, la diversidad cultural y la conciencia ecológica.', 'UNESCO, Torres, Boff'],
+            ]
+          }
+        },
+        {
+          tipo: 'lectura',
+          titulo: '4. ¿Por qué el DSE y la FC son inseparables?',
+          texto: `Una de las tesis más importantes del documento MEN 2026 es que la formación ciudadana y el desarrollo socioemocional <strong>no son dos áreas paralelas</strong>, sino dimensiones de un mismo proceso formativo.
+
+<blockquote>"Las emociones constituyen la infraestructura invisible que sostiene o debilita la vida democrática: sin regulación emocional no hay diálogo real; sin empatía no hay reconocimiento del otro; sin resiliencia no hay reconstrucción del tejido social." <cite>— MEN, 2026</cite></blockquote>
+
+Esto tiene implicaciones concretas para la práctica docente:
+
+<strong>1. No se puede "enseñar convivencia" sin trabajar las emociones.</strong> Un estudiante que no puede regular su frustración no puede participar productivamente en un debate.
+
+<strong>2. No se puede "enseñar emociones" en el vacío.</strong> La regulación emocional sin un horizonte ético y ciudadano se queda en psicología individualista.
+
+<strong>3. El docente es el primer modelo.</strong> La manera en que el docente gestiona sus propias emociones, resuelve conflictos y participa democráticamente en la institución es el currículo oculto más poderoso que existe.`
+        }
       ],
-      contenidos: [
-        '<strong>Anclajes constitucionales:</strong> Los Artículos 41 y 67 de la Constitución de 1991 como mandatos imperativos para la enseñanza de la democracia, los Derechos Humanos y la edificación de una cultura de paz.',
-        '<strong>Hitos de la política pública colombiana:</strong> La Ley General de Educación 115 de 1994, los Estándares Básicos de Competencias Ciudadanas (2004) y el despliegue de la Ley 1620 de 2013 (Sistema Nacional de Convivencia Escolar).',
-        '<strong>La gran actualización legislativa:</strong> La Ley 2503 de 2025. Implicaciones de la obligatoriedad de la Cátedra de Educación Emocional concebida no como una asignatura de cátedra aislada, sino como un proceso pedagógico transversal, intencional y permanente en los establecimientos educativos.',
-        '<strong>Evolución de la Política Pública de Convivencia y Ciudadanía en Colombia:</strong><br><br><table style="width:100%; border-collapse:collapse; background:#fff; font-size:12px; border:1px solid var(--border)"><tr style="background:#E1F5EE; color:#0F6E56"><th style="padding:6px; border:1px solid var(--border)">Hito Normativo</th><th style="padding:6px; border:1px solid var(--border)">Paradigma Dominante</th><th style="padding:6px; border:1px solid var(--border)">Impacto en la Gestión Curricular</th></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Constitución de 1991 / Ley 115</td><td style="padding:6px; border:1px solid var(--border)">Democracia participativa y derechos</td><td style="padding:6px; border:1px solid var(--border)">Apertura de los Gobiernos Estudiantiles e inicios del Manual de Convivencia.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Ley 1620 de 2013</td><td style="padding:6px; border:1px solid var(--border)">Enfoque de derechos, género y mitigación</td><td style="padding:6px; border:1px solid var(--border)">Creación de Comités de Convivencia y los 4 componentes de la Ruta.</td></tr><tr><td style="padding:6px; border:1px solid var(--border); font-weight:600">Ley 2503 de 2025</td><td style="padding:6px; border:1px solid var(--border)">Educación Emocional Permanente Transversal</td><td style="padding:6px; border:1px solid var(--border)">Integración obligatoria en Aprendizajes Esenciales de todas las áreas.</td></tr></table>'
-      ],
+
       actividades: [
-        '<strong>Reto Strategico "El Inspector del PEI":</strong> Analiza el caso documental de una institución educativa estancada en un enfoque policivo y punitivo heredado de los años 90. Detecta 3 violaciones flagrantes a los principios de la Ley 1620 y la Ley 2503 de 2025, formulando sus respectivos pliegos de corrección didáctica.',
-        '<strong>Diseño de Reforma de Convivencia:</strong> Redacta un artículo de modificación directa para el Manual de Convivencia de tu colegio, sustituyendo una medida suspensiva automática por un protocolo de reparación colectiva o círculo restaurativo.'
+        {
+          tipo: 'individual',
+          titulo: 'Auditoría de mi práctica',
+          icono: '🔍',
+          instruccion: 'Piensa en una clase que diste la semana pasada. ¿Qué dimensión trabajaste más: cognitiva, socioemocional o ética-ciudadana? ¿Cuál quedó implícita? ¿Cuál fue completamente ausente? No se trata de culpabilizarse, sino de ver con claridad.',
+          tiempo: '15 min'
+        },
+        {
+          tipo: 'grupal',
+          titulo: 'Los 6 enfoques del DSE en tu institución',
+          icono: '🎯',
+          instruccion: 'En grupos de 3: ¿Cuál de los 6 enfoques epistemológicos del DSE está más presente en las prácticas de tu institución? ¿Cuál está completamente ausente? ¿Cuál generaría más resistencia si lo propusieras? ¿Por qué?',
+          tiempo: '25 min'
+        },
+        {
+          tipo: 'reflexion',
+          titulo: 'Metacognición: Mi currículo oculto',
+          icono: '🪞',
+          instruccion: 'Escribe en tu diario: "Las emociones que mis estudiantes aprenden de MÍ (no de lo que digo) son... Esto lo sé porque... Lo que quiero cambiar es..."',
+          tiempo: '15 min'
+        }
       ],
+
       recursos: [
-        'Compendio Normativo Unificado: Ley 115, Ley 1620 y Ley 2503 de 2025 en la Práctica Docente',
-        'Decreto 1965 de 2013: Análisis Operativo de los Componentes de la Ruta de Atención Integral (RAI)'
+        { tipo: 'doc', titulo: 'MEN 2026 — Sección 2.1: Fundamentos epistemológicos', url: '#', meta: 'Pp. 21–24 del documento' },
+        { tipo: 'web', titulo: 'CASEL Framework — What is SEL?', url: 'https://casel.org/fundamentals-of-sel/', meta: 'Marco de referencia internacional' },
+        { tipo: 'video', titulo: 'Daniel Goleman: El aprendizaje socioemocional en el aula', url: '#', meta: 'Conferencia · 22 min' },
+        { tipo: 'libro', titulo: 'Bisquerra, R. (2009). Psicopedagogía de las emociones.', url: '#', meta: 'Síntesis — Cap. 1' },
       ],
-      rq: '¿El Manual de Convivencia de tu sede actual opera bajo una lógica puramente punitiva y fiscalizadora o integra con éxito procesos de justicia restaurativa y co-regulación emocional? ¿Qué artículo específico reformarás de inmediato?',
-      aq: '¿Qué tan preparado/a te sientes legal y pedagógicamente para sostener ante una asamblea de padres o consejo directivo la abolición de medidas punitivas automáticas?'
-    }
-  ],
-  
-  // ── EVALUACIÓN FORMATIVA Y CONTROL DE PROGRESO (QUIZ) ──────────────────
-  quiz: [
-    {
-      q: '¿Cuál es la innovación y el mandato de transformación principal que introduce la Ley 2503 de 2025 en la arquitectura del sistema educativo colombiano?',
-      opts: [
-        'La supresión de las asignaturas científicas tradicionales para reemplazarlas por talleres virtuales homogéneos de autoayuda.',
-        'La instauración obligatoria de la Cátedra de Educación Emocional, entendida como un proceso pedagógico transversal, intencional, permanente y contextualizado en todas las áreas y niveles del establecimiento.',
-        'La delegación exclusiva y obligatoria de la convivencia escolar en agencias de psicología clínica externas a la institución.',
-        'La creación de una escala de calificaciones numéricas tradicionales para evaluar el índice de felicidad individual de los alumnos.'
-      ],
-      c: 1,
-      exp: 'La Ley 2503 de 2025 no busca la creación de una hora teórica aislada que sature el currículo de papeleo administrativo. Su mandato exige la transformación de las prácticas pedagógicas vigentes: la integración intencional y transversal de capacidades emocionales en los Aprendizajes Esenciales de todas las áreas del conocimiento.'
-    },
-    {
-      q: 'Al ejecutar la simulación del "Inspector del PEI" en la Sesión 2, ¿cuál de las siguientes realidades institucionales contradice de manera directo los marcos normativos vigentes en Colombia (Ley 1620 y Ley 2503)?',
-      opts: [
-        'Modificar el SIEE para incorporar rúbricas de progresión descriptivas y cualitativas en la evaluación de proyectos integrados.',
-        'Involucrar de forma directo y deliberativa a los representantes del gobierno estudiantil en el diseño de los acuerdos de aula.',
-        'Aplicar medidas sancionatorias automáticas de expulsión o suspensión a estudiantes desregulados conductualmente, evadiendo la activación de la Ruta de Atención Integral y los procesos de acompañamiento formativo.',
-        'Vincular a sabedores y líderes de la Junta de Acción Comunal dentro de las secuencias didácticas transversales del área de Ciencias Sociales.'
-      ],
-      c: 2,
-      exp: 'Los enfoques formativos, sistémicos y restaurativos de la Ley 1620 y los nuevos Lineamientos Curriculares 2026 prohíben las sanciones de exclusión punitiva automáticas. Toda crisis de convivencia exige el despliegue de la Ruta de Atención Integral (RAI) centrándose en el análisis de contexto, la reparación del daño y la co-regulación emocional.'
-    },
-    {
-      q: '¿Qué se entiende por "currículo oculto" al realizar el autodiagnóstico del "Termómetro de Urgencias" en la primera sesión?',
-      opts: [
-        'Los contenidos y planes de área impresos que el colegio archiva en la rectoría y no comparte con el Ministerio de Educación.',
-        'El conjunto de aprendizajes, sesgos, normas implícitas, discursos diarios y dinámicas de poder que se transmiten de forma no declarada pero vivencial en la cotidianidad escolar, modelando las conductas éticas y afectivas del estudiante.',
-        'El listado oficial de asignaturas optativas que los alumnos cursan exclusivamente en los entornos digitales y plataformas virtuales.',
-        'El marco legal histórico que regula las asignaciones salariales y las funciones administrativas del estamento docente en Colombia.'
-      ],
-      c: 1,
-      exp: 'El currículo oculto es lo que la escuela enseña a través de su arquitectura y sus relaciones diarias. Si un docente dicta una clase magistral sobre el respeto pero silencia autoritariamente la palabra de los alumnos, el estudiante interioriza la sumisión ante el poder (currículo oculto) por encima del concepto teórico escrito en el tablero.'
+
+      evaluacion: {
+        titulo: 'Verificación de comprensión',
+        preguntas: [
+          {
+            pregunta: '¿Qué plantea el enfoque decolonial del DSE?',
+            opciones: [
+              'Que los modelos emocionales de EE.UU. son superiores y deben adoptarse en Colombia',
+              'Que los saberes emocionales de comunidades indígenas, afro y campesinas son conocimiento legítimo',
+              'Que las emociones no deben estudiarse porque son conceptos occidentales',
+              'Que cada región debe ignorar los referentes internacionales del DSE'
+            ],
+            correcta: 1,
+            explicacion: 'El enfoque decolonial reconoce que existen saberes emocionales propios de las comunidades indígenas, afrodescendientes y campesinas de Colombia, que constituyen formas legítimas de conocimiento que deben integrarse en la educación.'
+          },
+          {
+            pregunta: '¿Por qué el docente es descrito como "el primer modelo" en la formación ciudadana y socioemocional?',
+            opciones: [
+              'Porque el docente debe enseñar ciudadanía como una asignatura separada',
+              'Porque la forma en que el docente gestiona emociones y participa democráticamente es el currículo oculto más poderoso',
+              'Porque los estudiantes ignoran todo lo demás excepto al docente',
+              'Porque el docente debe tener competencias ciudadanas perfectas antes de enseñarlas'
+            ],
+            correcta: 1,
+            explicacion: 'El currículo oculto —lo que los estudiantes aprenden de cómo actúa el docente, no de lo que dice— es más potente que cualquier contenido explícito. El docente que regula sus emociones, escucha activamente y participa democráticamente modela estas competencias en cada clase.'
+          }
+        ]
+      },
+
+      metacognicion: {
+        preguntas: [
+          '¿Cuál de los 6 enfoques del DSE te resultó más nuevo o desafiante? ¿Por qué?',
+          '¿Cómo cambia tu comprensión de "enseñar ciudadanía" después de esta sesión?',
+          '¿Qué aspecto de tu "currículo oculto" quieres trabajar más conscientemente?'
+        ]
+      }
     }
   ]
 });
