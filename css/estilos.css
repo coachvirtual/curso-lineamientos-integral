@@ -3,7 +3,7 @@
    Design System v2 — Inter + Fraunces
    ══════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts loaded via <link> in index.html */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -374,11 +374,12 @@ body {
   white-space: nowrap; color: var(--muted);
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
+  position: relative;
   font-family: var(--font-body);
   transition: color .15s, border-color .15s;
   display: flex; align-items: center; gap: 6px;
 }
-.tab-btn.active { color: var(--text); }
+.tab-btn.active { color: var(--text); font-weight: 600; }
 .tab-btn:not(.active):hover { color: var(--text2); }
 
 /* Tab lock overlay */
