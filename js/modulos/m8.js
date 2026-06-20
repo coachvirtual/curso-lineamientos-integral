@@ -29,7 +29,7 @@ MODULOS.push({
           titulo: '1. El PEI y el currículo: quién orienta a quién',
           texto: `El documento MEN 2026 establece una relación clara entre el PEI y el currículo que muchas instituciones tienen invertida:
 
-<blockquote>"El PEI constituye el marco orientador del currículo: no es el currículo el que antecede al PEI, sino que el currículo concreta pedagógicamente las definiciones formativas, filosóficas y normativas que el PEI establece." <cite>— MEN, 2026, p. 98</cite></blockquote>
+<p>El PEI constituye el marco orientador del currículo: no es el currículo el que antecede al PEI, sino que el currículo concreta pedagógicamente las definiciones formativas, filosóficas y normativas que el PEI establece.</p>
 
 Esto significa que antes de preguntarse qué actividad hago para trabajar convivencia o qué proyecto de ciudadanía implemento, la institución debe hacerse preguntas de fondo:
 
@@ -47,7 +47,7 @@ Sin respuestas explícitas a estas preguntas en el PEI, la implementación de CC
           titulo: '2. La autonomía escolar: libertad con responsabilidad',
           texto: `El MEN 2026 reafirma la autonomía curricular reconocida en la Ley 115 de 1994, pero la enmarca en una responsabilidad clara:
 
-<blockquote>"Estos lineamientos no prescriben un modelo o un camino de construcción único, sino que ofrecen criterios y principios para que las comunidades educativas ejerzan su autonomía curricular con responsabilidad y sentido de pertenencia." <cite>— MEN, 2026, p. 91</cite></blockquote>
+<p>Estos lineamientos no prescriben un modelo o un camino de construcción único, sino que ofrecen criterios y principios para que las comunidades educativas ejerzan su autonomía curricular con responsabilidad y sentido de pertenencia.</p>
 
 La autonomía no es discrecionalidad absoluta. Significa que cada institución:
 <ul>
@@ -56,7 +56,7 @@ La autonomía no es discrecionalidad absoluta. Significa que cada institución:
 <li>Es responsable de que las CC y CSE no queden solo en proyectos transversales ocasionales sino que <strong>permeen la vida institucional completa</strong>.</li>
 </ul>
 
-<blockquote>"La formación ciudadana y el desarrollo socioemocional se conciben como procesos vivos, situados y construidos colectivamente." <cite>— MEN, 2026, Presentación</cite></blockquote>`
+<p>La formación ciudadana y el desarrollo socioemocional se conciben como procesos vivos, situados y construidos colectivamente.</p>`
         },
         {
           tipo: 'tabla',
@@ -168,7 +168,7 @@ Esto tiene una implicación concreta: <strong>no cumple la ley</strong> la insti
           titulo: '1. Transformación curricular: qué es y qué no es',
           texto: `El MEN 2026 es cuidadoso al definir qué significa realmente transformar el currículo en CC y CSE:
 
-<blockquote>"La actualización curricular debe entenderse como un proceso sistemático, progresivo y contextualizado, orientado por criterios de pertinencia y coherencia. Este proceso no se limita a ajustes formales del documento curricular, sino que implica un ciclo institucional que comprende diagnóstico, acción, análisis y actualización permanente." <cite>— MEN, 2026, p. 95</cite></blockquote>
+<p>La actualización curricular debe entenderse como un proceso sistemático, progresivo y contextualizado, orientado por criterios de pertinencia y coherencia. Este proceso no se limita a ajustes formales del documento curricular, sino que implica un ciclo institucional que comprende diagnóstico, acción, análisis y actualización permanente.</p>
 
 <strong>NO es transformación curricular:</strong>
 <ul>
@@ -204,7 +204,7 @@ Esto tiene una implicación concreta: <strong>no cumple la ley</strong> la insti
           titulo: '3. La formación docente como columna vertebral de la implementación',
           texto: `El MEN 2026 insiste en que la implementación real de CC y CSE depende en gran medida de las competencias de los propios docentes:
 
-<blockquote>"Es fundamental reconocer que estas competencias se desarrollan tanto en el currículo explícito como en el currículo oculto que permea toda la vida institucional. Las personas adultas que acompañan los procesos formativos son actoras fundamentales cuyas prácticas, actitudes y formas de relacionarse constituyen el principal referente para los niños, niñas y adolescentes." <cite>— MEN, 2026, p. 13</cite></blockquote>
+<p>Es fundamental reconocer que estas competencias se desarrollan tanto en el currículo explícito como en el currículo oculto que permea toda la vida institucional. Las personas adultas que acompañan los procesos formativos son actoras fundamentales cuyas prácticas, actitudes y formas de relacionarse constituyen el principal referente para los niños, niñas y adolescentes.</p>
 
 Esto no es un reproche al docente — es un reconocimiento de su poder transformador. Significa que:
 <ul>

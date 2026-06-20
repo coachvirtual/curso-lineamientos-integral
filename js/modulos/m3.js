@@ -27,7 +27,7 @@ MODULOS.push({
           titulo: '1. Definición desde el documento MEN 2026',
           texto: `La primera competencia ciudadana es la más demandante y la más urgente en el contexto colombiano. El documento la define así:
 
-<blockquote>"La convivencia pacífica es la capacidad de relacionarse con los demás desde el reconocimiento mutuo, el diálogo y la construcción colaborativa de normas y acuerdos que permitan resolver los conflictos de manera no violenta. Implica el desarrollo de habilidades para el diálogo, la empatía, la cooperación y la gestión pacífica de los conflictos." <cite>— MEN, 2026, p. 43</cite></blockquote>
+<p>La convivencia pacífica es la capacidad de relacionarse con los demás desde el reconocimiento mutuo, el diálogo y la construcción colaborativa de normas y acuerdos que permitan resolver los conflictos de manera no violenta. Implica el desarrollo de habilidades para el diálogo, la empatía, la cooperación y la gestión pacífica de los conflictos.</p>
 
 Esta definición tiene tres dimensiones inseparables:
 <ul>
@@ -69,7 +69,7 @@ Esta definición tiene tres dimensiones inseparables:
 
 El Acuerdo de Paz de 2016, en su punto 6 sobre "Implementación, verificación y refrendación", reconoció explícitamente el papel de la educación en la construcción de paz. No como agregado externo, sino como condición estructural.
 
-<blockquote>"Las instituciones educativas son el primer escenario donde Colombia practica o no practica la paz. Cada conflicto entre estudiantes es una oportunidad pedagógica real." <cite>— MEN, 2026, p. 47</cite></blockquote>
+<p>Las instituciones educativas son el primer escenario donde Colombia practica o no practica la paz. Cada conflicto entre estudiantes es una oportunidad pedagógica real.</p>
 
 Esto implica que la gestión de conflictos en la escuela <strong>no es un problema disciplinario</strong>. Es una oportunidad de formación ciudadana de primer orden. El docente que castiga sin dialogar, que silencia sin escuchar, que expulsa sin incluir, está formando ciudadanos para la exclusión y la violencia.`
         }
@@ -149,7 +149,7 @@ Esto implica que la gestión de conflictos en la escuela <strong>no es un proble
         {
           tipo: 'lectura',
           titulo: '1. Definición y dimensiones',
-          texto: `<blockquote>"La justicia social implica el reconocimiento de la dignidad de todas las personas, la redistribución equitativa de recursos y oportunidades, y la participación de todos en las decisiones que afectan su vida." <cite>— MEN, 2026, p. 56</cite></blockquote>
+          texto: `<p>La justicia social implica el reconocimiento de la dignidad de todas las personas, la redistribución equitativa de recursos y oportunidades, y la participación de todos en las decisiones que afectan su vida.</p>
 
 El documento MEN adopta un concepto <strong>tridimensional de justicia</strong>, inspirado en Fraser (2009):
 <ul>
@@ -240,7 +240,7 @@ En Colombia, las tres dimensiones tienen expresiones concretas: la brecha entre 
         {
           tipo: 'lectura',
           titulo: '1. Definición: participar es más que votar',
-          texto: `<blockquote>"La participación democrática es la capacidad de involucrarse activa, crítica y responsablemente en los procesos de toma de decisiones que afectan la vida colectiva, desde los espacios cotidianos hasta las instituciones nacionales." <cite>— MEN, 2026, p. 69</cite></blockquote>
+          texto: `<p>La participación democrática es la capacidad de involucrarse activa, crítica y responsablemente en los procesos de toma de decisiones que afectan la vida colectiva, desde los espacios cotidianos hasta las instituciones nacionales.</p>
 
 Westheimer y Kahne (2004) identifican tres tipos de ciudadanos que la escuela puede formar:
 <ul>
@@ -320,7 +320,7 @@ Los Lineamientos MEN 2026 apuntan al tercer tipo: no basta participar; hay que h
         {
           tipo: 'lectura',
           titulo: '1. La historia como competencia ciudadana',
-          texto: `<blockquote>"La competencia histórica es la capacidad de comprender e interpretar el pasado para analizar críticamente el presente y proyectar futuros posibles, reconociendo la pluralidad de perspectivas y la complejidad de los procesos históricos." <cite>— MEN, 2026, p. 81</cite></blockquote>
+          texto: `<p>La competencia histórica es la capacidad de comprender e interpretar el pasado para analizar críticamente el presente y proyectar futuros posibles, reconociendo la pluralidad de perspectivas y la complejidad de los procesos históricos.</p>
 
 El documento integra dos dimensiones que en Colombia son inseparables:
 
@@ -401,7 +401,7 @@ El CNMH (Centro Nacional de Memoria Histórica) ha desarrollado pedagogías espe
         {
           tipo: 'lectura',
           titulo: '1. Diversidad como fundamento democrático',
-          texto: `<blockquote>"La diversidad no es un problema que resolver, sino una riqueza que explorar y un fundamento de la democracia. Aprender a convivir con la diferencia es aprender a ser humano." <cite>— MEN, 2026, p. 95</cite></blockquote>
+          texto: `<p>La diversidad no es un problema que resolver, sino una riqueza que explorar y un fundamento de la democracia. Aprender a convivir con la diferencia es aprender a ser humano.</p>
 
 Colombia es un país <strong>pluriétnico y multicultural</strong> reconocido así desde la Constitución de 1991. Tiene:
 <ul>
@@ -482,7 +482,7 @@ Los Lineamientos 2026 proponen un giro: la escuela como espacio de <strong>inter
         {
           tipo: 'lectura',
           titulo: '1. La tierra como sujeto de derechos',
-          texto: `<blockquote>"La sostenibilidad no es una opción: es la condición de posibilidad de toda vida humana futura. La escuela que no forma para el cuidado del planeta forma ciudadanos para la autodestrucción." <cite>— MEN, 2026, p. 107</cite></blockquote>
+          texto: `<p>La sostenibilidad no es una opción: es la condición de posibilidad de toda vida humana futura. La escuela que no forma para el cuidado del planeta forma ciudadanos para la autodestrucción.</p>
 
 Colombia es el <strong>segundo país más biodiverso del mundo</strong>. Es también uno de los países más amenazados por el cambio climático y la deforestación. Esta paradoja pone a la educación ambiental en el centro de la formación ciudadana.
 
@@ -559,7 +559,7 @@ También incorporan la perspectiva indígena del <strong>Buen Vivir</strong> (Su
         {
           tipo: 'lectura',
           titulo: '1. La ciudadanía en el mundo digital',
-          texto: `<blockquote>"La ciudadanía digital no es una opción pedagógica: es una necesidad ineludible en un mundo donde las identidades, las relaciones y el poder se configuran también en entornos virtuales." <cite>— MEN, 2026, p. 120</cite></blockquote>
+          texto: `<p>La ciudadanía digital no es una opción pedagógica: es una necesidad ineludible en un mundo donde las identidades, las relaciones y el poder se configuran también en entornos virtuales.</p>
 
 Colombia tiene hoy <strong>más de 38 millones de usuarios de internet</strong>. Los jóvenes colombianos pasan en promedio 7 horas diarias frente a pantallas. Sin embargo, menos del 30% tiene habilidades básicas de verificación de información.
 

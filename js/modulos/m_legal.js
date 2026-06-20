@@ -34,7 +34,7 @@ No es una afirmación de autoayuda. Es una conclusión del propio documento MEN 
 El problema no es la ausencia de ley. El problema es que la mayoría de docentes e instituciones no saben qué dice esa ley, qué les exige concretamente, y qué significa ignorarla.
 </div>
 
-<blockquote>"La formación ciudadana y el desarrollo socioemocional constituyen un componente obligatorio y estructural del sistema educativo colombiano. No es posible formar ciudadanos/as activos/as sin desarrollar simultáneamente sus capacidades emocionales, relacionales y éticas." <cite>— MEN, 2026, pp. 19–20</cite></blockquote>
+<p>La formación ciudadana y el desarrollo socioemocional constituyen un componente obligatorio y estructural del sistema educativo colombiano. No es posible formar ciudadanos/as activos/as sin desarrollar simultáneamente sus capacidades emocionales, relacionales y éticas.</p>
 
 Este módulo existe para que esa afirmación deje de ser retórica y se convierta en <strong>argumento institucional concreto</strong>.`
         },
@@ -81,7 +81,7 @@ Las guías de autoevaluación institucional del MEN (Índice de Inclusión, Eval
 <strong>3. Consecuencia ética y pedagógica real</strong>
 El costo más alto no es administrativo: es humano. Las instituciones que no trabajan intencionalmente las CC y CSE producen entornos donde la violencia escolar, la exclusión, la apatía ciudadana y el deterioro de la salud mental de estudiantes y docentes son la norma. La investigación educativa colombiana e internacional muestra consistentemente que el clima escolar es el predictor más poderoso del bienestar y el aprendizaje.
 
-<blockquote>"La coherencia entre el discurso y la práctica es condición indispensable para una educación transformadora." <cite>— MEN, 2026, p. 13</cite></blockquote>`
+<p>La coherencia entre el discurso y la práctica es condición indispensable para una educación transformadora.</p>`
         },
         {
           tipo: 'grafico',

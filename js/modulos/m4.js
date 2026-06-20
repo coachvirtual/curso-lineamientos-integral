@@ -25,7 +25,7 @@ MODULOS.push({
         {
           tipo: 'lectura',
           titulo: '1. Definición desde el documento MEN 2026',
-          texto: `<blockquote>"La conciencia emocional es la capacidad de reconocer, identificar y comprender las propias emociones y las de los demás, incluyendo la habilidad para nombrarlas con precisión y entender su impacto en el comportamiento y las relaciones." <cite>— MEN, 2026, p. 135</cite></blockquote>
+          texto: `<p>La conciencia emocional es la capacidad de reconocer, identificar y comprender las propias emociones y las de los demás, incluyendo la habilidad para nombrarlas con precisión y entender su impacto en el comportamiento y las relaciones.</p>
 
 El documento fundamenta esta competencia en tres tradiciones científicas convergentes:
 
@@ -63,7 +63,7 @@ El documento fundamenta esta competencia en tres tradiciones científicas conver
           titulo: '4. La conciencia emocional del docente: por qué importa',
           texto: `El documento MEN 2026 hace un énfasis especial en la conciencia emocional del docente, no solo del estudiante:
 
-<blockquote>"Un docente que no reconoce sus propias emociones en el aula las actuará sin conciencia: el miedo se volverá rigidez, la frustración se volverá hostilidad, la inseguridad se volverá autoritarismo. El docente emocionalmente consciente transforma esas emociones en información pedagógica." <cite>— MEN, 2026, p. 140</cite></blockquote>
+<p>Un docente que no reconoce sus propias emociones en el aula las actuará sin conciencia: el miedo se volverá rigidez, la frustración se volverá hostilidad, la inseguridad se volverá autoritarismo. El docente emocionalmente consciente transforma esas emociones en información pedagógica.</p>
 
 Las emociones del docente más frecuentes en el aula y su potencial pedagógico:
 <ul>
@@ -156,7 +156,7 @@ Las emociones del docente más frecuentes en el aula y su potencial pedagógico:
         {
           tipo: 'lectura',
           titulo: '1. Regulación no es supresión',
-          texto: `<blockquote>"La regulación emocional es la capacidad de gestionar la experiencia y expresión de las emociones de forma flexible y apropiada al contexto, de manera que se puedan alcanzar metas personales y relacionales sin causar daño." <cite>— MEN, 2026, p. 149</cite></blockquote>
+          texto: `<p>La regulación emocional es la capacidad de gestionar la experiencia y expresión de las emociones de forma flexible y apropiada al contexto, de manera que se puedan alcanzar metas personales y relacionales sin causar daño.</p>
 
 La distinción más importante que hace el documento es entre <strong>regulación</strong> y <strong>supresión</strong>:
 
@@ -185,7 +185,7 @@ El documento adopta el <strong>modelo procesual de regulación emocional</strong
           titulo: '3. Burnout docente: cuando la regulación falla sistemáticamente',
           texto: `El documento MEN 2026 incluye una sección específica sobre <strong>bienestar docente</strong> como condición para la formación socioemocional de los estudiantes:
 
-<blockquote>"No es posible enseñar regulación emocional desde un estado de agotamiento crónico. El bienestar docente no es un lujo: es una condición estructural para la calidad educativa." <cite>— MEN, 2026, p. 157</cite></blockquote>
+<p>No es posible enseñar regulación emocional desde un estado de agotamiento crónico. El bienestar docente no es un lujo: es una condición estructural para la calidad educativa.</p>
 
 El <strong>síndrome de burnout</strong> (Maslach, 2001) tiene tres dimensiones en docentes:
 <ul>
@@ -261,7 +261,7 @@ Colombia tiene una de las tasas más altas de burnout docente en América Latina
         {
           tipo: 'lectura',
           titulo: '1. La decisión ética como proceso integrado',
-          texto: `<blockquote>"La toma de decisiones éticas es la capacidad de analizar situaciones complejas considerando consecuencias, valores y perspectivas diversas, para actuar de manera responsable y coherente con principios de justicia, cuidado y dignidad." <cite>— MEN, 2026, p. 163</cite></blockquote>
+          texto: `<p>La toma de decisiones éticas es la capacidad de analizar situaciones complejas considerando consecuencias, valores y perspectivas diversas, para actuar de manera responsable y coherente con principios de justicia, cuidado y dignidad.</p>
 
 El documento integra tres tradiciones éticas:
 <ul>
@@ -343,7 +343,7 @@ El hallazgo clave del documento es que la deliberación ética madura integra la
         {
           tipo: 'lectura',
           titulo: '1. Empatía: tres componentes inseparables',
-          texto: `<blockquote>"La empatía es la capacidad de reconocer y comprender los estados emocionales de los demás, de adoptar su perspectiva y de responder de manera apropiada y compasiva." <cite>— MEN, 2026, p. 176</cite></blockquote>
+          texto: `<p>La empatía es la capacidad de reconocer y comprender los estados emocionales de los demás, de adoptar su perspectiva y de responder de manera apropiada y compasiva.</p>
 
 La neurociencia contemporánea distingue tres componentes de la empatía que el documento MEN adopta:
 
@@ -374,7 +374,7 @@ La distinción crítica del documento: <strong>empatía ≠ simpatía</strong>. 
           titulo: '3. La empatía como fundamento de la democracia (Nussbaum)',
           texto: `La filósofa Martha Nussbaum, ampliamente citada en el documento MEN, plantea que la democracia requiere ciudadanos empáticos:
 
-<blockquote>"La imaginación narrativa —la capacidad de verse como ser humano que busca florecimiento en el lugar de otro ser humano— es el núcleo de la educación para la ciudadanía democrática." <cite>— Nussbaum, 2010, citada en MEN 2026, p. 181</cite></blockquote>
+<p>La imaginación narrativa —la capacidad de verse como ser humano que busca florecimiento en el lugar de otro ser humano— es el núcleo de la educación para la ciudadanía democrática.</p>
 
 Sin empatía, la democracia se degrada en suma de intereses individuales. Con empatía, se convierte en proyecto colectivo donde cada quien puede ver al otro como igual.
 
@@ -443,7 +443,7 @@ Para el aula colombiana, esto tiene implicaciones concretas: trabajar la empatí
         {
           tipo: 'lectura',
           titulo: '1. Las relaciones como competencia',
-          texto: `<blockquote>"Las habilidades de relación son el conjunto de capacidades que permiten establecer vínculos interpersonales saludables, comunicarse de manera asertiva y colaborar eficazmente hacia metas comunes." <cite>— MEN, 2026, p. 189</cite></blockquote>
+          texto: `<p>Las habilidades de relación son el conjunto de capacidades que permiten establecer vínculos interpersonales saludables, comunicarse de manera asertiva y colaborar eficazmente hacia metas comunes.</p>
 
 El documento identifica cuatro componentes de la CSE5:
 <ul>
@@ -537,7 +537,7 @@ El documento incorpora el modelo de <strong>Comunicación No Violenta (CNV)</str
         {
           tipo: 'lectura',
           titulo: '1. Las emociones no solo son individuales',
-          texto: `<blockquote>"Las emociones colectivas son estados afectivos compartidos que emergen en grupos y comunidades, orientan la acción colectiva y tienen un papel constitutivo en la vida democrática." <cite>— MEN, 2026, p. 203</cite></blockquote>
+          texto: `<p>Las emociones colectivas son estados afectivos compartidos que emergen en grupos y comunidades, orientan la acción colectiva y tienen un papel constitutivo en la vida democrática.</p>
 
 La filósofa Martha Nussbaum, en <em>Emociones políticas</em> (2014), plantea que la democracia no puede sostenerse solo en razones y normas: necesita también <strong>emociones que la sustenten</strong>.
 
@@ -628,7 +628,7 @@ En Colombia, el conflicto armado generó emociones colectivas que todavía estru
         {
           tipo: 'lectura',
           titulo: '1. Resiliencia: más allá del "rebotar"',
-          texto: `<blockquote>"La resiliencia comunitaria es la capacidad colectiva para afrontar adversidades, aprender de ellas y transformarlas en oportunidades de crecimiento y fortalecimiento del tejido social." <cite>— MEN, 2026, p. 215</cite></blockquote>
+          texto: `<p>La resiliencia comunitaria es la capacidad colectiva para afrontar adversidades, aprender de ellas y transformarlas en oportunidades de crecimiento y fortalecimiento del tejido social.</p>
 
 El documento supera la concepción individualista de la resiliencia ("volver a la normalidad después de un golpe") y adopta la perspectiva de <strong>resiliencia comunitaria</strong>:
 
@@ -656,7 +656,7 @@ En Colombia, comunidades que han sufrido desplazamiento, masacres y pérdidas ha
           titulo: '3. Pedagogía de la esperanza: Freire y el posconflicto',
           texto: `Paulo Freire desarrolló el concepto de <strong>pedagogía de la esperanza</strong> como respuesta a los contextos de opresión y despojo. Para Freire, la esperanza no es ingenuidad: es una necesidad ontológica del ser humano y un acto político:
 
-<blockquote>"La esperanza es una especie de vocación ontológica [...] Mientras lucho, tengo esperanza. Y si peleo con esperanza, puedo esperar." <cite>— Freire, 1994, citado en MEN 2026, p. 220</cite></blockquote>
+<p>La esperanza es una especie de vocación ontológica [...] Mientras lucho, tengo esperanza. Y si peleo con esperanza, puedo esperar.</p>
 
 Para el aula colombiana posconflicto, la pedagogía de la esperanza implica:
 <ul>

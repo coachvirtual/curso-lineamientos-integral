@@ -27,7 +27,7 @@ MODULOS.push({
           titulo: '1. El problema específico de evaluar CC y CSE',
           texto: `Evaluar competencias ciudadanas y socioemocionales plantea un desafío que no existe con el mismo peso en otras áreas: <strong>el riesgo de pervertir lo que se evalúa</strong>.
 
-<blockquote>"La evaluación de competencias ciudadanas y socioemocionales no puede convertirse en una vigilancia de actitudes o en una calificación de la personalidad. Cuando esto ocurre, los estudiantes aprenden a actuar como si tuvieran las competencias, no a desarrollarlas genuinamente." <cite>— MEN, 2026, p. 133</cite></blockquote>
+<p>La evaluación de competencias ciudadanas y socioemocionales no puede convertirse en una vigilancia de actitudes o en una calificación de la personalidad. Cuando esto ocurre, los estudiantes aprenden a actuar como si tuvieran las competencias, no a desarrollarlas genuinamente.</p>
 
 Ejemplos del riesgo:
 <ul>
@@ -159,7 +159,7 @@ La solución del MEN no es no evaluar, sino <strong>cambiar el objeto de la eval
         {
           tipo: 'lectura',
           titulo: '1. La retroalimentación que transforma',
-          texto: `<blockquote>"La retroalimentación no es informar al estudiante sobre su calificación; es proveer información específica, orientada a la mejora, que el estudiante pueda usar para transformar su aprendizaje." <cite>— MEN, 2026, p. 149</cite></blockquote>
+          texto: `<p>La retroalimentación no es informar al estudiante sobre su calificación; es proveer información específica, orientada a la mejora, que el estudiante pueda usar para transformar su aprendizaje.</p>
 
 Hattie y Timperley (2007) identificaron en una mega-investigación que la retroalimentación es el factor más poderoso de todos los que afectan el aprendizaje (d=0.73). Pero no toda retroalimentación tiene el mismo efecto.
 
@@ -200,7 +200,7 @@ Un portafolio de ciudadanía incluye:
 
 El portafolio tiene un componente esencial: la <strong>selección reflexiva</strong>. El estudiante no incluye todo: elige qué incluir y por qué. Esa elección ya es un acto metacognitivo.
 
-<blockquote>"El portafolio no es un archivo: es una conversación del estudiante consigo mismo sobre quién está llegando a ser." <cite>— MEN, 2026, p. 157</cite></blockquote>`
+<p>El portafolio no es un archivo: es una conversación del estudiante consigo mismo sobre quién está llegando a ser.</p>`
         },
         {
           tipo: 'tabla',

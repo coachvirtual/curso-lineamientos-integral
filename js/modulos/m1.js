@@ -36,7 +36,7 @@ Según los fundamentos del documento, el conocimiento en este marco es:
 <li><strong>Transformador:</strong> El conocimiento que no cambia la manera de actuar en el mundo no es verdadero aprendizaje.</li>
 </ul>
 
-<blockquote>"Comprender implica un movimiento circular entre los horizontes del intérprete y los de la tradición, en el que el sentido se construye en el diálogo y en la apertura al otro." <cite>— Gadamer, 2003, citado en MEN 2026, p. 35</cite></blockquote>`
+<p>Comprender implica un movimiento circular entre los horizontes del intérprete y los de la tradición, en el que el sentido se construye en el diálogo y en la apertura al otro.</p>`
         },
         {
           tipo: 'tabla',
@@ -166,7 +166,7 @@ Las tres dimensiones son inseparables. Trabajar solo una es insuficiente.`
 La instrucción pregunta: ¿cuánto saben los estudiantes sobre los derechos humanos?
 La formación pregunta: ¿cómo actúan los estudiantes cuando alguien viola los derechos de otro?
 
-<blockquote>"La pedagogía no es la técnica de la enseñanza, sino el horizonte de comprensión desde el cual el maestro orienta su acción formativa." <cite>— MEN, 2026, p. 27</cite></blockquote>
+<p>La pedagogía no es la técnica de la enseñanza, sino el horizonte de comprensión desde el cual el maestro orienta su acción formativa.</p>
 
 Esta distinción tiene consecuencias metodológicas: no basta con enseñar SOBRE democracia. Hay que practicarla EN la escuela.`
         },
@@ -294,7 +294,7 @@ La diferencia es la que hay entre saber la definición de democracia y practicar
           titulo: '1. El currículo no es neutral',
           texto: `Los lineamientos MEN 2026 adoptan una concepción del currículo que va mucho más allá de "el plan de estudios". El currículo es:
 
-<blockquote>"El conjunto de criterios, planes de estudio, programas, metodologías, y procesos que contribuyen a la formación integral y a la construcción de la identidad cultural nacional, regional y local." <cite>— Ley 115 de 1994, Art. 76, citado en MEN 2026</cite></blockquote>
+<p>El conjunto de criterios, planes de estudio, programas, metodologías, y procesos que contribuyen a la formación integral y a la construcción de la identidad cultural nacional, regional y local.</p>
 
 Pero más aún: el currículo es <strong>selectivo, restrictivo y regulativo</strong>. Cuando una institución decide qué conocimientos son importantes, qué voces se incluyen en los textos, qué preguntas se pueden hacer y cuáles no, está tomando decisiones políticas y éticas.
 
@@ -327,7 +327,7 @@ Esta autonomía es un derecho y una responsabilidad. Implica que:
 <li>Ese proceso de construcción es en sí mismo un ejercicio de ciudadanía institucional.</li>
 </ul>
 
-<blockquote>"Las escuelas, en el marco de su autonomía institucional, deben ser conscientes de las necesidades e intereses de sus estudiantes, al diseñar su propio currículo, considerando la igualdad de oportunidades al implementar apoyos e intervenciones o al realizar ajustes razonables." <cite>— MEN, 2026, p. 92</cite></blockquote>`
+<p>Las escuelas, en el marco de su autonomía institucional, deben ser conscientes de las necesidades e intereses de sus estudiantes, al diseñar su propio currículo, considerando la igualdad de oportunidades al implementar apoyos e intervenciones o al realizar ajustes razonables.</p>`
         }
       ],
 

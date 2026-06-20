@@ -30,7 +30,7 @@ MODULOS.push({
           titulo: '1. El problema de fondo: competencias que no se enseñan, se construyen',
           texto: `El documento MEN 2026 plantea una premisa fundamental que transforma la manera de pensar la didáctica de las CC y las CSE:
 
-<blockquote>"El desarrollo de las competencias ciudadanas y socioemocionales requiere trascender enfoques centrados exclusivamente en la transmisión de contenidos o en la prescripción de comportamientos esperados. Desde una perspectiva pedagógica contemporánea, dichas competencias se construyen en la experiencia, en la interacción y en la reflexión situada sobre la vida personal, social y comunitaria." <cite>— MEN, 2026, p. 109</cite></blockquote>
+<p>El desarrollo de las competencias ciudadanas y socioemocionales requiere trascender enfoques centrados exclusivamente en la transmisión de contenidos o en la prescripción de comportamientos esperados. Desde una perspectiva pedagógica contemporánea, dichas competencias se construyen en la experiencia, en la interacción y en la reflexión situada sobre la vida personal, social y comunitaria.</p>
 
 Esto tiene una implicación directa para el docente: <strong>no es suficiente explicar qué es la empatía, hablar de paz o definir la participación democrática</strong>. Las competencias se movilizan como capacidades en acción, articulando simultáneamente dimensiones cognitivas, emocionales, éticas y relacionales.
 
@@ -41,7 +41,7 @@ El sustento teórico de este enfoque es Vygotsky (1978), quien concibe el aprend
           titulo: '2. Diversidad metodológica: por qué no hay un método único',
           texto: `El MEN 2026 es explícito en rechazar la idea de una metodología única o universal:
 
-<blockquote>"Metodológicamente, la diversidad de estrategias responde al reconocimiento de que no existe una única forma válida de enseñar ni de aprender las competencias ciudadanas y socioemocionales. Las realidades territoriales, culturales y comunitarias de las escuelas colombianas son heterogéneas; por tanto, un marco de competencias que aspire a ser pertinente debe ofrecer orientaciones flexibles, abiertas a la adaptación y a la creación pedagógica por parte de las y los docentes." <cite>— MEN, 2026, p. 109</cite></blockquote>
+<p>Metodológicamente, la diversidad de estrategias responde al reconocimiento de que no existe una única forma válida de enseñar ni de aprender las competencias ciudadanas y socioemocionales. Las realidades territoriales, culturales y comunitarias de las escuelas colombianas son heterogéneas; por tanto, un marco de competencias que aspire a ser pertinente debe ofrecer orientaciones flexibles, abiertas a la adaptación y a la creación pedagógica por parte de las y los docentes.</p>
 
 Esta diversidad no es relativismo pedagógico — es un reconocimiento político y cultural. Una estrategia que funciona en un colegio urbano de Bogotá puede no resonar en una comunidad rural del Chocó o en una institución con población de desplazamiento. <strong>La pertinencia territorial es un principio metodológico, no una opción</strong>.`
         },
@@ -91,7 +91,7 @@ Esta diversidad no es relativismo pedagógico — es un reconocimiento político
 </tr>
 </table>
 
-<blockquote style="margin-top:1rem">"La progresión no supone que ciertas capacidades no existan en niveles iniciales, sino que se espera mayor profundidad, autonomía y complejidad en niveles superiores." <cite>— MEN, 2026, p. 107</cite></blockquote>`
+<p>La progresión no supone que ciertas capacidades no existan en niveles iniciales, sino que se espera mayor profundidad, autonomía y complejidad en niveles superiores.</p>`
         }
       ],
 
@@ -175,7 +175,7 @@ Esta diversidad no es relativismo pedagógico — es un reconocimiento político
         {
           tipo: 'lectura',
           titulo: '1. ¿Qué es la progresión de aprendizajes y por qué importa?',
-          texto: `<blockquote>"La progresión de los aprendizajes constituye un componente estructural del diseño curricular, en tanto permite organizar, de manera intencionada, gradual y coherente, el desarrollo de capacidades, competencias y aprendizajes a lo largo de las distintas etapas del proceso educativo." <cite>— MEN, 2026, p. 103</cite></blockquote>
+          texto: `<p>La progresión de los aprendizajes constituye un componente estructural del diseño curricular, en tanto permite organizar, de manera intencionada, gradual y coherente, el desarrollo de capacidades, competencias y aprendizajes a lo largo de las distintas etapas del proceso educativo.</p>
 
 Un currículo sin progresión explícita comete dos errores frecuentes:
 
@@ -212,7 +212,7 @@ La progresión cumple una <em>doble función</em>: orienta la planificación doc
 </ol>
 
 Un ejemplo concreto del MEN para CSE-1 (Conciencia emocional):
-<blockquote><strong>Aprendizaje esencial:</strong> "Analizar y expresar con claridad sus propias emociones y las de los demás, reconociendo cómo estas reflejan valores, significados personales y dinámicas colectivas en el grupo."<br><strong>Indicador:</strong> "Analizar las propias emociones y sentimientos en diferentes situaciones personales, académicas y sociales."<br><strong>Pregunta docente:</strong> "¿Qué emoción experimentas frente a esta situación? ¿Qué te ayuda a darte cuenta de que estás triste, motivado o frustrado?" <cite>— MEN, 2026, Tabla 18, p. 101</cite></blockquote>`
+<p><strong>Aprendizaje esencial:</strong> "Analizar y expresar con claridad sus propias emociones y las de los demás, reconociendo cómo estas reflejan valores, significados personales y dinámicas colectivas en el grupo."<br><strong>Indicador:</strong> "Analizar las propias emociones y sentimientos en diferentes situaciones personales, académicas y sociales."<br><strong>Pregunta docente:</strong> "¿Qué emoción experimentas frente a esta situación? ¿Qué te ayuda a darte cuenta de que estás triste, motivado o frustrado?</p>`
         },
         {
           tipo: 'lectura',
@@ -354,7 +354,7 @@ El MEN 2026 lo expresa así: <em>"No se trata de constatar si la competencia 'es
 
 <strong>De modelo implícito a modelo consciente:</strong> El docente que usa metodologías activas de CC y CSE debe ser coherente con lo que enseña. Un docente que gestiona mal su frustración en el aula enseña regulación emocional por su ausencia — aunque explique perfectamente qué es.
 
-<blockquote>"La manera en que el docente gestiona sus propias emociones, resuelve conflictos y participa democráticamente en la institución es el currículo oculto más poderoso que existe." <cite>— MEN, 2026, p. 12</cite></blockquote>`
+<p>La manera en que el docente gestiona sus propias emociones, resuelve conflictos y participa democráticamente en la institución es el currículo oculto más poderoso que existe.</p>`
         }
       ],
 

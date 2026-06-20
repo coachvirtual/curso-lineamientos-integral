@@ -29,7 +29,7 @@ MODULOS.push({
 
 El documento responde con una <strong>estructura curricular integrada</strong> que articula cuatro componentes:
 
-<blockquote>"La propuesta curricular no busca añadir contenidos al currículo existente, sino reorganizarlo desde una perspectiva integradora que ponga en el centro el desarrollo humano integral." <cite>— MEN, 2026, p. 92</cite></blockquote>
+<p>La propuesta curricular no busca añadir contenidos al currículo existente, sino reorganizarlo desde una perspectiva integradora que ponga en el centro el desarrollo humano integral.</p>
 
 Los cuatro componentes son:
 <ol>
@@ -70,7 +70,7 @@ Ejemplos para el aprendizaje anterior:
 <li>Pide mediación antes de escalar el conflicto.</li>
 </ul>
 
-<blockquote>"Los indicadores de desempeño son ventanas, no espejos: no reflejan la totalidad del aprendizaje, sino que nos permiten asomarnos a él." <cite>— MEN, 2026, p. 98</cite></blockquote>`
+<p>Los indicadores de desempeño son ventanas, no espejos: no reflejan la totalidad del aprendizaje, sino que nos permiten asomarnos a él.</p>`
         },
         {
           tipo: 'grafico',
@@ -159,7 +159,7 @@ Ejemplos para el aprendizaje anterior:
         {
           tipo: 'lectura',
           titulo: '1. El principio de progresión',
-          texto: `<blockquote>"La progresión curricular implica que los aprendizajes se construyen de manera acumulativa, espiralada y coherente a lo largo de la trayectoria educativa, garantizando que cada nivel profundice y amplíe lo desarrollado en el anterior." <cite>— MEN, 2026, p. 116</cite></blockquote>
+          texto: `<p>La progresión curricular implica que los aprendizajes se construyen de manera acumulativa, espiralada y coherente a lo largo de la trayectoria educativa, garantizando que cada nivel profundice y amplíe lo desarrollado en el anterior.</p>
 
 El modelo curricular adoptado es el <strong>currículo espiralado</strong> (Bruner, 1960): los mismos conceptos y competencias se trabajan en todos los niveles, pero con profundidad y complejidad crecientes.
 
@@ -190,7 +190,7 @@ El desafío colombiano: la fragmentación curricular. Los docentes de primaria n
           titulo: '3. La transversalidad: todos son docentes de ciudadanía',
           texto: `Uno de los principios más retadores del documento es la <strong>transversalidad</strong>: la formación ciudadana y el DSE no son responsabilidad exclusiva del docente de Ética o Sociales. Son responsabilidad de todos.
 
-<blockquote>"Un docente de matemáticas que forma en perseverancia, colaboración y valoración del error está desarrollando competencias socioemocionales. Un docente de biología que trabaja la sostenibilidad está desarrollando ciudadanía. La transversalidad no es un ideal abstracto: es una descripción de lo que ya ocurre, consciente o inconscientemente." <cite>— MEN, 2026, p. 120</cite></blockquote>
+<p>Un docente de matemáticas que forma en perseverancia, colaboración y valoración del error está desarrollando competencias socioemocionales. Un docente de biología que trabaja la sostenibilidad está desarrollando ciudadanía. La transversalidad no es un ideal abstracto: es una descripción de lo que ya ocurre, consciente o inconscientemente.</p>
 
 Esto tiene implicaciones prácticas:
 <ul>
@@ -278,7 +278,7 @@ La clave: hacer visible lo que ya se hace implícitamente y diseñarlo intencion
         {
           tipo: 'lectura',
           titulo: '1. La autonomía curricular como responsabilidad',
-          texto: `<blockquote>"La autonomía curricular no es la ausencia de referentes comunes, sino la capacidad de las comunidades educativas para construir propuestas propias coherentes con los lineamientos nacionales y profundamente enraizadas en sus contextos." <cite>— MEN, 2026, p. 126</cite></blockquote>
+          texto: `<p>La autonomía curricular no es la ausencia de referentes comunes, sino la capacidad de las comunidades educativas para construir propuestas propias coherentes con los lineamientos nacionales y profundamente enraizadas en sus contextos.</p>
 
 El documento MEN 2026 es claro: no hay un currículo único que implementar. Hay un marco que cada institución debe interpretar, contextualizar y hacer suyo.
 
@@ -308,7 +308,7 @@ Esto requiere que la institución responda cuatro preguntas fundamentales:
           titulo: '3. El PEI como documento vivo de ciudadanía',
           texto: `El Proyecto Educativo Institucional (PEI) es el primer documento curricular de una institución. El documento MEN 2026 plantea que el PEI debería ser el primer ejercicio de ciudadanía de la institución: construido colectivamente, revisado periódicamente, coherente con la vida real.
 
-<blockquote>"Un PEI que nadie conoce, que nadie cuida y que nadie usa no es un proyecto educativo: es un trámite burocrático. Un PEI vivo es aquel donde cada decisión curricular puede justificarse en relación con el tipo de ciudadano que la institución quiere formar." <cite>— MEN, 2026, p. 129</cite></blockquote>
+<p>Un PEI que nadie conoce, que nadie cuida y que nadie usa no es un proyecto educativo: es un trámite burocrático. Un PEI vivo es aquel donde cada decisión curricular puede justificarse en relación con el tipo de ciudadano que la institución quiere formar.</p>
 
 Para la formación ciudadana y el DSE, el PEI debe incluir explícitamente:
 <ul>

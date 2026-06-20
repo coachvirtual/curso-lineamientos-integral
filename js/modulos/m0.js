@@ -1,7 +1,17 @@
 /* ══════════════════════════════════════════════════════════
    M0 — Introducción y Contexto
-   Lineamientos Curriculares MEN 2026
-   Fuente: Capítulo 1 del documento oficial
+   Fuente verificada: MEN (2026), Lineamientos Curriculares para la
+   Formación Integral en Educación Inicial, Básica y Media.
+   Carta de presentación (p.7), Introducción (pp.11-13),
+   Capítulo 1 (pp.14-23).
+
+   v2: contenido recortado, actividades con entregable verificable,
+   evaluación por evidencia de aplicación. Se retiró el marco
+   "7 CC + 7 CSE / modelo concéntrico" por no estar verificado contra
+   el documento real; se usa en su lugar lo que el documento sí dice:
+   formación integral, 9 dimensiones del ser, ejes curriculares
+   relacionales y la Ley 115 de 1994 como marco legal de origen.
+   Guiones de video: /guiones/m0_s0.md y /guiones/m0_s1.md
    ══════════════════════════════════════════════════════════ */
 
 MODULOS.push({
@@ -11,149 +21,99 @@ MODULOS.push({
   color: '#0C7A4A',
   bg: '#E6F6EE',
   titulo: 'Introducción y Contexto',
-  subtitulo: 'Las raíces históricas, normativas y conceptuales de los lineamientos MEN 2026',
-  duracion: '2 sesiones · 3 horas',
-  descripcion: 'Comprendemos por qué Colombia construyó estos lineamientos, cuál es su marco legal y qué significa el concepto de "formación integral" en el siglo XXI.',
+  subtitulo: 'De dónde viene el documento y qué entiende por "formación integral"',
+  duracion: '2 sesiones · 60-70 min c/u',
+  descripcion: 'Por qué el MEN actualizó estos lineamientos, su marco legal de origen, y qué significa "formación integral" en este documento.',
   sesiones: [
     {
       id: 's0_0',
       num: 'Sesión 1',
-      titulo: '¿Por qué nuevos lineamientos? Historia y contexto',
-      duracion: '90 min',
+      titulo: '¿Por qué nuevos lineamientos? Origen y marco legal',
+      duracion: '60 min',
       tipo: 'Contexto histórico',
-      objetivo: 'Comprender el proceso participativo y la evolución histórica que dieron origen a los Lineamientos Curriculares MEN 2026, reconociendo su anclaje en tres décadas de desarrollo normativo colombiano.',
+      video: { titulo: 'De la Ley 115 a los lineamientos 2026, en 6 minutos', guion: 'guiones/m0_s0.md', duracion_estimada: '5-6 min' },
+      objetivo: 'Ubicar los Lineamientos MEN 2026 dentro de la trayectoria normativa colombiana desde 1991, y distinguir qué son y qué no son estos lineamientos.',
 
       contenido: [
         {
+          tipo: 'video',
+          titulo: 'Video — Origen y marco legal (5-6 min)',
+          texto: 'Mira el video antes de leer (guion en /guiones/m0_s0.md). Resume de dónde viene este documento y, sobre todo, qué NO es: no es una prescripción rígida que toca implementar igual en todo el país.'
+        },
+        {
           tipo: 'lectura',
-          titulo: '1. El punto de partida: 30 años de evolución',
-          texto: `Los Lineamientos Curriculares para la Formación Ciudadana y el Desarrollo Socioemocional (MEN, 2026) son el resultado de <strong>tres décadas de evolución</strong> en la comprensión de qué significa educar integralmente en y para una sociedad democrática.
+          titulo: 'La idea central',
+          texto: `Los lineamientos son el resultado de un <strong>proyecto colectivo nacional</strong> liderado por el MEN en convenio con la Universidad de Antioquia, construido en cinco fases (alistamiento, exploración, construcción colectiva, validación y ajuste, socialización), con la participación de <strong>más de 4000 voces</strong> de comunidades educativas en mesas territoriales (Agradecimientos, p. 9; Introducción, pp. 11-12).
 
-Colombia cuenta con uno de los marcos legales más avanzados de la región: dos décadas de experiencia desde los Estándares básicos de competencias ciudadanas (MEN, 2004) y una perspectiva <em>"glocal"</em> —que articula lo global con lo local— que proporciona doble legitimidad a estos lineamientos, situando al país en posición de liderazgo regional.
+Se apoyan en la <strong>Ley 115 de 1994</strong> (Ley General de Educación), que ya establecía la formación integral como horizonte de la educación colombiana (artículo 5 y artículo 78), y en el artículo 76, que define los lineamientos curriculares como "un conjunto de criterios, planes de estudio, programas, metodologías y procesos que contribuyen a la formación integral y a la construcción de la identidad cultural nacional, regional y local" (citado en el documento, p. 13).
 
-<blockquote>"La formación ciudadana no es una asignatura aislada, sino una responsabilidad compartida que atraviesa todas las áreas e instancias de la institución escolar." <cite>— MEN, 2004, p. 10</cite></blockquote>
-
-El documento fue elaborado en 2026 mediante un proceso participativo con docentes, directivos, estudiantes, familias y comunidades en mesas territoriales realizadas en municipios de todo el país. Sus voces, experiencias y reflexiones fueron el corazón de este proceso.`
+El documento es explícito sobre lo que NO es: una imposición uniforme. Para los pueblos y comunidades étnicas, "estos lineamientos son un horizonte de posibilidad para la toma de decisiones, pero no constituyen una imposición" (Carta de presentación, p. 8); cada institución los adapta con autonomía a su contexto territorial.`
         },
         {
           tipo: 'tabla',
-          titulo: '2. Hitos normativos de la formación ciudadana en Colombia',
+          titulo: 'Línea de tiempo normativa (verificada contra el documento, p. 14-18)',
           tabla: {
-            cabeceras: ['Año', 'Norma / Documento', 'Aporte clave'],
+            cabeceras: ['Año', 'Hito', 'Qué aportó'],
             filas: [
-              ['1991', 'Constitución Política', 'Art. 67: educación forma en derechos humanos, paz y democracia. Art. 41: obligatoriedad del estudio constitucional.'],
-              ['1994', 'Ley 115 (Ley General de Educación)', 'Define la formación integral en todas las dimensiones del ser. Art. 5: pleno desarrollo de la personalidad.'],
-              ['1998', 'Lineamientos de Constitución y Ética', 'Primer marco para transformar hábitos y actitudes, más allá de contenidos institucionales.'],
-              ['2004', 'Estándares Básicos de Competencias Ciudadanas', 'Salto cualitativo: competencias cognitivas, emocionales, comunicativas e integradoras. La dimensión emocional se vuelve explícita.'],
-              ['2013', 'Ley 1620 (Convivencia Escolar)', 'Crea el Sistema Nacional de Convivencia. La convivencia es componente central de la formación integral.'],
-              ['2014', 'Sentido de la Educación Inicial (MEN)', 'Bases socioemocionales desde la primera infancia: identidad, vínculos, participación.'],
-              ['2014', 'Ley 1732 (Cátedra de la Paz)', 'Obligatoria en todas las instituciones: cultura de paz, sostenibilidad y bienestar general.'],
-              ['2026', 'Lineamientos FC & DSE (este documento)', 'Integra formación ciudadana y desarrollo socioemocional como dimensiones inseparables. Modelo concéntrico: 7 CC + 7 CSE.'],
+              ['1991', 'Constitución Política', 'Educación como derecho y servicio público con función social (art. 67).'],
+              ['1994', 'Ley 115 — Ley General de Educación', 'Establece la formación integral como horizonte de la educación (arts. 5, 76, 78).'],
+              ['1998', 'Primeros lineamientos curriculares por área', 'Matemáticas, Lengua Castellana, Ciencias, Ética y Valores, entre otros.'],
+              ['2006', 'Estándares Básicos de Competencias', 'Consolidan el enfoque por competencias en el currículo nacional.'],
+              ['2016', 'Ley 1804 — Política de Estado para la Primera Infancia', 'Desarrollo integral desde la educación inicial.'],
+              ['2017', 'Decreto 1421 — Educación inclusiva', 'Ajustes razonables y atención a la diversidad como parte del derecho a la educación.'],
+              ['2026', 'Lineamientos para la Formación Integral (este documento)', 'Actualización curricular con perspectiva de formación integral, dimensiones del ser y ejes curriculares relacionales.'],
             ]
           }
-        },
-        {
-          tipo: 'grafico',
-          titulo: '3. La perspectiva "glocal": articulando lo global y lo local',
-          subtitulo: 'Colombia dialoga con referentes internacionales desde su propia identidad',
-          tipo_grafico: 'comparacion',
-          datos: [
-            { label: 'CASEL (EE.UU.)', valor: 'Marco SEL: identidades saludables, gestión emocional, empatía, decisiones responsables', color: '#4B5563' },
-            { label: 'UNESCO', valor: 'Ciudadanía global, sostenibilidad, educación transformadora (ODS 4.7)', color: '#6366F1' },
-            { label: 'Colombia MEN 2026', valor: 'Síntesis propia: 7 CC + 7 CSE, modelo concéntrico, enfoque territorial y de paz', color: '#0C7A4A' },
-          ],
-          nota: 'Colombia no copia modelos externos: los re-significa desde su historia, diversidad y contexto de posconflicto.'
-        },
-        {
-          tipo: 'lectura',
-          titulo: '4. ¿Qué son estos lineamientos y qué NO son?',
-          texto: `Es fundamental comprender la naturaleza de este documento para usarlo correctamente:
-
-<strong>SÍ son:</strong> Un marco común que orienta la construcción, el desarrollo y la actualización de los currículos en las instituciones educativas. Ofrecen criterios y principios para que las comunidades educativas ejerzan su <strong>autonomía curricular</strong> con responsabilidad.
-
-<strong>NO son:</strong> Una prescripción rígida. No establecen un modelo o camino de construcción único. La escuela no es un implementador de lineamientos: es un <em>co-creador</em> situado en su territorio.
-
-<blockquote>"La formación ciudadana y el desarrollo socioemocional se conciben como procesos vivos, situados y construidos colectivamente." <cite>— MEN, 2026, Presentación</cite></blockquote>
-
-La invitación del MEN es apropiarse críticamente de estos lineamientos, reinterpretarlos desde los contextos propios y convertirlos en herramientas vivas para fortalecer prácticas pedagógicas incluyentes, participativas y humanizadoras.`
         }
       ],
 
       actividades: [
         {
-          tipo: 'individual',
-          titulo: 'Línea de tiempo personal',
-          icono: '📅',
-          instruccion: '¿Cuándo llegaste a la docencia? ¿Qué documentos del MEN conociste en tu formación? Ubica tu trayectoria docente en la línea de tiempo normativa de Colombia. ¿En qué momento histórico empezaste a enseñar? ¿Qué cambios has visto en la educación ciudadana?',
+          tipo: 'diseno',
+          titulo: 'Entregable: ubica tu institución en el mapa normativo',
+          icono: '📍',
+          instruccion: 'Revisa el Proyecto Educativo Institucional (PEI) de tu colegio o el plan de área que más conoces. Identifica una frase o principio que venga directamente de alguno de los hitos de la tabla (por ejemplo, algo que remita a la Ley 115 o al Decreto 1421). Escríbela tal cual aparece en tu PEI.',
           tiempo: '15 min'
         },
         {
-          tipo: 'grupal',
-          titulo: 'Análisis comparativo: antes y ahora',
-          icono: '🔄',
-          instruccion: 'En parejas: compara los Estándares de 2004 con los Lineamientos 2026. ¿Qué continuidades encuentras? ¿Qué es genuinamente nuevo? ¿Qué te genera más preguntas?',
-          tiempo: '20 min'
-        },
-        {
           tipo: 'reflexion',
-          titulo: 'Metacognición: ¿Qué sabía y qué no sabía?',
+          titulo: 'Lo que esto cambia',
           icono: '🪞',
-          instruccion: 'Escribe en tu diario pedagógico: "Antes de esta sesión pensaba que los lineamientos eran... Ahora entiendo que... La pregunta que me queda es..."',
+          instruccion: 'En una frase: con base en lo que viste en el video y la lectura, ¿qué margen real de autonomía tiene tu institución frente a este documento? Da un ejemplo concreto de algo que tu colegio podría adaptar a su contexto sin violar el marco legal.',
           tiempo: '10 min'
         }
       ],
 
       recursos: [
-        { tipo: 'doc', titulo: 'Lineamientos Curriculares MEN 2026 — Documento completo', url: '#', meta: 'PDF oficial · 130 páginas' },
-        { tipo: 'doc', titulo: 'Estándares Básicos de Competencias Ciudadanas (2004)', url: '#', meta: 'MEN · Documento de referencia histórica' },
-        { tipo: 'web', titulo: 'Ley 1620 de 2013 — Convivencia Escolar', url: 'https://www.mineducacion.gov.co', meta: 'Marco normativo vigente' },
-        { tipo: 'video', titulo: 'Historia de la educación ciudadana en Colombia', url: '#', meta: 'Serie documental MEN · 18 min' },
+        { tipo: 'doc', titulo: 'MEN 2026 — Carta de presentación e Introducción (pp. 7-13)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'doc', titulo: 'Ley 115 de 1994 — Ley General de Educación', url: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_0115_1994.html', meta: 'Texto legal completo' },
+        { tipo: 'video', titulo: 'Guion del video de la sesión', url: 'guiones/m0_s0.md', meta: 'Para grabar o ver' },
       ],
 
       evaluacion: {
-        titulo: 'Verificación de comprensión',
-        preguntas: [
+        tipo: 'evidencia',
+        titulo: 'Evidencia de aplicación',
+        instrucciones: 'Completa estos campos con base en el documento institucional que revisaste en la actividad.',
+        prompts: [
           {
-            pregunta: '¿Cuál fue el hito normativo que convirtió las competencias emocionales en objeto explícito de enseñanza y evaluación en Colombia?',
-            opciones: [
-              'La Constitución Política de 1991',
-              'Los Estándares Básicos de Competencias Ciudadanas (2004)',
-              'La Ley 1620 de 2013',
-              'Los Lineamientos MEN 2026'
-            ],
-            correcta: 1,
-            explicacion: 'Los Estándares de 2004 representaron un salto cualitativo: definieron competencias emocionales como "habilidades para la identificación y respuesta constructiva ante las emociones propias y las de los demás", convirtiéndolas en objeto explícito de enseñanza.'
+            label: '1. Tu hallazgo en el PEI o plan de área',
+            ayuda: 'Pega la frase o principio que identificaste y el hito normativo con el que se relaciona.',
+            placeholder: 'En nuestro PEI dice... y se relaciona con...',
+            filas: 4
           },
           {
-            pregunta: '¿Qué significa la perspectiva "glocal" de los Lineamientos 2026?',
-            opciones: [
-              'Que Colombia adoptó el modelo CASEL de EE.UU. para sus escuelas',
-              'Que los lineamientos articulan lo global con lo local, ubicando a Colombia en liderazgo regional',
-              'Que cada municipio puede construir sus propios lineamientos independientes',
-              'Que los lineamientos aplican solo en contextos urbanos globalizados'
-            ],
-            correcta: 1,
-            explicacion: 'La perspectiva "glocal" significa que Colombia dialoga con referentes internacionales (CASEL, UNESCO) pero los re-significa desde su propia historia, diversidad cultural y contexto de posconflicto, sin copiar modelos externos.'
-          },
-          {
-            pregunta: '¿Qué NO son los Lineamientos Curriculares MEN 2026?',
-            opciones: [
-              'Un marco común que orienta la construcción del currículo institucional',
-              'Una prescripción rígida que cada escuela debe implementar de manera uniforme',
-              'Criterios y principios para el ejercicio de la autonomía curricular',
-              'El resultado de un proceso participativo con comunidades educativas'
-            ],
-            correcta: 1,
-            explicacion: 'Los lineamientos no prescriben un modelo único ni un camino de construcción uniforme. Ofrecen criterios para que cada comunidad educativa ejerza su autonomía con responsabilidad, adaptándose a su contexto territorial.'
+            label: '2. Qué autonomía real existe',
+            ayuda: 'A partir del ejemplo concreto que diste en la reflexión, explica qué margen de adaptación tiene tu institución y por qué no es una camisa de fuerza.',
+            placeholder: 'Mi institución podría adaptar... porque el documento permite...',
+            filas: 4
           }
         ]
       },
 
       metacognicion: {
         preguntas: [
-          '¿Qué conocías ya sobre los Lineamientos MEN 2026 antes de esta sesión? ¿Qué fue sorprendente?',
-          '¿Cómo sitúas tu práctica docente actual en la línea de tiempo normativa que viste hoy?',
-          '¿Cuál de los hitos normativos ha tenido más impacto real en tu práctica cotidiana? ¿Por qué?'
+          '¿Qué conocías ya de este marco normativo antes de hoy?',
+          '¿Cuál de los hitos ha tenido más impacto real en tu práctica cotidiana?'
         ]
       }
     },
@@ -161,136 +121,80 @@ La invitación del MEN es apropiarse críticamente de estos lineamientos, reinte
     {
       id: 's0_1',
       num: 'Sesión 2',
-      titulo: 'El enfoque de competencias y la formación integral',
-      duracion: '90 min',
+      titulo: '¿Qué significa "formación integral" en este documento?',
+      duracion: '60 min',
       tipo: 'Marco conceptual',
-      objetivo: 'Comprender qué son las competencias en el marco de estos lineamientos, cómo se articulan con la formación integral y por qué el enfoque socioemocional es inseparable del ciudadano.',
+      video: { titulo: 'Formación integral: ni solo cognición, ni una lista de valores', guion: 'guiones/m0_s1.md', duracion_estimada: '5-6 min' },
+      objetivo: 'Comprender la formación integral como categoría ontológica, política y pedagógica, y reconocer las dimensiones del ser que el documento articula.',
 
       contenido: [
         {
-          tipo: 'lectura',
-          titulo: '1. ¿Qué son las competencias en este marco?',
-          texto: `El concepto de competencia en estos lineamientos va mucho más allá de "saber hacer". El documento asume las competencias como:
-
-<blockquote>"La resolución de problemas, dado su uso en situaciones inéditas, la utilización del conocimiento en forma diferente a como fue aprendido, la integración de conocimiento de diferentes dominios y la combinación de conocimiento con habilidades de pensamiento de alto orden." <cite>— MEN, 2026, p. 31</cite></blockquote>
-
-Las competencias en formación ciudadana y DSE tienen tres dimensiones interdependientes:
-<ul>
-<li><strong>Cognitiva:</strong> Comprender conceptos, analizar contextos, evaluar situaciones complejas.</li>
-<li><strong>Socioemocional:</strong> Reconocer y gestionar emociones, empatizar, relacionarse éticamente.</li>
-<li><strong>Ética y ciudadana:</strong> Actuar con responsabilidad, participar, transformar la vida colectiva.</li>
-</ul>
-
-Un sujeto competente en ciudadanía no solo <em>conoce</em> los derechos: los <em>ejerce</em>, los <em>defiende</em> y trabaja para que otros también los tengan. Eso requiere las tres dimensiones simultáneamente.`
-        },
-        {
-          tipo: 'grafico',
-          titulo: '2. Enfoques epistemológicos del Desarrollo Socioemocional',
-          subtitulo: 'El DSE se fundamenta en seis perspectivas complementarias (MEN, 2026)',
-          tipo_grafico: 'hexagono',
-          datos: [
-            { label: 'Procesual-Cognitivo', desc: 'El DSE como proceso de aprendizaje que puede enseñarse intencionalmente', color: '#3B82F6' },
-            { label: 'Valorativo-Ético', desc: 'Las emociones como expresión de valores y compromisos morales', color: '#8B5CF6' },
-            { label: 'Regulación Motivacional', desc: 'La capacidad de gestionar estados internos para alcanzar metas', color: '#EC4899' },
-            { label: 'Político-Ciudadano', desc: 'Las emociones como base de la participación y la vida democrática', color: '#0C7A4A' },
-            { label: 'Filosófico-Hermenéutico', desc: 'El sujeto que se comprende a sí mismo mediante el diálogo con el mundo', color: '#F59E0B' },
-            { label: 'Decolonial', desc: 'Los saberes emocionales de comunidades indígenas, afro y campesinas como conocimiento legítimo', color: '#A84020' },
-          ]
-        },
-        {
-          tipo: 'tabla',
-          titulo: '3. Enfoques de las Competencias Ciudadanas',
-          tabla: {
-            cabeceras: ['Enfoque', 'Qué enfatiza', 'Referentes clave'],
-            filas: [
-              ['Socioemocional', 'Las emociones como base del ejercicio ciudadano. Sin regulación emocional no hay participación responsable.', 'CASEL, Bisquerra, Damasio'],
-              ['Ético-relacional', 'La ciudadanía como práctica de cuidado y responsabilidad hacia el otro. Ética del cuidado.', 'Gilligan, Noddings, Cortina'],
-              ['Sociopolítico crítico', 'La ciudadanía como acción transformadora frente a las injusticias estructurales.', 'Apple, Fraser, Freire'],
-              ['Ciudadanía global e intercultural', 'La responsabilidad planetaria, la diversidad cultural y la conciencia ecológica.', 'UNESCO, Torres, Boff'],
-            ]
-          }
+          tipo: 'video',
+          titulo: 'Video — ¿Qué es la formación integral? (5-6 min)',
+          texto: 'Mira el video (guion en /guiones/m0_s1.md) antes de leer. La idea clave: la formación integral no es una lista de materias nuevas que sumar, es una forma de mirar lo que ya enseñas.'
         },
         {
           tipo: 'lectura',
-          titulo: '4. ¿Por qué el DSE y la FC son inseparables?',
-          texto: `Una de las tesis más importantes del documento MEN 2026 es que la formación ciudadana y el desarrollo socioemocional <strong>no son dos áreas paralelas</strong>, sino dimensiones de un mismo proceso formativo.
+          titulo: 'La idea central',
+          texto: `El documento (sección 2.1, p. 25) define la formación integral como una <strong>categoría ontológica, política y pedagógica</strong>: no es una técnica ni una asignatura, es una manera de comprender al ser humano que resiste su fragmentación en partes inconexas (cognitiva por un lado, emocional por otro, ética por otro).
 
-<blockquote>"Las emociones constituyen la infraestructura invisible que sostiene o debilita la vida democrática: sin regulación emocional no hay diálogo real; sin empatía no hay reconocimiento del otro; sin resiliencia no hay reconstrucción del tejido social." <cite>— MEN, 2026</cite></blockquote>
+Para organizar esta mirada, el documento (sección 2.4, pp. 35-45) describe <strong>nueve dimensiones del ser</strong>: ambiental, ciudadana y política, cognitiva, comunicativa y creativa, corporal, cultural, ética, histórica y de memoria histórica, y socioemocional. No son materias separadas: son lentes que pueden activarse simultáneamente en una sola actividad.
 
-Esto tiene implicaciones concretas para la práctica docente:
-
-<strong>1. No se puede "enseñar convivencia" sin trabajar las emociones.</strong> Un estudiante que no puede regular su frustración no puede participar productivamente en un debate.
-
-<strong>2. No se puede "enseñar emociones" en el vacío.</strong> La regulación emocional sin un horizonte ético y ciudadano se queda en psicología individualista.
-
-<strong>3. El docente es el primer modelo.</strong> La manera en que el docente gestiona sus propias emociones, resuelve conflictos y participa democráticamente en la institución es el currículo oculto más poderoso que existe.`
+El documento es enfático (sección 2.1, p. 26): formación integral <strong>no significa</strong> "moldear" al estudiante con una lista cerrada de categorías. Cita a Edgar Morin (1999) para plantearla como una forma de religar conocimientos que el currículo fragmentó, dejando espacio a la indeterminación y a la potencialidad propia del sujeto.`
+        },
+        {
+          tipo: 'lectura',
+          titulo: 'Implicación práctica',
+          texto: `Esto tiene una consecuencia directa para el aula: una misma actividad —una huerta escolar, un debate, un proyecto de escritura— puede trabajar varias dimensiones del ser a la vez, sin que eso implique más tiempo de clase ni una asignatura nueva. El reto no es "agregar formación integral" a lo que ya haces, sino volver visibles las dimensiones que tu actividad ya toca y las que sistemáticamente deja por fuera.`
         }
       ],
 
       actividades: [
         {
-          tipo: 'individual',
-          titulo: 'Auditoría de mi práctica',
+          tipo: 'diseno',
+          titulo: 'Entregable: rastrea las dimensiones en tu plan de clase',
           icono: '🔍',
-          instruccion: 'Piensa en una clase que diste la semana pasada. ¿Qué dimensión trabajaste más: cognitiva, socioemocional o ética-ciudadana? ¿Cuál quedó implícita? ¿Cuál fue completamente ausente? No se trata de culpabilizarse, sino de ver con claridad.',
+          instruccion: 'Toma el plan de una clase real que dictaste la semana pasada. De las nueve dimensiones del ser (ambiental, ciudadana y política, cognitiva, comunicativa y creativa, corporal, cultural, ética, histórica y de memoria histórica, socioemocional), marca cuáles trabajó explícitamente tu clase y cuáles no.',
           tiempo: '15 min'
-        },
-        {
-          tipo: 'grupal',
-          titulo: 'Los 6 enfoques del DSE en tu institución',
-          icono: '🎯',
-          instruccion: 'En grupos de 3: ¿Cuál de los 6 enfoques epistemológicos del DSE está más presente en las prácticas de tu institución? ¿Cuál está completamente ausente? ¿Cuál generaría más resistencia si lo propusieras? ¿Por qué?',
-          tiempo: '25 min'
         },
         {
           tipo: 'reflexion',
-          titulo: 'Metacognición: Mi currículo oculto',
+          titulo: 'El patrón que se repite',
           icono: '🪞',
-          instruccion: 'Escribe en tu diario: "Las emociones que mis estudiantes aprenden de MÍ (no de lo que digo) son... Esto lo sé porque... Lo que quiero cambiar es..."',
-          tiempo: '15 min'
+          instruccion: 'Mirando tus últimas semanas de clase (no solo la de la actividad anterior): ¿qué dimensión aparece casi siempre y cuál casi nunca? ¿Es una decisión consciente tuya, una limitación del área que enseñas, o algo institucional?',
+          tiempo: '10 min'
         }
       ],
 
       recursos: [
-        { tipo: 'doc', titulo: 'MEN 2026 — Sección 2.1: Fundamentos epistemológicos', url: '#', meta: 'Pp. 21–24 del documento' },
-        { tipo: 'web', titulo: 'CASEL Framework — What is SEL?', url: 'https://casel.org/fundamentals-of-sel/', meta: 'Marco de referencia internacional' },
-        { tipo: 'video', titulo: 'Daniel Goleman: El aprendizaje socioemocional en el aula', url: '#', meta: 'Conferencia · 22 min' },
-        { tipo: 'libro', titulo: 'Bisquerra, R. (2009). Psicopedagogía de las emociones.', url: '#', meta: 'Síntesis — Cap. 1' },
+        { tipo: 'doc', titulo: 'MEN 2026 — Sección 2.1 y 2.4 (pp. 25-26, 35-45)', url: '#', meta: 'Documento oficial' },
+        { tipo: 'video', titulo: 'Guion del video de la sesión', url: 'guiones/m0_s1.md', meta: 'Para grabar o ver' },
       ],
 
       evaluacion: {
-        titulo: 'Verificación de comprensión',
-        preguntas: [
+        tipo: 'evidencia',
+        titulo: 'Evidencia de aplicación',
+        instrucciones: 'Completa estos campos con base en el plan de clase que revisaste.',
+        prompts: [
           {
-            pregunta: '¿Qué plantea el enfoque decolonial del DSE?',
-            opciones: [
-              'Que los modelos emocionales de EE.UU. son superiores y deben adoptarse en Colombia',
-              'Que los saberes emocionales de comunidades indígenas, afro y campesinas son conocimiento legítimo',
-              'Que las emociones no deben estudiarse porque son conceptos occidentales',
-              'Que cada región debe ignorar los referentes internacionales del DSE'
-            ],
-            correcta: 1,
-            explicacion: 'El enfoque decolonial reconoce que existen saberes emocionales propios de las comunidades indígenas, afrodescendientes y campesinas de Colombia, que constituyen formas legítimas de conocimiento que deben integrarse en la educación.'
+            label: '1. Tu mapeo de dimensiones',
+            ayuda: 'Lista las dimensiones que sí trabajó tu clase y las que no, con un ejemplo concreto de cada una marcada como presente.',
+            placeholder: 'Presentes: cognitiva (porque...), socioemocional (porque...)\nAusentes: ambiental, histórica...',
+            filas: 5
           },
           {
-            pregunta: '¿Por qué el docente es descrito como "el primer modelo" en la formación ciudadana y socioemocional?',
-            opciones: [
-              'Porque el docente debe enseñar ciudadanía como una asignatura separada',
-              'Porque la forma en que el docente gestiona emociones y participa democráticamente es el currículo oculto más poderoso',
-              'Porque los estudiantes ignoran todo lo demás excepto al docente',
-              'Porque el docente debe tener competencias ciudadanas perfectas antes de enseñarlas'
-            ],
-            correcta: 1,
-            explicacion: 'El currículo oculto —lo que los estudiantes aprenden de cómo actúa el docente, no de lo que dice— es más potente que cualquier contenido explícito. El docente que regula sus emociones, escucha activamente y participa democráticamente modela estas competencias en cada clase.'
+            label: '2. El patrón identificado',
+            ayuda: 'Explica el patrón que detectaste en la reflexión: qué dimensión casi nunca aparece en tus clases y a qué crees que se debe.',
+            placeholder: 'La dimensión que casi nunca trabajo es... porque...',
+            filas: 4
           }
         ]
       },
 
       metacognicion: {
         preguntas: [
-          '¿Cuál de los 6 enfoques del DSE te resultó más nuevo o desafiante? ¿Por qué?',
-          '¿Cómo cambia tu comprensión de "enseñar ciudadanía" después de esta sesión?',
-          '¿Qué aspecto de tu "currículo oculto" quieres trabajar más conscientemente?'
+          '¿Cómo cambia tu idea de "enseñar ciudadanía" después de esta sesión?',
+          '¿Qué dimensión quieres incorporar de forma más consciente la próxima semana?'
         ]
       }
     }
