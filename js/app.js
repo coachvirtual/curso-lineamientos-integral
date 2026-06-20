@@ -164,7 +164,7 @@ function openSesion(idx) {
     `<i class="ti ti-clock"></i> ${s.duracion||s.dur||''}`;
 
   /* ── TABS: siempre 4, actividades y evaluación con lock ── */
-  const hasEval = s.evaluacion && (s.evaluacion.preguntas||[]).length > 0;
+  const hasEval = s.evaluacion && ((s.evaluacion.preguntas||[]).length > 0 || s.evaluacion.tipo === 'evidencia');
   const tabsEl  = document.getElementById('ses-tabs');
   tabsEl.innerHTML = `
     <button class="tab-btn active" onclick="switchTab('contenido',this)" data-tab="contenido">
@@ -373,7 +373,18 @@ function renderTabContenido(m, s) {
 /* ── Render de bloques de contenido ── */
 function renderContenidoBloque(m, c) {
   let html = '';
-  if (c.tipo === 'lectura') {
+  if (c.tipo === 'video') {
+    html = `<div style="margin-bottom:1.5rem">
+      <div style="font-size:11px;font-weight:700;color:${m.color};margin-bottom:.5rem;
+                  text-transform:uppercase;letter-spacing:.07em">${c.titulo||''}</div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:1rem 1.15rem;
+                  background:${m.bg};border-radius:var(--r);border:1px solid var(--border)">
+        <i class="ti ti-player-play" style="color:${m.color};font-size:22px;flex-shrink:0;margin-top:2px"></i>
+        <div style="font-size:14px;color:var(--text2);line-height:1.75">${c.texto||''}</div>
+      </div>
+    </div>`;
+
+  } else if (c.tipo === 'lectura') {
     html = `<div style="margin-bottom:1.5rem">
       <div style="font-size:11px;font-weight:700;color:${m.color};margin-bottom:.5rem;
                   text-transform:uppercase;letter-spacing:.07em">${c.titulo||''}</div>
@@ -857,7 +868,13 @@ function renderTabRecursos(m, s) {
 function renderTabEvaluacion(m, s) {
   const pane = document.getElementById('tab-evaluacion');
   if (!pane || !s.evaluacion) return;
-  const ev    = s.evaluacion;
+  const ev = s.evaluacion;
+
+  if (ev.tipo === 'evidencia') {
+    renderEvidenciaAplicacion(m, ev);
+    return;
+  }
+
   const pregs = ev.preguntas||[];
 
   if (!pregs.length) {
@@ -871,6 +888,73 @@ function renderTabEvaluacion(m, s) {
 
   initQuiz(m, pregs);
 }
+
+/* ══════════════════════════
+   TAB: EVALUACIÓN — EVIDENCIA DE APLICACIÓN
+   (en vez de opción múltiple: el/la docente trae una situación
+   real de su aula y la confronta con el marco teórico)
+══════════════════════════ */
+const EVID_KEY = 'cfe_evidencia_v1';
+
+function renderEvidenciaAplicacion(m, ev) {
+  const pane = document.getElementById('tab-evaluacion');
+  if (!pane) return;
+  const key   = EVID_KEY + '_' + curModIdx + '_' + curSesIdx;
+  const saved = JSON.parse(localStorage.getItem(key) || 'null');
+  const prompts = ev.prompts || [];
+
+  const fieldsHtml = prompts.map((pr, i) => `
+    <div class="evid-field">
+      <label class="evid-label" for="evid-input-${i}">${pr.label}</label>
+      ${pr.ayuda ? `<div class="evid-help">${pr.ayuda}</div>` : ''}
+      <textarea id="evid-input-${i}" class="evid-textarea" rows="${pr.filas||4}"
+        placeholder="${pr.placeholder||''}">${saved && saved.respuestas ? (saved.respuestas[i]||'') : ''}</textarea>
+    </div>`).join('');
+
+  pane.innerHTML = `
+    <div class="section-label">${ev.titulo || 'Evidencia de aplicación'}</div>
+    <div class="evid-intro">
+      <i class="ti ti-clipboard-check" style="color:${m.color};font-size:20px"></i>
+      <div>${ev.instrucciones || 'Esta sesión no se evalúa con preguntas de opción múltiple. En su lugar, trae una situación real de tu práctica y confróntala con lo trabajado en la sesión.'}</div>
+    </div>
+    <div class="evid-form" id="evid-form-${curModIdx}-${curSesIdx}">
+      ${fieldsHtml}
+      <button class="evid-submit-btn" style="background:${m.color}" onclick="submitEvidencia(${prompts.length})">
+        <i class="ti ti-send"></i> ${saved ? 'Actualizar mi evidencia' : 'Guardar mi evidencia'}
+      </button>
+      <div id="evid-confirm" class="evid-confirm ${saved ? 'show' : ''}">
+        <i class="ti ti-circle-check-filled"></i> Evidencia guardada en tu diario pedagógico. Puedes editarla cuando quieras.
+      </div>
+    </div>`;
+}
+
+window.submitEvidencia = function(n) {
+  const respuestas = [];
+  for (let i = 0; i < n; i++) {
+    const el = document.getElementById('evid-input-' + i);
+    respuestas.push(el ? el.value.trim() : '');
+  }
+  const allFilled = respuestas.every(r => r.length > 0);
+  const key = EVID_KEY + '_' + curModIdx + '_' + curSesIdx;
+  const record = { respuestas, fecha: new Date().toISOString() };
+  localStorage.setItem(key, JSON.stringify(record));
+
+  const confirm = document.getElementById('evid-confirm');
+  if (confirm) {
+    confirm.classList.add('show');
+    confirm.innerHTML = allFilled
+      ? `<i class="ti ti-circle-check-filled"></i> Evidencia guardada en tu diario pedagógico. Puedes editarla cuando quieras.`
+      : `<i class="ti ti-alert-circle"></i> Guardado. Para marcar la sesión como completa, responde los campos que falten.`;
+  }
+
+  if (allFilled) {
+    const p = getProgress();
+    p[sesKey(curModIdx, curSesIdx)] = true;
+    saveProgress(p);
+    updateProgressUI();
+    renderModulos();
+  }
+};
 
 /* ── Quiz engine: 2 intentos totales ── */
 let _qState = {};
